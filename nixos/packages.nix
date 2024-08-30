@@ -33,6 +33,7 @@
       brightnessctl
       cava
       fastfetch
+      fd
       ffmpeg
       file
       git
