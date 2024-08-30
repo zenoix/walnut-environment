@@ -4,6 +4,7 @@
     ./fzf.nix
     ./git.nix
     ./kitty.nix
+    ./ruff.nix
     ./starship.nix
     ./tmux.nix
     ./zathura.nix
