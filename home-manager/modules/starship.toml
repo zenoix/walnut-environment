@@ -1,0 +1,327 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Change color palette
+palette = "catppuccin_mocha"
+
+# Inserts a blank line between shell prompts
+add_newline = true
+format = """$directory$character"""
+right_format = """$all"""
+
+[aws]
+symbol = "  "
+format = " [$symbol($profile )(\\($region\\) )(\\[$duration\\])]($style)"
+
+[azure]
+format = " [$symbol($subscription)]($style)"
+
+[battery]
+disabled = true
+
+[buf]
+symbol = " "
+
+[bun]
+format = " [$symbol($version)]($style)"
+
+[c]
+symbol = " "
+format = " [$symbol($version(-$name))]($style)"
+
+# Replace the '❯' symbol in the prompt with '➜' and change vimcmd symbol
+[character]
+vimcmd_symbol = '[V](bold green)'
+vimcmd_replace_one_symbol = '[V](bold purple)'
+vimcmd_replace_symbol = '[V](bold purple)'
+vimcmd_visual_symbol = '[V](bold yellow)'
+
+[cmake]
+format = " [$symbol($version)]($style)"
+
+[cobol]
+format = " [$symbol($version)]($style)"
+
+[cmd_duration]
+disabled = true
+format = " took [$duration]($style)"
+
+[conda]
+ignore_base = false
+format = " [$symbol$environment]($style)"
+
+[container]
+format = " [$symbol \\[$name\\]]($style)"
+
+[crystal]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[daml]
+format = " [$symbol($version)]($style)"
+
+[dart]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[deno]
+format = " [$symbol($version)]($style)"
+
+[directory]
+truncation_length = 2
+truncate_to_repo = false
+use_os_path_sep = false
+
+[direnv]
+format = " [$symbol$loaded/$allowed]($style)"
+
+[docker_context]
+symbol = " "
+format = " [$symbol$context]($style)"
+
+[dotnet]
+format = " [$symbol($version)(🎯 $tfm)]($style)"
+
+[elixir]
+symbol = " "
+format = " [$symbol($version \\(OTP $otp_version\\))]($style)"
+
+[elm]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[erlang]
+format = " [$symbol($version)]($style)"
+
+[fennel]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[fossil_branch]
+format = " [$symbol$branch]($style)"
+
+[fossil_metrics]
+format = " ([+$added]($added_style))([-$deleted]($deleted_style))"
+
+[gcloud]
+format = " [$symbol$account(@$domain)(\\($region\\))]($style)"
+
+[git_branch]
+format = ' [$symbol$branch(:$remote_branch)]($style)'
+truncation_length = 8
+
+[git_commit]
+format = " [\\($hash$tag\\)]($style)"
+
+[git_state]
+format = "\\([$state( $progress_current/$progress_total)]($style)\\)"
+
+[git_status]
+format = "([\\[$all_status$ahead_behind\\]]($style))"
+
+[gleam]
+format = " [$symbol($version)]($style)"
+
+[golang]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[guix_shell]
+symbol = " "
+format = " [$symbol]($style)"
+
+[gradle]
+format = " [$symbol($version)]($style)"
+
+[haskell]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[haxe]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[helm]
+format = " [$symbol($version)]($style)"
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[jobs]
+format = " [$symbol$number]($style)"
+
+[julia]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[kotlin]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[localip]
+format = " [$localipv4]($style)"
+
+[lua]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[memory_usage]
+format = " $symbol[$ram( | $swap)]($style)"
+
+[meson]
+format = " [$symbol$project]($style)"
+
+[hg_branch]
+format = " [$symbol$branch(:$topic)]($style)"
+
+[nim]
+format = " [$symbol($version)]($style)"
+
+[nix_shell]
+symbol = " "
+format = " [$symbol$state( \\($name\\))]($style)"
+
+[nodejs]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[ocaml]
+format = " [$symbol($version )(\\($switch_indicator$switch_name\\))]($style)"
+
+[odin]
+format = " [$symbol($version)]($style)"
+
+[opa]
+format = " [$symbol($version)]($style)"
+
+[openstack]
+format = " [$symbol$cloud(\\($project\\))]($style)"
+
+[os]
+disabled = true
+
+[package]
+format = " [$symbol$version]($style)"
+
+[perl]
+format = " [$symbol($version)]($style)"
+
+[php]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[pijul_channel]
+format = " [$symbol$channel]($style)"
+
+[pulumi]
+format = " [$symbol($username@)$stack]($style)"
+
+[purescript]
+format = " [$symbol($version)]($style)"
+
+[python]
+symbol = " "
+version_format = 'v${major}.${minor}'
+format = " [${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\))]($style)"
+
+[quarto]
+format = " [$symbol($version)]($style)"
+
+[rlang]
+symbol = '🅡 '
+format = " [$symbol($version)]($style)"
+
+[red]
+format = " [$symbol($version)]($style)"
+
+[ruby]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[rust]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[scala]
+symbol = " "
+format = ' [${symbol}(${version})]($style)'
+
+[shell]
+format = " [$indicator]($style)"
+
+[shlvl]
+format = " [$symbol$shlvl]($style)"
+
+[singularity]
+format = " [$symbol\\[$env\\]]($style)"
+
+[solidity]
+format = " [$symbol($version)]($style)"
+
+[spack]
+format = " [$symbol$environment]($style)"
+
+[status]
+format = " [$symbol$status]($style)"
+
+[swift]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+[terraform]
+format = " [$symbol$workspace]($style)"
+
+[time]
+format = " at [$time]($style)"
+
+[typst]
+format = " [$symbol($version)]($style)"
+
+[username]
+format = " [$user]($style) in"
+
+[vagrant]
+format = " [$symbol($version)]($style)"
+
+[vlang]
+format = " [$symbol($version)]($style)"
+
+[vcsh]
+format = " vcsh [$symbol$repo]($style)"
+
+[zig]
+symbol = " "
+format = " [$symbol($version)]($style)"
+
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
