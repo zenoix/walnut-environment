@@ -17,6 +17,7 @@
       rofi
       signal-desktop
       wofi
+      zathura
   
       # Coding stuff
       gcc
