@@ -8,6 +8,7 @@
     ./starship.nix
     ./tmux.nix
     ./zathura.nix
+    ./zoxide.nix
 
     ./wm/hyprland.nix
     ./wm/waybar.nix
