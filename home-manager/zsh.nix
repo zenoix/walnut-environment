@@ -238,6 +238,66 @@
     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
       exec tmux
     fi
+
+    autoload -Uz is-at-least
+    
+    function git_current_branch() {
+        local ref
+        ref=$(git symbolic-ref --quiet HEAD 2> /dev/null)
+        local ret=$?
+        if [[ $ret != 0 ]]; then
+            [[ $ret == 128 ]] && return  # no git repo.
+            ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+        fi
+        echo ''${ref#refs/heads/}
+    }
+    
+    function git_current_user_name() {
+        __git_prompt_git config user.name 2>/dev/null
+    }
+    
+    function git_current_user_email() {
+        __git_prompt_git config user.email 2>/dev/null
+    }
+    
+    function git_repo_name() {
+        local repo_path
+        if repo_path="$(git rev-parse --show-toplevel 2>/dev/null)" && [[ -n "$repo_path" ]]; then
+            echo ''${repo_path:t}
+        fi
+    }
+    
+    function current_branch() {
+        git_current_branch
+    }
+    
+    function git_develop_branch() {
+        command git rev-parse --git-dir &>/dev/null || return
+        local branch
+        for branch in dev devel develop development; do
+            if command git show-ref -q --verify refs/heads/$branch; then
+                echo $branch
+                return 0
+            fi
+        done
+    
+        echo develop
+        return 1
+    }
+    
+    function git_main_branch() {
+        command git rev-parse --git-dir &>/dev/null || return
+        local ref
+        for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk,mainline,default,master}; do
+            if command git show-ref -q --verify $ref; then
+                echo ''${ref:t}
+                return 0
+            fi
+        done
+    
+        echo master
+        return 1
+    }
     '';
   };
 }
