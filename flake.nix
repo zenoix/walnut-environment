@@ -13,6 +13,11 @@
 
     stylix.url = "github:danth/stylix";
 
+    nixvim = {
+        url = "github:nix-community/nixvim/nixos-24.05";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
@@ -27,10 +32,12 @@
     nixosConfigurations."walnut-nixos" = nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit system;
+	inherit inputs;
       };
       modules = [
         ./nixos/configuration.nix
 	stylix.nixosModules.stylix
+	inputs.nixvim.nixosModules.nixvim
       ];
     };
 

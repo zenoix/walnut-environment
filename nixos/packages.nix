@@ -26,6 +26,7 @@
       nodejs
       python
       (python3.withPackages (ps: with ps; [ requests ]))
+      vim
   
       # CLI utils
       bluez
