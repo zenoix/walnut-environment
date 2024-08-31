@@ -4,6 +4,7 @@
     ./fzf.nix
     ./git.nix
     ./kitty.nix
+    ./ripgrep.nix
     ./ruff.nix
     ./starship.nix
     ./tmux.nix
