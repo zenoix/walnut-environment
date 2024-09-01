@@ -43,8 +43,8 @@
       ignorecase = true;
       smartcase = true;
       
-      # # Keep signcolumn on by default
-      # signcolumn = "yes";
+      # Keep signcolumn on by default
+      signcolumn = "yes";
       
       # Turn bell off
       belloff = "all";
