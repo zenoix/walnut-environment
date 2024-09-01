@@ -7,7 +7,7 @@
     keyMode = "vi";
     mouse = true;
     shortcut = "Space";
-    terminal = "tmux-256color";
+    terminal = "xterm-256color";
 
     extraConfig = ''
       bind | split-window -h
