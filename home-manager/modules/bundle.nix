@@ -7,6 +7,7 @@
     ./ripgrep.nix
     ./ruff.nix
     ./starship.nix
+    ./syncthing.nix
     ./tmux.nix
     ./zathura.nix
     ./zoxide.nix
