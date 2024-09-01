@@ -14,7 +14,5 @@
     vimAlias = true;
     vimdiffAlias = true;
 
-    # Stylix neovim theme seems broken
-    colorschemes.catppuccin.enable = true;
   };
 }
