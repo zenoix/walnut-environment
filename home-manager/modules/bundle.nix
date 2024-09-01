@@ -12,6 +12,8 @@
     ./zathura.nix
     ./zoxide.nix
 
+    ./nixvim/nixvim.nix
+
     ./wm/hyprland.nix
     ./wm/waybar.nix
 
