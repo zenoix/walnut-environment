@@ -12,7 +12,11 @@
     };
 
     stylix.url = "github:danth/stylix";
-
+    
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
@@ -43,6 +47,7 @@
       modules = [ 
         ./home-manager/home.nix 
 	inputs.stylix.homeManagerModules.stylix
+	inputs.nixvim.homeManagerModules.nixvim
       ];
     };
   };

@@ -11,6 +11,7 @@
       firefox
       gparted
       kitty
+      libreoffice-qt6-fresh
       mpv
       obs-studio
       pcmanfm-qt
