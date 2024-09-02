@@ -15,7 +15,7 @@
       };
     };
 
-    opacity.terminal = 0.975;
+    opacity.terminal = 0.95;
 
   };
 }
