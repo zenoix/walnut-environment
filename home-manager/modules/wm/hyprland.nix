@@ -139,6 +139,8 @@
 	"$mainMod, B, exec, firefox"
 	"$mainMod, L, exec, hyprlock"
 
+        "$mainMod SHIFT, P, exec, grim -g \"$(slurp)\" - | swappy -f -" 
+
         # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
         "$mainMod, right, movefocus, r"

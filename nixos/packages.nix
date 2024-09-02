@@ -92,7 +92,6 @@
       pulseaudio
   
       # Screenshotting
-      flameshot
       grim
       grimblast
       slurp
