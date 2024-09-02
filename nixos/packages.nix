@@ -6,7 +6,6 @@
 
     environment.systemPackages = with pkgs; [
       # Desktop apps
-      discord
       dolphin
       firefox
       gparted
@@ -17,6 +16,7 @@
       pcmanfm-qt
       rofi
       signal-desktop
+      vesktop
       wofi
       zathura
   
