@@ -84,7 +84,7 @@
       polybar
       seatd
       waybar
-      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
   
       # Sound
       pamixer
