@@ -5,7 +5,7 @@
     layout = [
       { 
         type = "padding";
-        val = 3;
+        val = 4;
       }
       {
         type = "text";
@@ -47,78 +47,70 @@
       }
       {
         type = "padding";
-        val = 1;
+        val = 2;
       }
       {
         type = "group";
-        val = [
-          {
-            on_press = {
-              __raw = "function() vim.cmd[[ene]] end";
-            };
-            opts = {
-              shortcut = "n";
-            };
+        val = let
+          mkButton = shortcut: cmd: val: hl: {
             type = "button";
-            val = "  New file";
-          }
-          {
-            on_press = {
-              __raw = "function() vim.cmd[[Telescope find_files]] end";
-            };
+            inherit val;
             opts = {
-              shortcut = "f";
+              inherit hl shortcut;
+              keymap = [
+                "n"
+                shortcut
+                cmd
+                {}
+              ];
+              position = "center";
+              cursor = 0;
+              width = 40;
+              align_shortcut = "right";
+              hl_shortcut = "string";
             };
-            type = "button";
-            val = "  Find File   ";
-          }
-          {
-            on_press = {
-              __raw = "function() vim.cmd[[Telescope live_grep]] end";
-            };
-            opts = {
-              shortcut = "t";
-            };
-            type = "button";
-            val = "󰊄  Find Text   ";
-          }
-          {
-            on_press = {
-              __raw = "function() vim.cmd[[Telescope oldfiles]] end";
-            };
-            opts = {
-              shortcut = "r";
-            };
-            type = "button";
-            val = "  Recent Files";
-          }{
-            on_press = {
-              __raw = "function() vim.cmd[[Telescope find_files search_dirs={'~/walnut-environment'}]] end";
-            };
-            opts = {
-              shortcut = "c";
-            };
-            type = "button";
-            val = "  Nvim Config ";
-          }
-          {
-            on_press = {
-              __raw = "function() vim.cmd[[q]] end";
-            };
-            opts = {
-              shortcut = "q";
-            };
-            type = "button";
-            val = "󰅙 Quit Neovim";
-          }
+          };
+        in [
+          (
+            mkButton
+            "n"
+            "<CMD>enew<CR>"
+            "  New file"
+            "string"
+          )
+          (
+            mkButton
+            "f"
+            "<CMD>lua require('telescope.builtin').find_files({hidden = true})<CR>"
+            "  Find File"
+            "String"
+          )
+          (
+            mkButton
+            "t"
+            "<CMD>lua require('telescope.builtin').live_grep({hidden = true})<CR>"
+            "󰊄  Find Text"
+            "String"
+          )
+          (
+            mkButton
+            "r"
+            "<CMD>lua require('telescope.builtin').old_files({hidden = true})<CR>"
+            "  Recent Files"
+            "String"
+          )
+          (
+            mkButton
+            "q"
+            "<CMD>q<CR>"
+            "󰅙  Quit Neovim"
+            "String"
+          )
         ];
-        opts = {
-          position = "center";
-        };
       }
       { 
         type = "padding";
-        val = 1;
+        val = 2;
       }
       {
         type = "text";
@@ -134,7 +126,7 @@
       }
       {
         type = "padding";
-        val = 3;
+        val = 4;
       }
     ];
 
@@ -142,37 +134,37 @@
       margin = 2;
       noautocmd = true;
       redraw_on_resize = true;
-      #setup.__raw = ''
-      #  function()
-      #  vim.api.nvim_create_autocmd("User", {
-      #      pattern = "AlphaReady",
-      #      desc = "hide cursor for alpha",
-      #      callback = function()
-      #      local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
-      #      vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", hl, { blend = 100 }))
-      #      vim.opt.guicursor = "a:Cursor/lCursor"
-      #      end,
-      #      })
-      #vim.api.nvim_create_autocmd("BufUnload", {
-      #    buffer = 0,
-      #    desc = "show cursor after alpha",
-      #    callback = function()
-      #    local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
-      #    vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", hl, { blend = nil }))
-      #    vim.opt.guicursor = "n-v-c-sm-i-ci-ve-o:block,r-cr:hor20"
-      #    end,
-      #    })
-      #vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-      #    pattern = { "oil://*" },
-      #    desc = "show cursor after alpha",
-      #    callback = function()
-      #    local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
-      #    vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", hl, { blend = nil }))
-      #    vim.opt.guicursor = "n-v-c-sm-i-ci-ve-o:block,r-cr:hor20"
-      #    end,
-      #    })
-      #end
-      #  '';
+      setup.__raw = ''
+        function()
+        vim.api.nvim_create_autocmd("User", {
+            pattern = "AlphaReady",
+            desc = "hide cursor for alpha",
+            callback = function()
+            local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
+            vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", hl, { blend = 100 }))
+            vim.opt.guicursor = "a:Cursor/lCursor"
+            end,
+            })
+      vim.api.nvim_create_autocmd("BufUnload", {
+          buffer = 0,
+          desc = "show cursor after alpha",
+          callback = function()
+          local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
+          vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", hl, { blend = nil }))
+          vim.opt.guicursor = "n-v-c-sm-i-ci-ve-o:block,r-cr:hor20"
+          end,
+          })
+      vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+          pattern = { "oil://*" },
+          desc = "show cursor after alpha",
+          callback = function()
+          local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
+          vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", hl, { blend = nil }))
+          vim.opt.guicursor = "n-v-c-sm-i-ci-ve-o:block,r-cr:hor20"
+          end,
+          })
+      end
+        '';
     };
   };
 }
