@@ -23,31 +23,28 @@
 
     let
       system = "x86_64-linux";
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-      };
     in {
     # nixos - system hostname
     nixosConfigurations."walnut-nixos" = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit system;
+        pkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        inherit inputs system;
       };
       modules = [
         ./nixos/configuration.nix
-	stylix.nixosModules.stylix
+	      stylix.nixosModules.stylix
       ];
     };
 
     homeConfigurations.zenoix = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-      extraSpecialArgs = {
-        inherit pkgs-unstable;
-	inherit inputs;
-      };
       modules = [ 
         ./home-manager/home.nix 
-	inputs.stylix.homeManagerModules.stylix
-	inputs.nixvim.homeManagerModules.nixvim
+	      inputs.stylix.homeManagerModules.stylix
+	      inputs.nixvim.homeManagerModules.nixvim
       ];
     };
   };
