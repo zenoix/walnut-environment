@@ -80,7 +80,6 @@
       herbstluftwm
       hyprland
       hyprlock
-      hyprpaper
       polybar
       seatd
       waybar
