@@ -7,7 +7,7 @@
     keyMode = "vi";
     mouse = true;
     shortcut = "Space";
-    terminal = "xterm-256color";
+    terminal = "tmux-256color";
 
     extraConfig = ''
       bind | split-window -h
@@ -16,6 +16,8 @@
       unbind %
       bind '"' split-window -v -c "#{pane_current_path}"
       bind % split-window -h -c "#{pane_current_path}"
+    
+      set -g allow-passthrough on
     '';
 
     plugins = with pkgs; [
@@ -23,7 +25,7 @@
       {
         plugin = tmuxPlugins.catppuccin;
         extraConfig = ''
-	  set -g @catppuccin_window_left_separator ""
+	        set -g @catppuccin_window_left_separator ""
           set -g @catppuccin_window_right_separator " "
           set -g @catppuccin_window_middle_separator " █"
           set -g @catppuccin_window_number_position "right"
