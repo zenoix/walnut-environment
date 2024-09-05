@@ -22,6 +22,7 @@
         cat = "bat";
         cls = "clear";
         egrep = "grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}";
+        ff = "fastfetch";
         fgrep = "grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}";
         fman = "compgen -c | fzf | xargs man";
         frm = "fd . -H | fzf -m --header 'Select files to move with tab then enter' --preview 'bat --style=numbers --color=always {}' | awk '{print $2}' | xargs -r rm";

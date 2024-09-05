@@ -42,7 +42,6 @@
       light
       lux
       mediainfo
-      neofetch
       nix-index
       ntfs3g
       openssl
