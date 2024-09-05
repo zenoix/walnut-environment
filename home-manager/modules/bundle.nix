@@ -6,13 +6,14 @@
     ./kitty.nix
     ./ripgrep.nix
     ./ruff.nix
-    ./starship.nix
     ./syncthing.nix
     ./tmux.nix
     ./zathura.nix
     ./zoxide.nix
 
     ./nixvim/nixvim.nix
+
+    ./starship/starship.nix
 
     ./wm/hyprland.nix
     ./wm/waybar.nix
