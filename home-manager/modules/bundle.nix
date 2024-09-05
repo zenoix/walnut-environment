@@ -11,6 +11,8 @@
     ./zathura.nix
     ./zoxide.nix
 
+    ./firefox/firefox.nix
+
     ./nixvim/nixvim.nix
 
     ./starship/starship.nix
