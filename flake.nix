@@ -23,15 +23,27 @@
 
     let
       system = "x86_64-linux";
+
+      personal = {
+        user = "zenoix";
+        host = "walnut-nixos";
+        timeZone = "Pacific/Auckland";
+        defaultLocale = "en_NZ.UTF-8";
+        city = "Auckland";
+
+        # Used for gitconfig
+        gitUser = "zenoix";
+        gitEmail = "41812358+zenoix@users.noreply.github.com";
+      };
     in {
     # nixos - system hostname
-    nixosConfigurations."walnut-nixos" = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${personal.host}= nixpkgs.lib.nixosSystem {
       specialArgs = {
         pkgs-unstable = import nixpkgs-unstable {
           inherit system;
           config.allowUnfree = true;
         };
-        inherit inputs system;
+        inherit inputs system personal;
       };
       modules = [
         ./nixos/configuration.nix
@@ -39,7 +51,10 @@
       ];
     };
 
-    homeConfigurations.zenoix = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
+      extraSpecialArgs = {
+        inherit personal;
+      };
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [ 
         ./home-manager/home.nix 

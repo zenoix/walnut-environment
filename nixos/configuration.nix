@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, pkgs-unstable, personal, ... }:
 
 {
   imports =
@@ -39,7 +39,7 @@
     size = 16 * 1024;
   }];
 
-  networking.hostName = "walnut-nixos"; # Define your hostname.
+  networking.hostName = "${personal.host}"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -59,21 +59,21 @@
   };
 
   # Set your time zone.
-  time.timeZone = "Pacific/Auckland";
+  time.timeZone = "${personal.timeZone}";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_NZ.UTF-8";
+  i18n.defaultLocale = "${personal.defaultLocale}";
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_NZ.UTF-8";
-    LC_IDENTIFICATION = "en_NZ.UTF-8";
-    LC_MEASUREMENT = "en_NZ.UTF-8";
-    LC_MONETARY = "en_NZ.UTF-8";
-    LC_NAME = "en_NZ.UTF-8";
-    LC_NUMERIC = "en_NZ.UTF-8";
-    LC_PAPER = "en_NZ.UTF-8";
-    LC_TELEPHONE = "en_NZ.UTF-8";
-    LC_TIME = "en_NZ.UTF-8";
+    LC_ADDRESS = "${personal.defaultLocale}";
+    LC_IDENTIFICATION = "${personal.defaultLocale}";
+    LC_MEASUREMENT = "${personal.defaultLocale}";
+    LC_MONETARY = "${personal.defaultLocale}";
+    LC_NAME = "${personal.defaultLocale}";
+    LC_NUMERIC = "${personal.defaultLocale}";
+    LC_PAPER = "${personal.defaultLocale}";
+    LC_TELEPHONE = "${personal.defaultLocale}";
+    LC_TIME = "${personal.defaultLocale}";
   };
 
   services.displayManager.sddm = {
@@ -87,12 +87,15 @@
     variant = "";
   };
 
+  programs.zsh.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.zenoix = {
+  users.users.${personal.user} = {
     isNormalUser = true;
-    description = "zenoix";
+    description = "${personal.user}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
@@ -105,9 +108,6 @@
       pkgs.xdg-desktop-portal-gtk
     ];
   };
-
-  programs.zsh.enable = true;
-  users.users.zenoix.shell = pkgs.zsh;
 
   programs.hyprland.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

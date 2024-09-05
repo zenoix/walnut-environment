@@ -12,7 +12,7 @@ Then replace the hardware configuration file
 rm nixos/hardware-configuration.nix
 cp /etc/nixos/hardware-configuration.nix nixos/hardware-configuration.nix
 ```
-Lastly, you'll want to change the host name and username in `flake.nix`, `nixos/configuration.nix`, `home-manager/home.nix`, and the git configuration in `home-manager/modules/git.nix`.
+Lastly, you'll want to change the values in the `personal` attribute set in `flake.nix`.
 
 ## Credits:
 

@@ -1,8 +1,8 @@
-{
+{ personal, ... }: {
   programs.git = {
     enable = true;
-    userName = "zenoix";
-    userEmail = "41812358+zenoix@users.noreply.github.com";
+    userName = "${personal.gitUser}";
+    userEmail = "${personal.gitEmail}";
 
     aliases = {
       tree = "log --all --graph --decorate";
@@ -16,7 +16,7 @@
       enable = true;
       options = {
         navigate = true;
-	side-by-side = true;
+        side-by-side = true;
         features = "rosepine";
       };
     };
