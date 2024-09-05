@@ -8,7 +8,7 @@
     settings = {
       enable_audio_bell = false;
       window_padding_width = 5;
-      # background_opacity = "0.975";
+      background_blur = 1;
     };
   };
 }
