@@ -15,6 +15,12 @@
       };
     };
 
+    cursor = {
+      package = pkgs.catppuccin-cursors.mochaDark;
+      name = "catppuccin-mocha-dark-cursors";
+      size = 24;
+    };
+
     opacity.terminal = 0.95;
 
   };
