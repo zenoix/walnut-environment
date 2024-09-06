@@ -1,6 +1,7 @@
 {
   imports = [
     ./alpha.nix
+    ./conform-nvim.nix
     ./fugitive.nix
     ./gitgutter.nix
     ./lualine.nix
