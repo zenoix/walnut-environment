@@ -16,7 +16,6 @@
       pcmanfm-qt
       rofi
       signal-desktop
-      vesktop
       wofi
       zathura
   
