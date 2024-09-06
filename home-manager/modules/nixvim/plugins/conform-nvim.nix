@@ -1,12 +1,18 @@
-{ lib, pkgs, pkgs-unstable, ... }: {
+{
+  lib,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
+{
   programs.nixvim = {
 
     extraPackages = with pkgs; [
       beautysh
       goimports-reviser
+      nixfmt-rfc-style
       nodePackages.prettier
       stylua
-      nixfmt-rfc-style
 
       pkgs-unstable.ruff
     ];
@@ -16,7 +22,10 @@
 
       formattersByFt = {
         bash = [ "beautysh" ];
-        go = [ "gofmt" "goimports-reviser" ];
+        go = [
+          "gofmt"
+          "goimports-reviser"
+        ];
         html = [ "prettier" ];
         javascript = [ "prettier" ];
         json = [ "prettier" ];
@@ -40,7 +49,6 @@
       };
     };
 
-
     keymaps = [
       {
         action = {
@@ -55,7 +63,10 @@
           '';
         };
         key = "<leader>mp";
-        mode = [ "n" "v" ];
+        mode = [
+          "n"
+          "v"
+        ];
       }
     ];
   };
