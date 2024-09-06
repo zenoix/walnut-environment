@@ -5,7 +5,6 @@
     ./git.nix
     ./kitty.nix
     ./ripgrep.nix
-    ./ruff.nix
     ./spicetify.nix
     ./syncthing.nix
     ./tmux.nix
@@ -15,6 +14,8 @@
     ./firefox/firefox.nix
 
     ./nixvim/nixvim.nix
+
+    ./ruff/ruff.nix
 
     ./starship/starship.nix
 
