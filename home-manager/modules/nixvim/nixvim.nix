@@ -1,3 +1,4 @@
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./autocmds.nix
@@ -13,6 +14,6 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-
+    package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.neovim-unwrapped;
   };
 }
