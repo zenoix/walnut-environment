@@ -85,6 +85,7 @@
   
       # Sound
       pamixer
+      pavucontrol
       pipewire
       pulseaudio
   
