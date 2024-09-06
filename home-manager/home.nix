@@ -4,6 +4,12 @@
     ./modules/bundle.nix
   ];
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
+
   home = {
     username = "${personal.user}";
     homeDirectory = "/home/${personal.user}";
