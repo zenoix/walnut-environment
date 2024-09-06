@@ -4,6 +4,7 @@
     ./conform-nvim.nix
     ./fugitive.nix
     ./gitgutter.nix
+    ./illuminate.nix
     ./lualine.nix
     ./mini.nix
     ./nvim-ts-context-commentstring.nix
