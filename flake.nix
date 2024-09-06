@@ -58,6 +58,10 @@
 
     homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
       extraSpecialArgs = {
+        pkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
         inherit inputs personal;
       };
       pkgs = nixpkgs.legacyPackages.${system};
