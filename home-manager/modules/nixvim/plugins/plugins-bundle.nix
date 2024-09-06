@@ -2,6 +2,7 @@
   imports = [
     ./alpha.nix
     ./conform-nvim.nix
+    ./dressing.nix
     ./fugitive.nix
     ./gitgutter.nix
     ./illuminate.nix
