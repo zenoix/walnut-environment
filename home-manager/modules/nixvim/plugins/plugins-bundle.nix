@@ -6,6 +6,7 @@
     ./fugitive.nix
     ./gitgutter.nix
     ./illuminate.nix
+    ./indent-blankline.nix
     ./lualine.nix
     ./mini.nix
     ./nvim-ts-context-commentstring.nix
