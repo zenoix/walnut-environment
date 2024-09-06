@@ -12,7 +12,7 @@
     };
 
     stylix.url = "github:danth/stylix";
-    
+
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,7 +24,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      stylix,
+      ...
+    }@inputs:
 
     let
       system = "x86_64-linux";
@@ -40,36 +48,37 @@
         gitUser = "zenoix";
         gitEmail = "41812358+zenoix@users.noreply.github.com";
       };
-    in {
-    # nixos - system hostname
-    nixosConfigurations.${personal.host}= nixpkgs.lib.nixosSystem {
-      specialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {
-          inherit system;
-          config.allowUnfree = true;
+    in
+    {
+      # nixos - system hostname
+      nixosConfigurations.${personal.host} = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs system personal;
         };
-        inherit inputs system personal;
+        modules = [
+          ./nixos/configuration.nix
+          stylix.nixosModules.stylix
+        ];
       };
-      modules = [
-        ./nixos/configuration.nix
-	      stylix.nixosModules.stylix
-      ];
-    };
 
-    homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
-      extraSpecialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {
-          inherit system;
-          config.allowUnfree = true;
+      homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
+        extraSpecialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs personal;
         };
-        inherit inputs personal;
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [
+          ./home-manager/home.nix
+          inputs.stylix.homeManagerModules.stylix
+          inputs.nixvim.homeManagerModules.nixvim
+        ];
       };
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [ 
-        ./home-manager/home.nix 
-	      inputs.stylix.homeManagerModules.stylix
-	      inputs.nixvim.homeManagerModules.nixvim
-      ];
     };
-  };
 }

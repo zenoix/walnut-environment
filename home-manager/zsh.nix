@@ -1,14 +1,16 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = 
+    shellAliases =
       let
         flakeDir = "~/walnut-environment";
-      in {
+      in
+      {
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
         upd = "nix flake update ${flakeDir}";
         upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
@@ -85,7 +87,7 @@
         gcssm = "git commit --gpg-sign --signoff --message";
         gd = "git diff";
         gdca = "git diff --cached";
-        gdct="git describe --tags $(git rev-list --tags --max-count = 1)";
+        gdct = "git describe --tags $(git rev-list --tags --max-count = 1)";
         gdcw = "git diff --cached --word-diff";
         gds = "git diff --staged";
         gdt = "git diff-tree --no-commit-id --name-only -r";
@@ -261,7 +263,7 @@
       fi
 
       autoload -Uz is-at-least
-      
+
       function git_current_branch() {
           local ref
           ref=$(git symbolic-ref --quiet HEAD 2> /dev/null)
@@ -272,26 +274,26 @@
           fi
           echo ''${ref#refs/heads/}
       }
-      
+
       function git_current_user_name() {
           __git_prompt_git config user.name 2>/dev/null
       }
-      
+
       function git_current_user_email() {
           __git_prompt_git config user.email 2>/dev/null
       }
-      
+
       function git_repo_name() {
           local repo_path
           if repo_path="$(git rev-parse --show-toplevel 2>/dev/null)" && [[ -n "$repo_path" ]]; then
               echo ''${repo_path:t}
           fi
       }
-      
+
       function current_branch() {
           git_current_branch
       }
-      
+
       function git_develop_branch() {
           command git rev-parse --git-dir &>/dev/null || return
           local branch
@@ -301,11 +303,11 @@
                   return 0
               fi
           done
-      
+
           echo develop
           return 1
       }
-      
+
       function git_main_branch() {
           command git rev-parse --git-dir &>/dev/null || return
           local ref
@@ -315,7 +317,7 @@
                   return 0
               fi
           done
-      
+
           echo master
           return 1
       }
@@ -324,7 +326,7 @@
       function mkcd takedir() {
           mkdir -p $@ && cd ''${@:$#}
       }
-      
+
       function takeurl() {
           local data thedir
           data="$(mktemp)"
@@ -334,12 +336,12 @@
           rm "$data"
           cd "$thedir"
       }
-      
+
       function takegit() {
           git clone "$1"
           cd "$(basename ''${1%%.git})"
       }
-      
+
       function take() {
           if [[ $1 =~ ^(https?|ftp).*\.(tar\.(gz|bz2|xz)|tgz)$ ]]; then
               takeurl "$1"
@@ -352,7 +354,7 @@
 
       function detect-clipboard() {
           emulate -L zsh
-      
+
           if [[ "''${OSTYPE}" == darwin* ]] && (( ''${+commands[pbcopy]} )) && (( ''${+commands[pbpaste]} )); then
               function clipcopy() { cat "''${1:-/dev/stdin}" | pbcopy; }
               function clippaste() { pbpaste; }
@@ -401,29 +403,29 @@
               return 1
           fi
       }
-      
+
       function clipcopy clippaste {
           unfunction clipcopy clippaste
           detect-clipboard || true # let one retry
           "$0" "$@"
       }
-      
-      
+
+
       function copypath {
           # If no argument passed, use current directory
           local file="''${1:-.}"
-      
+
           # If argument is not an absolute path, prepend $PWD
           [[ $file = /* ]] || file="$PWD/$file"
-      
+
           # Copy the absolute path without resolving symlinks
           # If clipcopy fails, exit the function with an error
           print -n "''${file:a}" | clipcopy || return 1
-      
+
           echo ''${(%):-"%B''${file:a}%b copied to clipboard."}
       }
-      
-      
+
+
       function copyfile {
           emulate -L zsh
           clipcopy $1
@@ -431,26 +433,26 @@
 
       zle-line-init() {
         emulate -L zsh
-      
+
         [[ $CONTEXT == start ]] || return 0
-      
+
         while true; do
           zle .recursive-edit
           local -i ret=$?
           [[ $ret == 0 && $KEYS == $'\4' ]] || break
           [[ -o ignore_eof ]] || exit 0
         done
-      
+
         local saved_prompt=$PROMPT
         local saved_rprompt=$RPROMPT
-      
+
         # Set prompt value from character module
         PROMPT="$(starship module -s ''${STARSHIP_CMD_STATUS:-0} character)"
         RPROMPT='''
         zle .reset-prompt
         PROMPT=$saved_prompt
         RPROMPT=$saved_rprompt
-      
+
         if (( ret )); then
           zle .send-break
         else
@@ -458,7 +460,7 @@
         fi
         return ret
       }
-      
+
       zle -N zle-line-init
     '';
   };

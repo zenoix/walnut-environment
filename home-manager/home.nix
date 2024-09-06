@@ -1,4 +1,10 @@
-{ config, pkgs, personal, ... }: {
+{
+  config,
+  pkgs,
+  personal,
+  ...
+}:
+{
   imports = [
     ./zsh.nix
     ./modules/bundle.nix
