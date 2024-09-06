@@ -17,6 +17,11 @@
       url = "github:nix-community/nixvim/nixos-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
@@ -53,7 +58,7 @@
 
     homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
       extraSpecialArgs = {
-        inherit personal;
+        inherit inputs personal;
       };
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [ 

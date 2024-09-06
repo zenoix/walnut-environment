@@ -6,6 +6,7 @@
     ./kitty.nix
     ./ripgrep.nix
     ./ruff.nix
+    ./spicetify.nix
     ./syncthing.nix
     ./tmux.nix
     ./zathura.nix
