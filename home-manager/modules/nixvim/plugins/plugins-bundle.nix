@@ -12,8 +12,9 @@
     ./neogen.nix
     ./nvim-ts-context-commentstring.nix
     ./oil.nix
+    ./render-markdown.nix
     ./telescope.nix
-    ./treesitter.nix
     ./tmux-navigator.nix
+    ./treesitter.nix
   ];
 }
