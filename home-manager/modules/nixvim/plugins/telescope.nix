@@ -1,6 +1,8 @@
+{ pkgs-unstable, ... }:
 {
   programs.nixvim.plugins.telescope = {
     enable = true;
+    package = pkgs-unstable.vimPlugins.telescope-nvim;
     settings = {
       defaults = {
         path_display = [ "smart" ];

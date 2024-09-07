@@ -4,6 +4,7 @@
     ./autocmds.nix
     ./opts.nix
     ./remap.nix
+    ./theme.nix
 
     ./plugins/plugins-bundle.nix
   ];
