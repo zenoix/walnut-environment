@@ -15,6 +15,7 @@
     ./render-markdown.nix
     ./telescope.nix
     ./tmux-navigator.nix
+    ./todo-comments.nix
     ./treesitter.nix
     ./trouble.nix
     ./undotree.nix
