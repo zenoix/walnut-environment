@@ -16,5 +16,6 @@
     ./telescope.nix
     ./tmux-navigator.nix
     ./treesitter.nix
+    ./undotree.nix
   ];
 }
