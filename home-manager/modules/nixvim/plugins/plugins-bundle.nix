@@ -20,6 +20,7 @@
     ./telescope.nix
     ./tmux-navigator.nix
     ./todo-comments.nix
+    ./treesitter-context.nix
     ./treesitter.nix
     ./trouble.nix
     ./undotree.nix
