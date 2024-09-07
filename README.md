@@ -1,5 +1,16 @@
 # (WIP) walnut-environment
 
+## Layout
+```
+walnut-environment
+├── assets              # Assets used in configurations
+├── home-manager        # User specific configurations
+├── nixos               # System configurations
+├── themes              # Shared stylix configurations (system and user)
+├── flake.nix           # Flake (main entry point)
+└── flake.lock          # Flake lock file
+```
+
 ## To set it up:
 First clone and place the directory in the right place
 ```sh
