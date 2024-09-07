@@ -1,7 +1,9 @@
 {
   imports = [
     ./alpha.nix
+    ./biscuits.nix
     ./conform-nvim.nix
+    ./dadbod.nix
     ./dressing.nix
     ./fugitive.nix
     ./gitgutter.nix
