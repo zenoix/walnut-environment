@@ -1,0 +1,48 @@
+{ pkgs, pkgs-unstable, ... }:
+{
+  programs.nixvim = {
+    extraPackages = with pkgs; [
+      hadolint
+
+      pkgs-unstable.mypy
+    ];
+
+    plugins.lint = {
+      enable = true;
+
+      lintersByFt = {
+        dockerfile = [ "hadolint" ];
+        python = [ "mypy" ];
+      };
+
+      autoCmd = {
+        callback = {
+          __raw = ''
+            function()
+              require('lint').try_lint()
+            end
+          '';
+        };
+        event = [
+          "BufEnter"
+          "BufWritePost"
+          "InsertLeave"
+        ];
+      };
+
+    };
+
+    keymaps = [
+      {
+        action = {
+          __raw = ''
+            function()
+              require("lint").try_lint()
+            end
+          '';
+        };
+        key = "<leader>l";
+      }
+    ];
+  };
+}

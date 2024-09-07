@@ -7,6 +7,7 @@
     ./gitgutter.nix
     ./illuminate.nix
     ./indent-blankline.nix
+    ./lint.nix
     ./lualine.nix
     ./mini.nix
     ./neogen.nix
