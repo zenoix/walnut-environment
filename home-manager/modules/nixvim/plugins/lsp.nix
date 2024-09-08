@@ -56,6 +56,7 @@
         };
         gopls.enable = true;
         marksman.enable = true;
+        nil-ls.enable = true;
         pylsp.enable = true;
         ruff.enable = true;
         taplo.enable = true;
