@@ -2,6 +2,7 @@
   imports = [
     ./alpha.nix
     ./biscuits.nix
+    ./completion.nix
     ./conform-nvim.nix
     ./dadbod.nix
     ./dressing.nix
