@@ -11,6 +11,7 @@
     ./illuminate.nix
     ./indent-blankline.nix
     ./lint.nix
+    ./lsp.nix
     ./lualine.nix
     ./mini.nix
     ./neogen.nix
