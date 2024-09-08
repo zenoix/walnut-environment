@@ -1,5 +1,30 @@
 # (WIP) walnut-environment
 
+## Environment
+
+
+| Type           | Program      |
+| :------------- | :----------: |
+| Browser         | Firefox |
+| Cursor     | Catppuccin Cursor |
+| Display Manager     | Not yet configured |
+| Editor         | Neovim |
+| Fetch         | Fastfetch |
+| File Manager   | Not yet configured |
+| Launcher       | Not yet configured |
+| Lockscreen       | Not yet configured |
+| Media Player     | Not yet configured |
+| Music Player | Spicetify |
+| Notification Daemon       | Not yet configured |
+| Screen Recorder      | Not yet configured |
+| Screenshot Software    | Grim + Slurp + Swappy |
+| Shell          | Zsh |
+| Status Bar     | Waybar |
+| Terminal       | Kitty |
+| Terminal Font  | JetBrainsMono |
+| Theme         | Catppuccin Mocha |
+| Window Manager | Hyprland |
+
 ## Layout
 ```
 walnut-environment
