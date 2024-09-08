@@ -23,7 +23,18 @@ Then replace the hardware configuration file
 rm nixos/hardware-configuration.nix
 cp /etc/nixos/hardware-configuration.nix nixos/hardware-configuration.nix
 ```
-Lastly, you'll want to change the values in the `personal` attribute set in `flake.nix`.
+Next, you'll want to change the values in the `personal` attribute set in `flake.nix`.
+
+Lastly, to rebuild the system, use 
+```sh
+sudo nixos-rebuild switch --flake ~/walnut-environment
+```
+and/or for home manager
+```sh
+home-manager switch --flake ~/walnut-environment
+```
+
+These two switch commands are aliased in my home manager configuration to `rb` and `hms` respectively which makes future rebuilding easier. 
 
 ## Credits:
 
