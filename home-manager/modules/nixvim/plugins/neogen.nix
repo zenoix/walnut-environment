@@ -4,8 +4,7 @@
     enablePlaceholders = true;
     keymapsSilent = true;
     placeholderHighlight = "DiagnosticHint";
-    # TODO: set up luasnip
-    # snippetEngine = "luasnip";
+    snippetEngine = "luasnip";
     keymaps = {
       generate = "<leader>d";
     };
