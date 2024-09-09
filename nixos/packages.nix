@@ -92,6 +92,7 @@
     pavucontrol
     pipewire
     pulseaudio
+    playerctl
 
     # Screenshotting
     grim
