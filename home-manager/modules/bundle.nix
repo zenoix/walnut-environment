@@ -19,6 +19,7 @@
 
     ./starship/starship.nix
 
+    ./wm/hypridle.nix
     ./wm/hyprland.nix
     ./wm/hyprlock.nix
     ./wm/waybar.nix

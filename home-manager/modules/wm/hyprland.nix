@@ -45,7 +45,7 @@
 
         layout = "dwindle";
 
-	resize_on_border = true;
+        resize_on_border = true;
       };
 
       decoration = {
@@ -55,7 +55,7 @@
           enabled = true;
           size = 3;
           passes = 1;
-	  vibrancy = "0.1696";
+          vibrancy = "0.1696";
           new_optimizations = true;
         };
 
@@ -69,11 +69,11 @@
         enabled = true;
 
         bezier = [
-	  "wind, 0.05, 0.09, 0.1, 1.05"
-	  "winIn, 0.1, 1.1, 0.1, 1.1"
-	  "winOut, 0.3, -0.3, 0, 1"
-	  "liner, 1, 1, 1, 1"
-	];
+          "wind, 0.05, 0.09, 0.1, 1.05"
+          "winIn, 0.1, 1.1, 0.1, 1.1"
+          "winOut, 0.3, -0.3, 0, 1"
+          "liner, 1, 1, 1, 1"
+        ];
 
         animation = [
           "windows, 1, 6, wind, slide"
@@ -84,7 +84,7 @@
           "borderangle, 1, 30, liner, loop"
           "fade, 1, 10, default"
           "workspaces, 1, 5, wind"
-	];
+        ];
       };
 
       dwindle = {
@@ -120,6 +120,7 @@
       exec-once = [
         # "hyprpaper"
         "waybar"
+        "hypridle"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
@@ -132,14 +133,14 @@
         "$mainMod, M, exit,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, V, togglefloating,"
-	"$mainMod, F, fullscreen, 1"
+        "$mainMod, F, fullscreen, 1"
         "$mainMod, Super_L, exec, wofi --show drun"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, S, togglesplit, # dwindle"
-	"$mainMod, B, exec, firefox"
-	"$mainMod, L, exec, hyprlock"
+        "$mainMod, B, exec, firefox"
+        "$mainMod, L, exec, hyprlock"
 
-        "$mainMod SHIFT, P, exec, grim -g \"$(slurp)\" - | swappy -f -" 
+        "$mainMod SHIFT, P, exec, grim -g \"$(slurp)\" - | swappy -f -"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
@@ -196,7 +197,7 @@
         ", XF86AudioLowerVolume, exec, pamixer -d 5 "
         ", XF86AudioMute, exec, pamixer -t"
         ", XF86AudioMicMute, exec, pamixer --default-source -m"
-        
+
         # Brightness control
         ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
         ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
