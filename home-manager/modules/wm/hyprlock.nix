@@ -16,7 +16,7 @@ in
 
       background = [
         {
-          path = "~/walnut-environment/assets/fuji.jpg";
+          path = "$HOME/walnut-environment/assets/fuji.jpg";
           blur_passes = 2;
           brightness = 0.75;
           vibrancy = 0.2;
