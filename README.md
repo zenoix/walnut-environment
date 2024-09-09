@@ -12,7 +12,7 @@
 | Fetch         | Fastfetch |
 | File Manager   | Not yet configured |
 | Launcher       | Not yet configured |
-| Lockscreen       | Not yet configured |
+| Lockscreen       | Hypridle + Hyprlock |
 | Media Player     | Not yet configured |
 | Music Player | Spicetify |
 | Notification Daemon       | Not yet configured |
