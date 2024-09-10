@@ -43,7 +43,6 @@
       '';
 
       servers = {
-        basedpyright.enable = true;
         bashls.enable = true;
         dockerls.enable = true;
         golangci-lint-ls = {
