@@ -18,10 +18,10 @@
           end
         '';
 
-        # TODO: Add border
-        # window = {
-        #   completion.border = []
-        # }
+        window = {
+          completion.__raw = "require('cmp').config.window.bordered()";
+          documentation.__raw = "require('cmp').config.window.bordered()";
+        };
 
         mapping = {
           __raw = ''

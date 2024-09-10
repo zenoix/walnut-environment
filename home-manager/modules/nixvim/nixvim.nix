@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 {
   imports = [
     ./autocmds.nix
@@ -16,5 +21,7 @@
     vimAlias = true;
     vimdiffAlias = true;
     package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.neovim-unwrapped;
+
+    extraPackages = with pkgs-unstable; [ astro-language-server ];
   };
 }

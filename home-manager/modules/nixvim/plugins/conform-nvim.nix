@@ -1,9 +1,4 @@
-{
-  lib,
-  pkgs,
-  pkgs-unstable,
-  ...
-}:
+{ pkgs, pkgs-unstable, ... }:
 {
   programs.nixvim = {
 
@@ -20,32 +15,34 @@
     plugins.conform-nvim = {
       enable = true;
 
-      formattersByFt = {
-        bash = [ "beautysh" ];
-        go = [
-          "gofmt"
-          "goimports-reviser"
-        ];
-        html = [ "prettier" ];
-        javascript = [ "prettier" ];
-        json = [ "prettier" ];
-        lua = [ "stylua" ];
-        nix = [ "nixfmt" ];
-        python = [
-          # To fix auto-fixable lint errors.
-          "ruff_fix"
-          # To run the Ruff formatter.
-          "ruff_format"
-          # To organize the imports.
-          "ruff_organize_imports"
-        ];
-        yaml = [ "prettier" ];
-        zsh = [ "beautysh" ];
-      };
+      settings = {
+        formatters_by_ft = {
+          bash = [ "beautysh" ];
+          go = [
+            "gofmt"
+            "goimports-reviser"
+          ];
+          html = [ "prettier" ];
+          javascript = [ "prettier" ];
+          json = [ "prettier" ];
+          lua = [ "stylua" ];
+          nix = [ "nixfmt" ];
+          python = [
+            # To fix auto-fixable lint errors.
+            "ruff_fix"
+            # To run the Ruff formatter.
+            "ruff_format"
+            # To organize the imports.
+            "ruff_organize_imports"
+          ];
+          yaml = [ "prettier" ];
+          zsh = [ "beautysh" ];
+        };
 
-      formatOnSave = {
-        lspFallback = true;
-        timeoutMs = 500;
+        format_on_save = {
+          lspFallback = true;
+          timeoutMs = 500;
+        };
       };
     };
 

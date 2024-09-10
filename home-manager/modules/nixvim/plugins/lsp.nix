@@ -18,8 +18,7 @@
 
     lsp = {
       enable = true;
-      # TODO: Not enabled in 24.05
-      # inlayHints = true;
+      inlayHints = true;
       keymaps = {
         silent = true;
         lspBuf = {
@@ -43,7 +42,10 @@
       '';
 
       servers = {
-        bashls.enable = true;
+        bashls = {
+          enable = true;
+          package = pkgs-unstable.bash-language-server;
+        };
         dockerls.enable = true;
         golangci-lint-ls = {
           enable = true;
