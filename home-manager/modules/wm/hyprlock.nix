@@ -1,9 +1,8 @@
 let
-  textColor = "rgb(205, 214, 244)";
-  inputTextColor = "rgb(186, 194, 222)";
-  inputInnerColor = "rgb(49, 50, 68)";
-  inputOuterColor = "rgb(147, 153, 178)";
-  inputCheckColor = "rgb(148, 226, 213)";
+  textColor = "rgb(225, 225, 225)";
+  inputInnerColor = "rgba(255, 255, 255, 0.1)";
+  inputOuterColor = "rgba(255, 255, 255, 0)";
+  inputCheckColor = "rgb(249, 226, 175)";
   inputFailColor = "rgb(243, 139, 168)";
 in
 {
@@ -34,7 +33,7 @@ in
           dots_center = true;
           inner_color = inputInnerColor;
           outer_color = inputOuterColor;
-          font_color = inputTextColor;
+          font_color = textColor;
           fade_on_empty = false;
           rounding = -1;
           check_color = inputCheckColor;
@@ -45,6 +44,7 @@ in
           position = "0, -120";
           halign = "center";
           valign = "center";
+          swap_font_color = false;
         }
       ];
 
