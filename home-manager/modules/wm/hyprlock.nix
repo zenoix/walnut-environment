@@ -84,6 +84,18 @@ in
           halign = "center";
           valign = "bottom";
         }
+
+        # Battery
+        {
+          monitor = "";
+          text = "cmd[update:1000] echo \"$($HOME/walnut-environment/home-manager/modules/wm/scripts/battery.sh)\"";
+          color = textColor;
+          font_size = 12;
+          font_family = "JetBrains Mono";
+          position = "-15, -10";
+          halign = "right";
+          valign = "top";
+        }
       ];
     };
   };
