@@ -1,8 +1,8 @@
+{ lib, config, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-
     settings = {
       "$mainMod" = "SUPER";
 
@@ -46,6 +46,8 @@
         layout = "dwindle";
 
         resize_on_border = true;
+
+        "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base0E})";
       };
 
       decoration = {
@@ -134,7 +136,7 @@
         "$mainMod, E, exec, dolphin"
         "$mainMod, V, togglefloating,"
         "$mainMod, F, fullscreen, 1"
-        "$mainMod, Super_L, exec, wofi --show drun"
+        "$mainMod, Super_L, exec, rofi --show drun"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, S, togglesplit, # dwindle"
         "$mainMod, B, exec, firefox"

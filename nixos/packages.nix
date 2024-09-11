@@ -18,9 +18,8 @@
     mpv
     obs-studio
     pcmanfm-qt
-    rofi
+    rofi-wayland
     signal-desktop
-    wofi
     zathura
 
     # Coding stuff
@@ -64,6 +63,7 @@
     feh
     gromit-mpx
     imv
+    libnotify
     mako
     screenkey
 
