@@ -23,6 +23,10 @@
    </div>
 </h1>
 
+## Screenshots
+
+![Hyprlock](./.github/assets/screenshots/hyprlock.png)
+
 ## Environment
 
 
