@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   stylix = {
     enable = true;
@@ -22,7 +27,13 @@
       size = 24;
     };
 
-    opacity.terminal = 0.95;
+    opacity = {
+      applications = 0.95;
+      terminal = 0.95;
+      popups = 0.95;
+    };
 
   };
+
+  wayland.windowManager.hyprland.settings.general."col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base0E})";
 }
