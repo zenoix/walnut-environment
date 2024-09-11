@@ -1,4 +1,5 @@
-{ personal, ... }: {
+{ personal, ... }:
+{
   programs.git = {
     enable = true;
     userName = "${personal.gitUser}";
@@ -10,6 +11,7 @@
 
     extraConfig = {
       init.defaultBranch = "main";
+      pull.rebase = true;
     };
 
     delta = {
