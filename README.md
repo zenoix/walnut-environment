@@ -45,9 +45,7 @@ As at 11/09/2024
 | Launcher       | Not yet configured |
 | Lockscreen       | Hypridle + Hyprlock |
 | Media Player     | Not yet configured |
-| Music Player | Spicetify |
 | Notification Daemon       | Not yet configured |
-| Screen Recorder      | Not yet configured |
 | Screenshot Software    | Grim + Slurp + Swappy |
 | Shell          | Zsh |
 | Status Bar     | Waybar |
