@@ -4,6 +4,7 @@
     ./fzf.nix
     ./git.nix
     ./kitty.nix
+    ./mako.nix
     ./ripgrep.nix
     ./spicetify.nix
     ./syncthing.nix
