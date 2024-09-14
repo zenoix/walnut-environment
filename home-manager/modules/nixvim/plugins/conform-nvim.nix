@@ -18,6 +18,7 @@
       settings = {
         formatters_by_ft = {
           bash = [ "beautysh" ];
+          css = [ "prettier" ];
           go = [
             "gofmt"
             "goimports-reviser"

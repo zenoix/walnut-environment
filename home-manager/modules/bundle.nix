@@ -16,6 +16,8 @@
 
     ./nixvim/nixvim.nix
 
+    ./rofi/rofi.nix
+
     ./ruff/ruff.nix
 
     ./starship/starship.nix
