@@ -12,12 +12,9 @@
     # Desktop apps
     dolphin
     firefox
-    gparted
     kitty
     libreoffice-qt6-fresh
-    mpv
     obs-studio
-    pcmanfm-qt
     rofi-wayland
     signal-desktop
     zathura
@@ -61,7 +58,6 @@
     # GUI utils
     dmenu
     feh
-    gromit-mpx
     imv
     libnotify
     mako
