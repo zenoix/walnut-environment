@@ -42,7 +42,7 @@ As at 11/09/2024
 | Editor         | Neovim |
 | Fetch         | Fastfetch |
 | File Manager   | Not yet configured |
-| Launcher       | Not yet configured |
+| Launcher       | Rofi |
 | Lockscreen       | Hypridle + Hyprlock |
 | Media Player     | Not yet configured |
 | Notification Daemon       | Not yet configured |
