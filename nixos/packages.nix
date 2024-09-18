@@ -44,7 +44,6 @@
     nix-index
     ntfs3g
     openssl
-    ranger
     scrot
     swww
     tmux
@@ -61,7 +60,6 @@
     imv
     libnotify
     mako
-    screenkey
 
     # Xorg stuff
     #xterm
