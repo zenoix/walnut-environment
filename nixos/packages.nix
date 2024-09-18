@@ -10,13 +10,13 @@
 
   environment.systemPackages = with pkgs; [
     # Desktop apps
-    dolphin
     firefox
     kitty
     libreoffice-qt6-fresh
     obs-studio
     rofi-wayland
     signal-desktop
+    xfce.thunar
     zathura
 
     # Coding stuff

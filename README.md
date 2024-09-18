@@ -41,7 +41,7 @@ As at 11/09/2024
 | Display Manager     | Not yet configured |
 | Editor         | Neovim |
 | Fetch         | Fastfetch |
-| File Manager   | Not yet configured |
+| File Manager   | Thunar |
 | Launcher       | Rofi |
 | Lockscreen       | Hypridle + Hyprlock |
 | Media Player     | Not yet configured |

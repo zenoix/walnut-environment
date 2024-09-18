@@ -133,7 +133,7 @@
         "$mainMod, T, exec, kitty"
         "$mainMod, W, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, E, exec, dolphin"
+        "$mainMod, E, exec, thunar"
         "$mainMod, V, togglefloating,"
         "$mainMod, F, fullscreen, 1"
         "$mainMod, Super_L, exec, rofi -show drun -no-levenshtein-sort -disable-history"
