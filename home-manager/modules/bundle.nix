@@ -3,6 +3,7 @@
     ./bat.nix
     ./fzf.nix
     ./git.nix
+    ./gtk.nix
     ./kitty.nix
     ./mako.nix
     ./ripgrep.nix
