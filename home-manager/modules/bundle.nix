@@ -6,6 +6,7 @@
     ./kitty.nix
     ./mako.nix
     ./ripgrep.nix
+    ./rofi.nix
     ./spicetify.nix
     ./syncthing.nix
     ./tmux.nix
@@ -15,8 +16,6 @@
     ./firefox/firefox.nix
 
     ./nixvim/nixvim.nix
-
-    ./rofi/rofi.nix
 
     ./ruff/ruff.nix
 

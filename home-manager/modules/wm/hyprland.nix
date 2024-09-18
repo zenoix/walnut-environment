@@ -136,7 +136,7 @@
         "$mainMod, E, exec, dolphin"
         "$mainMod, V, togglefloating,"
         "$mainMod, F, fullscreen, 1"
-        "$mainMod, Super_L, exec, rofi -show drun"
+        "$mainMod, Super_L, exec, rofi -show drun -no-levenshtein-sort -disable-history"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, S, togglesplit, # dwindle"
         "$mainMod, B, exec, firefox"

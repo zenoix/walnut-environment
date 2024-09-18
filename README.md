@@ -99,3 +99,5 @@ Wallpapers are from reddit:
 Firefox CSS was modified from [mimipile's firefoxCSS repo](https://github.com/mimipile/firefoxCSS)
 
 README header was modified from [Frost Pheonix's catppuccin config](https://github.com/Frost-Phoenix/nixos-config/blob/catppuccin/README.md)
+
+Rofi was modified from [Sukhmancs' nixos config](https://github.com/sukhmancs/nixos-configs)

@@ -105,6 +105,7 @@
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
     papirus-nord
+    pop-icon-theme
     spice-vdagent
   ];
 
