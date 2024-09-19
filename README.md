@@ -45,7 +45,7 @@ As at 11/09/2024
 | Launcher       | Rofi |
 | Lockscreen       | Hypridle + Hyprlock |
 | Media Player     | Not yet configured |
-| Notification Daemon       | Not yet configured |
+| Notification Daemon       | Dunst |
 | Screenshot Software    | Grim + Slurp + Swappy |
 | Shell          | Zsh |
 | Status Bar     | Waybar |
