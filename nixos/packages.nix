@@ -59,7 +59,6 @@
     feh
     imv
     libnotify
-    mako
 
     # Xorg stuff
     #xterm
@@ -70,6 +69,7 @@
     cliphist
     wl-clipboard
     xwayland
+    dunst
 
     # WMs and stuff
     base16-schemes

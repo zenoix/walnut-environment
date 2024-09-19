@@ -1,11 +1,11 @@
 {
   imports = [
     ./bat.nix
+    ./dunst.nix
     ./fzf.nix
     ./git.nix
     ./gtk.nix
     ./kitty.nix
-    ./mako.nix
     ./ripgrep.nix
     ./rofi.nix
     ./spicetify.nix
