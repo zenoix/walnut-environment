@@ -67,7 +67,7 @@
           border-radius = mkLiteral "100%";
           background-color = mkLiteral "transparent";
           text-color = mkLiteral "#${colors.base0E}";
-          str = " ";
+          str = " ";
           font = "JetBrainsMono Nerd Font 12";
         };
 
