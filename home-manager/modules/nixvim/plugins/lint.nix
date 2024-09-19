@@ -12,7 +12,6 @@
 
       lintersByFt = {
         dockerfile = [ "hadolint" ];
-        python = [ "mypy" ];
       };
 
       autoCmd = {
