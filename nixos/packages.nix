@@ -38,6 +38,7 @@
     file
     git
     htop
+    killall
     light
     lux
     mediainfo
