@@ -91,6 +91,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    theme = "${import ./modules/sddm_theme.nix { inherit pkgs; }}";
   };
 
   # Configure keymap in X11

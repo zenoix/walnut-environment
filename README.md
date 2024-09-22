@@ -38,7 +38,7 @@ As at 11/09/2024
 | :------------- | :----------: |
 | Browser         | Firefox |
 | Cursor     | Catppuccin Cursor |
-| Display Manager     | Not yet configured |
+| Display Manager     | Sddm |
 | Editor         | Neovim |
 | Fetch         | Fastfetch |
 | File Manager   | Thunar |
