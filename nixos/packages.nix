@@ -32,6 +32,7 @@
     bluez-tools
     brightnessctl
     cava
+    cocogitto
     fastfetch
     fd
     ffmpeg

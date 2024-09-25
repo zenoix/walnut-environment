@@ -23,6 +23,7 @@
         ".." = "cd ..";
         cat = "bat";
         cls = "clear";
+        cogco = "cog commit";
         egrep = "grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}";
         ff = "fastfetch";
         fgrep = "grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}";
