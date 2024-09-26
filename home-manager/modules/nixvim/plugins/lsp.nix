@@ -43,6 +43,10 @@
       '';
 
       servers = {
+        basedpyright = {
+          enable = true;
+          package = pkgs-unstable.basedpyright;
+        };
         bashls = {
           enable = true;
           package = pkgs-unstable.bash-language-server;
@@ -61,7 +65,6 @@
         marksman.enable = true;
         nil-ls.enable = true;
         pylsp.enable = true;
-        pyright.enable = true;
         ruff.enable = true;
         taplo.enable = true;
         typos-lsp = {
