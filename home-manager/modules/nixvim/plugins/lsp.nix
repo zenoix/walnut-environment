@@ -65,7 +65,10 @@
         marksman.enable = true;
         nil-ls.enable = true;
         pylsp.enable = true;
-        ruff.enable = true;
+        ruff = {
+          enable = true;
+          package = pkgs-unstable.ruff;
+        };
         taplo.enable = true;
         typos-lsp = {
           enable = true;
