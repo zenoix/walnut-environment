@@ -18,6 +18,7 @@
 
     lsp = {
       enable = true;
+      package = pkgs-unstable.vimPlugins.nvim-lspconfig;
       inlayHints = true;
       keymaps = {
         silent = true;
