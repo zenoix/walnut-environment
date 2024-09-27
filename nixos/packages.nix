@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 {
   nixpkgs.config = {
     allowUnfree = true;
@@ -6,6 +6,14 @@
       "python-2.7.18.8"
       "electron-25.9.0"
     ];
+  };
+
+  programs.zsh.enable = true;
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    package = pkgs-unstable.neovim-unwrapped;
   };
 
   environment.systemPackages = with pkgs; [
