@@ -337,7 +337,7 @@
                   }
 
                   #battery.charging {
-                      color: #${colors.base05};
+                      color: #${colors.base00};
                       background-color: #${colors.base0B};
                   }
 
