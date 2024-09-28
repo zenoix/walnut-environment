@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -5,341 +6,371 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "9 13 -10 18";
+        margin = "9 18 -10 18";
 
-        modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
-        modules-center = ["clock" "custom/weather"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray"];
+        modules-left = [
+          "hyprland/workspaces"
+          "hyprland/language"
+          # "keyboard-state"
+          # "hyprland/submap"
+        ];
+        modules-center = [ "clock" ];
+        modules-right = [
+          "tray"
+          "pulseaudio"
+          # "custom/mem"
+          # "cpu"
+          "backlight"
+          "battery"
+        ];
 
         "hyprland/workspaces" = {
-          disable-scroll = true;
+          "format" = "{icon}";
+          "format-icons" = {
+            "active" = "󱨇";
+            "default" = "";
+
+          };
+          "disable-scroll" = true;
+          "rotate" = 0;
+          "all-outputs" = true;
+          "active-only" = false;
+          "on-click" = "activate";
+          persistent-workspaces = {
+            "*" = 3;
+          };
         };
 
-    "hyprland/language" = {
-        format-en = "US";
-        format-ru = "RU";
-	      min-length = 5;
-	      tooltip = false;
-    };
+        "hyprland/language" = {
+          format-en = "US";
+          min-length = 5;
+          tooltip = false;
+        };
 
-    "keyboard-state" = {
-        #numlock = true;
-        capslock = true;
-        format = "{icon} ";
-        format-icons = {
+        "keyboard-state" = {
+          #numlock = true;
+          capslock = true;
+          format = "{icon} ";
+          format-icons = {
             locked = " ";
             unlocked = "";
+          };
         };
-    };
 
-    "clock" = {
-        # timezone = "America/New_York";
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        format = "{:%a; %d %b, %I:%M %p}";
-    };
+        "clock" = {
+          # timezone = "America/New_York";
+          tooltip-format = "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>";
+          format = "{:%a %d %b %I:%M %p}";
+        };
 
-    "custom/weather" = {
-        format = "{}";
-        tooltip = true;
-        interval = 1800;
-        exec = "$HOME/.config/waybar/scripts/wttr.py";
-        return-type = "json";
-    };
-
-    "pulseaudio" = {
-        # scroll-step = 1; # %, can be a float
-        reverse-scrolling = 1;
-        format = "{volume}% {icon} {format_source}";
-        format-bluetooth = "{volume}% {icon} {format_source}";
-        format-bluetooth-muted = " {icon} {format_source}";
-        format-muted = " {format_source}";
-        format-source = "{volume}% ";
-        format-source-muted = "";
-        format-icons = {
+        "pulseaudio" = {
+          # scroll-step = 1; # %, can be a float
+          reverse-scrolling = 1;
+          format = "{volume}% {icon} {format_source}";
+          format-bluetooth = "{volume}% {icon} {format_source}";
+          format-bluetooth-muted = " {icon} {format_source}";
+          format-muted = "{volume}%  {format_source}";
+          format-source = "{volume}% ";
+          format-source-muted = "";
+          format-icons = {
             headphone = "";
             hands-free = "";
             headset = "";
             phone = "";
             portable = "";
             car = "";
-            default = ["" "" ""];
+            default = [
+              ""
+              ""
+              ""
+            ];
+          };
+          on-click = "pavucontrol";
+          min-length = 13;
         };
-        on-click = "pavucontrol";
-        min-length = 13;
-    };
 
-    "custom/mem" = {
-        format = "{} ";
-        interval = 3;
-        exec = "free -h | awk '/Mem:/{printf $3}'";
-        tooltip = false;
-    };
+        "cpu" = {
+          interval = 2;
+          format = "{usage}% ";
+          min-length = 6;
+        };
 
-    "cpu" = {
-      interval = 2;
-      format = "{usage}% ";
-      min-length = 6;
-    };
+        "backlight" = {
+          device = "intel_backlight";
+          format = "{percent}% {icon}";
+          format-icons = [ "" ];
+          min-length = 7;
+        };
 
-    "temperature" = {
-        # thermal-zone = 2;
-        # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-        critical-threshold = 80;
-        # format-critical = "{temperatureC}°C {icon}";
-        format = "{temperatureC}°C {icon}";
-        format-icons = ["" "" "" "" ""];
-        tooltip = false;
-    };
-
-    "backlight" = {
-        device = "intel_backlight";
-        format = "{percent}% {icon}";
-        format-icons = [""];
-        min-length = 7;
-    };
-
-    battery = {
-        states = {
+        battery = {
+          states = {
             warning = 30;
             critical = 15;
+          };
+          format = "{capacity}% {icon}";
+          format-charging = "{capacity}% 󰂄";
+          format-plugged = "{capacity}% ";
+          format-alt = "{time} {icon}";
+          format-icons = [
+            "󰂃"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰁹"
+          ];
+          on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
         };
-        format = "{capacity}% {icon}";
-        format-charging = "{capacity}% ";
-        format-plugged = "{capacity}% ";
-        format-alt = "{time} {icon}";
-        format-icons = ["" "" "" "" "" "" "" "" "" ""];
-	on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
-    };
 
-    tray = {
-        icon-size = 16;
-        spacing = 0;
-    };
+        tray = {
+          icon-size = 16;
+          spacing = 0;
+        };
 
       };
     };
-  
-    style = 
+
+    style =
+      let
+        inherit (config.lib.stylix) colors;
+      in
       ''
-* {
-    border: none;
-    border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono;
-    font-weight: bold; 
-    min-height: 20px;
-}
+        * {
+            border: none;
+            border-radius: 0;
+            /* `otf-font-awesome` is required to be installed for icons */
+            font-family: JetBrains Mono;
+            font-weight: bold; 
+            min-height: 20px;
+        }
 
-window#waybar {
-    background: transparent;
-}
+        window#waybar {
+            background: transparent;
+        }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
+        window#waybar.hidden {
+            opacity: 0.2;
+        }
 
-#workspaces {
-    margin-right: 8px;
-    border-radius: 10px;
-    transition: none;
-    background: #383c4a;
-}
+        #workspaces {
+          margin-right: 8px;
+          padding-left: 8px;
+          padding-right: 8px;
+          border-radius: 10px;
+          transition: none;
+          background: #${colors.base00};
+        }
 
-#workspaces button {
-    transition: none;
-    color: #7c818c;
-    background: transparent;
-    padding: 5px;
-    font-size: 18px;
-}
+          #workspaces button {
+              box-shadow: none;
+              text-shadow: none;
+              padding: 0px;
+              border-radius: 8px;
+              margin-top: 4px;
+              margin-bottom: 4px;
+              margin-left: 0px;
+              padding-left: 4px;
+              padding-right: 4px;
+              margin-right: 0px;
+              color: #${colors.base04};
+              animation: ws_normal 20s ease-in-out 1;
+          }
 
-#workspaces button.persistent {
-    color: #7c818c;
-    font-size: 12px;
-}
+          #workspaces button.persistent{
+              color: #${colors.base04};
+          }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    border-radius: inherit;
-    color: #383c4a;
-    background: #7c818c;
-}
+          #workspaces button.active {
+              /* background: #2B2F38; */
+              color: #${colors.base07};
+              /* margin-left: 1px; 
+              padding-left: 4px;
+              padding-right: 8px;
+              margin-right: 1px; */
+              animation: ws_active 20s ease-in-out 1;
+              /* transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682); */
+          }
 
-#workspaces button.active {
-    background: #4e5263;
-    color: white;
-    border-radius: inherit;
-}
+          #workspaces button:hover {
+              /* background: @wb-hvr-bg; */
+              color: #D5A5AA;
+              animation: ws_hover 20s ease-in-out 1;
+              transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+          }
 
-#language {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
 
-#keyboard-state {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #language {
+                      padding-left: 12px;
+                      padding-right: 12px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #${colors.base05};
+                      background: #${colors.base00};
+                  }
 
-#custom-pacman {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #keyboard-state {
+                      margin-right: 8px;
+                      padding-right: 16px;
+                      border-radius: 0px 10px 10px 0px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#custom-mail {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #custom-pacman {
+                      padding-left: 16px;
+                      padding-right: 8px;
+                      border-radius: 10px 0px 0px 10px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#submap {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #custom-mail {
+                      margin-right: 8px;
+                      padding-right: 16px;
+                      border-radius: 0px 10px 10px 0px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#clock {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #submap {
+                      padding-left: 16px;
+                      padding-right: 16px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#custom-weather {
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #clock {
+                      padding-left: 16px;
+                      padding-right: 16px;
+                      border-radius: 10px 10px 10px 10px;
+                      transition: none;
+                      color: #${colors.base05};
+                      background: #${colors.base00};
+                  }
 
-#pulseaudio {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #custom-weather {
+                      padding-right: 16px;
+                      border-radius: 0px 10px 10px 0px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
+                  #pulseaudio {
+                      margin-left: 8px;
+                      margin-right: 8px;
+                      padding-left: 12px;
+                      padding-right: 12px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #${colors.base05};
+                      background: #${colors.base00};
+                  }
 
-#custom-mem {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #pulseaudio.muted {
+                      margin-left: 8px;
+                      margin-right: 8px;
+                      padding-left: 12px;
+                      padding-right: 12px;
+                  }
 
-#cpu {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #custom-mem {
+                      margin-right: 8px;
+                      padding-left: 16px;
+                      padding-right: 16px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#temperature {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #cpu {
+                      margin-right: 8px;
+                      padding-left: 16px;
+                      padding-right: 16px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#temperature.critical {
-    background-color: #eb4d4b;
-}
+                  #temperature {
+                      margin-right: 8px;
+                      padding-left: 16px;
+                      padding-right: 16px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #ffffff;
+                      background: #383c4a;
+                  }
 
-#backlight {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #temperature.critical {
+                      background-color: #eb4d4b;
+                  }
 
-#battery {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #backlight {
+                      margin-right: 8px;
+                      padding-left: 12px;
+                      padding-right: 12px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #${colors.base05};
+                      background: #${colors.base00};
+                  }
 
-#battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
-}
+                  #battery {
+                      padding-left: 16px;
+                      padding-right: 16px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #${colors.base05};
+                      background: #${colors.base00};
+                  }
 
-#battery.warning:not(.charging) {
-    background-color: #ffbe61;
-    color: black;
-}
+                  #battery.charging {
+                      color: #${colors.base05};
+                      background-color: #${colors.base0B};
+                  }
 
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+                  #battery.warning:not(.charging) {
+                      background-color: #${colors.base0A};
+                      color: black;
+                  }
 
-#tray {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
+                  #battery.critical:not(.charging) {
+                      background-color: #${colors.base08};
+                      color: #ffffff;
+                      animation-name: blink;
+                      animation-duration: 0.5s;
+                      animation-timing-function: linear;
+                      animation-iteration-count: infinite;
+                      animation-direction: alternate;
+                  }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
+                  #tray {
+                      padding-left: 16px;
+                      padding-right: 16px;
+                      border-radius: 10px;
+                      transition: none;
+                      color: #${colors.base05};
+                      background: #${colors.base00};
+                  }
+
+                  @keyframes blink {
+                      to {
+                          background-color: #ffffff;
+                          color: #000000;
+                      }
+                  }
       '';
   };
 }
