@@ -76,7 +76,7 @@ in
         # Spotify
         {
           monitor = "";
-          text = "cmd[update:1000] echo \"$(playerctl metadata --format ' {{artist}} - {{title}}')\"";
+          text = "cmd[update:1000] echo \"$($HOME/walnut-environment/home-manager/modules/wm/scripts/now_playing.sh)\"";
           color = textColor;
           font_size = 14;
           font_family = "JetBrains Mono";
