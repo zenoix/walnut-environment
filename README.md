@@ -29,6 +29,7 @@ As at 11/09/2024
 
 ![Hyprlock](./.github/assets/screenshots/hyprlock.png)
 
+![Rofi](./.github/assets/screenshots/rofi.png)
 
 
 ## Environment
