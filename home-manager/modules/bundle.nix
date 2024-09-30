@@ -2,6 +2,7 @@
   imports = [
     ./bat.nix
     ./dunst.nix
+    ./fastfetch.nix
     ./fzf.nix
     ./git.nix
     ./gtk.nix
