@@ -25,7 +25,7 @@
 
 ## Screenshots
 
-As at 11/09/2024
+As at 30/09/2024
 
 ![Hyprlock](./.github/assets/screenshots/hyprlock.png)
 
