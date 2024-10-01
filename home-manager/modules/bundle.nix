@@ -6,6 +6,7 @@
     ./fzf.nix
     ./git.nix
     ./gtk.nix
+    ./i18n.nix
     ./kitty.nix
     ./ripgrep.nix
     ./rofi.nix

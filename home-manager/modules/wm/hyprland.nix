@@ -15,6 +15,7 @@
         "XCURSOR_SIZE,24"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screenshots"
+        "GLFW_IM_MODULE,ibus"
       ];
 
       debug = {
@@ -125,6 +126,7 @@
         "hypridle"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "fcitx5"
       ];
 
       bind = [

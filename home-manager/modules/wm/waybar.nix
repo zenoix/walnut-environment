@@ -10,7 +10,7 @@
 
         modules-left = [
           "hyprland/workspaces"
-          "hyprland/language"
+          # "hyprland/language"
           # "keyboard-state"
           # "hyprland/submap"
         ];
@@ -43,6 +43,7 @@
 
         "hyprland/language" = {
           format-en = "US";
+          format-jp = "JP";
           min-length = 5;
           tooltip = false;
         };
