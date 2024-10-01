@@ -22,6 +22,7 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [
+      anki-bin
       chafa
       vesktop
     ];
