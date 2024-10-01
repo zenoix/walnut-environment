@@ -18,7 +18,7 @@
         separator = " ";
       };
       modules = [
-        # "break"
+        "break"
         # "break"
         # "break"
         # {
