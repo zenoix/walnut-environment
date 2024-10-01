@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -264,6 +264,8 @@
       fi
 
       autoload -Uz is-at-least
+
+      source ${pkgs.fzf-git-sh}/share/fzf-git-sh/fzf-git.sh
 
       function git_current_branch() {
           local ref

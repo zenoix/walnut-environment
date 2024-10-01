@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.fzf = {
     enable = true;
@@ -26,4 +27,6 @@
     ];
 
   };
+
+  home.packages = with pkgs; [ fzf-git-sh ];
 }
