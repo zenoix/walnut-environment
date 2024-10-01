@@ -156,6 +156,11 @@
             opacity: 0.2;
         }
 
+        tooltip {
+          border-radius: 8px;
+          border-width: 0px;
+        }
+
         #workspaces {
           margin-right: 8px;
           padding-left: 8px;
