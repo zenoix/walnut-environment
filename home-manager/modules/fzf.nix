@@ -22,9 +22,7 @@
       "--bind 'ctrl-p:toggle-preview'"
     ];
 
-    historyWidgetOptions = [
-      "--layout=reverse"
-    ];
+    historyWidgetOptions = [ "--layout=reverse" ];
 
   };
 
