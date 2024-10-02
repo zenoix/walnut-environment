@@ -22,7 +22,43 @@
           # "cpu"
           "backlight"
           "battery"
+          "group/power"
         ];
+
+        "group/power" = {
+          "orientation" = "inherit";
+          "drawer" = {
+            "transition-duration" = 500;
+            "children-class" = "not-power";
+            "transition-left-to-right" = false;
+          };
+          "modules" = [
+            "custom/power" # First element is the "group leader" and won't ever be hidden
+            "custom/quit"
+            "custom/lock"
+            "custom/reboot"
+          ];
+        };
+        "custom/quit" = {
+          "format" = "󰗼";
+          "tooltip" = false;
+          "on-click" = "hyprctl dispatch exit";
+        };
+        "custom/lock" = {
+          "format" = "󰍁";
+          "tooltip" = false;
+          "on-click" = "hyprlock";
+        };
+        "custom/reboot" = {
+          "format" = "󰜉";
+          "tooltip" = false;
+          "on-click" = "reboot";
+        };
+        "custom/power" = {
+          "format" = "";
+          "tooltip" = false;
+          "on-click" = "shutdown now";
+        };
 
         "hyprland/workspaces" = {
           "format" = "{icon}";
@@ -171,6 +207,34 @@
         tooltip {
           border-radius: 8px;
           border-width: 0px;
+        }
+
+        #power {
+          border-radius: 10px;
+          background: #${colors.base00};
+        }
+
+        #custom-power,
+        #custom-quit,
+        #custom-lock,
+        #custom-reboot
+        {
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 10px;
+          border-width: 0px;
+          transition: none;
+          background: #${colors.base00};
+        }
+
+        #custom-power {
+          color: #f5c2e7;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+
+        #custom-quit {
+          padding-left: 12px;
         }
 
         #workspaces {
@@ -345,6 +409,7 @@
                   }
 
                   #battery {
+                    margin-right: 8px;
                       padding-left: 16px;
                       padding-right: 16px;
                       border-radius: 10px;
