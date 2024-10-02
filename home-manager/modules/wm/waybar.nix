@@ -99,8 +99,20 @@
         "backlight" = {
           device = "intel_backlight";
           format = "{percent}% {icon}";
-          format-icons = [ "" ];
-          min-length = 7;
+          "format-icons" = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+          "on-scroll-up" = "brightnessctl set 1%+";
+          "on-scroll-down" = "brightnessctl set 1%-";
+          "min-length" = 6;
         };
 
         battery = {
