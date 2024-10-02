@@ -24,7 +24,7 @@
       };
 
       input = {
-        kb_layout = "us,jp";
+        kb_layout = "us";
         kb_variant = "";
         kb_options = "grp:alt_space_toggle";
 
