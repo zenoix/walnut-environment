@@ -10,13 +10,13 @@
 
         modules-left = [
           "hyprland/workspaces"
-          "hyprland/language"
+          # "hyprland/language"
+          "tray"
           # "keyboard-state"
           # "hyprland/submap"
         ];
         modules-center = [ "clock" ];
         modules-right = [
-          "tray"
           "pulseaudio"
           # "custom/mem"
           # "cpu"
