@@ -312,8 +312,11 @@
           padding-left: 10px;
           padding-right: 10px;
           border-radius: 10px;
-          margin-right: 8px;
           background: #${colors.base00};
+        }
+
+        #group1 {
+          margin-right: 8px;
         }
 
         #bluetooth {
