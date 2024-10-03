@@ -104,3 +104,5 @@ README header was modified from [Frost Pheonix's catppuccin config](https://gith
 Rofi was modified from [Sukhmancs' nixos config](https://github.com/sukhmancs/nixos-configs)
 
 Fastfetch was modified from [LierB's fastfetch presets](https://github.com/LierB/fastfetch)
+
+Some waybar components were taken from [Spelljinxer's dotfiles](https://github.com/Spelljinxer/dotfiles)
