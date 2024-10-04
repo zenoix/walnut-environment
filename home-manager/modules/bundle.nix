@@ -9,6 +9,7 @@
     ./gtk.nix
     ./i18n.nix
     ./kitty.nix
+    ./obs.nix
     ./ripgrep.nix
     ./rofi.nix
     ./spicetify.nix
