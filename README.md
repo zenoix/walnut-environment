@@ -30,6 +30,7 @@ As at 04/10/2024
 ![Desktop1](./.github/assets/screenshots/desktop1.png)
 
 ![Hyprlock](./.github/assets/screenshots/hyprlock.png)
+![Desktop2](./.github/assets/screenshots/desktop2.png)
 
 ![Rofi](./.github/assets/screenshots/rofi.png)
 
