@@ -1,6 +1,7 @@
 {
   imports = [
     ./bat.nix
+    ./cava.nix
     ./dunst.nix
     ./fastfetch.nix
     ./fzf.nix
