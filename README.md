@@ -25,7 +25,9 @@
 
 ## Screenshots
 
-As at 30/09/2024
+As at 04/10/2024
+
+![Desktop1](./.github/assets/screenshots/desktop1.png)
 
 ![Hyprlock](./.github/assets/screenshots/hyprlock.png)
 
