@@ -15,6 +15,7 @@
     ./spicetify.nix
     ./syncthing.nix
     ./tmux.nix
+    ./yazi.nix
     ./zathura.nix
     ./zoxide.nix
 
