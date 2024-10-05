@@ -16,6 +16,10 @@
     package = pkgs-unstable.neovim-unwrapped;
   };
 
+  programs.thunar.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Desktop apps
     firefox
@@ -24,7 +28,6 @@
     obs-studio
     rofi-wayland
     signal-desktop
-    xfce.thunar
     zathura
 
     # Coding stuff
