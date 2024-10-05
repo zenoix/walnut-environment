@@ -17,8 +17,8 @@
         "julia"
         "go"
       ];
-    };
 
-    # TODO: Missing settings in nix 24.05
+      highlight.enable = true;
+    };
   };
 }
