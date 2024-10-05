@@ -147,6 +147,7 @@
           format-connected = "󰂱";
           format-disabled = "󰂲";
           rotate = 0;
+          on-click = "blueman-manager";
           format-connected-battery = "{icon} {num_connections}";
           # "format-connected-battery" = "{icon} {device_alias}-{device_battery_percentage}%";
           format-icons = [
