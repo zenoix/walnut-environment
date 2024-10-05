@@ -24,6 +24,7 @@
     packages = with pkgs; [
       anki-bin
       chafa
+      obsidian
       vesktop
     ];
   };
