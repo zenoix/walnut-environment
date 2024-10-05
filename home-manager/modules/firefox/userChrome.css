@@ -19,6 +19,31 @@
   border-inline-start-width: 0px !important;
 }
 
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box {
+  background-color: rgba(30, 30, 46, 0.6) !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+}
+
+window,
+#nav-bar {
+  background-color: rgba(30, 30, 46, 0.6) !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: rgba(30, 30, 46, 0.6) !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+}
+
 /* End of what I added */
 
 /*
@@ -167,7 +192,6 @@
 }
 #nav-bar,
 #PersonalToolbar {
-  background-color: #0000 !important;
   background-image: none !important;
   box-shadow: none !important;
 }
