@@ -3,5 +3,6 @@
 
   stylix.targets = {
     waybar.enable = false;
+    spicetify.enable = false;
   };
 }
