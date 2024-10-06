@@ -28,6 +28,7 @@
     obs-studio
     rofi-wayland
     signal-desktop
+    vlc
     zathura
 
     # Coding stuff
