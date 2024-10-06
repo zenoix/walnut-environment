@@ -294,4 +294,3 @@ format = " vcsh [$symbol$repo]($style)"
 [zig]
 symbol = " "
 format = " [$symbol($version)]($style)"
-
