@@ -224,6 +224,7 @@ format = " [$symbol($version)]($style)"
 symbol = " "
 version_format = 'v${major}.${minor}'
 format = " [${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\))]($style)"
+python_binary = ["python3", "python", "python2"]
 
 [quarto]
 format = " [$symbol($version)]($style)"
