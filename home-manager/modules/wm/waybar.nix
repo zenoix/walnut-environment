@@ -31,6 +31,7 @@
             "bluetooth"
             "pulseaudio"
             "pulseaudio#microphone"
+            "idle_inhibitor"
           ];
         };
 
@@ -272,6 +273,17 @@
           format = "";
           tooltip = false;
           on-click = "shutdown now";
+        };
+
+        idle_inhibitor = {
+          format = "{icon}";
+          format-icons = {
+            activated = "󰛊";
+            deactivated = "󰾫";
+          };
+          on-click = "~/walnut-environment/home-manager/modules/wm/scripts/caffeine.sh";
+          tooltip-format-activated = "Caffeine mode // On";
+          tooltip-format-deactivated = "Caffeine mode // Off";
         };
       };
     };
