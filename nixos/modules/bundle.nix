@@ -6,6 +6,7 @@
     ./hyprland.nix
     ./locale.nix
     ./networking.nix
+    ./power.nix
     ./sound.nix
     ./stylix.nix
     ./swap.nix
