@@ -86,7 +86,14 @@
 
       {
         event = "FileType";
-        pattern = [ "nix" ];
+        pattern = [
+          "css"
+          "html"
+          "js"
+          "json"
+          "nix"
+          "sh"
+        ];
         group = "filetype_indents";
         desc = "Set indent to 2 for given filetypes";
         callback = {
