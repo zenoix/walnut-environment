@@ -29,27 +29,43 @@
         };
       }
 
+      # The two following autocmds are from u/shivamrajput958
       {
-        event = "InsertEnter";
+        event = [
+          "InsertEnter"
+          "BufLeave"
+          "FocusLost"
+          "CmdlineEnter"
+          "WinLeave"
+        ];
         group = "rel_number_toggle";
-        desc = "Turn relative line numbers off in insert mode";
         callback = {
           __raw = ''
             function()
-              vim.wo.relativenumber = false
+              if vim.o.nu then
+                vim.wo.relativenumber = false
+                vim.cmd("redraw")
+              end
             end
           '';
         };
       }
 
       {
-        event = "InsertLeave";
+        event = [
+          "InsertLeave"
+          "BufEnter"
+          "FocusGained"
+          "CmdlineLeave"
+          "WinEnter"
+        ];
         group = "rel_number_toggle";
-        desc = "Turn relative line numbers on when leaving insert mode";
         callback = {
           __raw = ''
             function()
-              vim.wo.relativenumber = true
+              if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
+                vim.wo.relativenumber = true
+              end
             end
           '';
         };
