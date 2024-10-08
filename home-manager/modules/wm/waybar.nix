@@ -278,8 +278,8 @@
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
-            activated = "󰛊";
-            deactivated = "󰾫";
+            activated = "󰖨";
+            deactivated = "󰤄";
           };
           on-click = "~/walnut-environment/home-manager/modules/wm/scripts/caffeine.sh";
           tooltip-format-activated = "Caffeine mode // On";
