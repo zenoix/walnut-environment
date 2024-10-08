@@ -13,6 +13,23 @@
 
     autoCmd = [
       {
+        event = [
+          "InsertEnter"
+          "InsertLeave"
+        ];
+        desc = "Disable Treesitter for large files";
+        callback = {
+          __raw = ''
+            function()
+              if vim.api.nvim_buf_line_count(0) > 10000 then
+                vim.cmd("TSToggle highlight")
+              end
+            end
+          '';
+        };
+      }
+
+      {
         event = "InsertEnter";
         group = "rel_number_toggle";
         desc = "Turn relative line numbers off in insert mode";
