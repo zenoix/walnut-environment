@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   services.dunst = {
     enable = true;
@@ -15,7 +20,8 @@
           gap_size = 10;
           height = 300;
           horizontal_padding = lib.mkForce 12;
-          icon_theme = "Pop,Adwaita,Papirus-Dark";
+          # icon_theme = "Pop,Adwaita,Papirus-Dark";
+          icon_path = "${pkgs.pop-icon-theme}/share/icons/Pop/24x24/actions:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/animations:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/apps:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/categories:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/devices:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/emblems:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/emotes:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/mimetypes:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/panel:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/places:${pkgs.pop-icon-theme}/share/icons/Pop/24x24/status";
           idle_threshold = 120;
           indicate_hidden = true;
           notification_limit = 5;
