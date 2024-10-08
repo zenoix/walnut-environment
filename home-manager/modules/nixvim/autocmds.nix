@@ -6,9 +6,9 @@
         clear = true;
       };
 
-      highlight_yank = {};
+      highlight_yank = { };
 
-      filetype_indents = {};
+      filetype_indents = { };
     };
 
     autoCmd = [
@@ -16,11 +16,11 @@
         event = "InsertEnter";
         group = "rel_number_toggle";
         desc = "Turn relative line numbers off in insert mode";
-        callback = { 
+        callback = {
           __raw = ''
             function()
-	          vim.wo.relativenumber = false
-	        end
+              vim.wo.relativenumber = false
+            end
           '';
         };
       }
@@ -29,11 +29,11 @@
         event = "InsertLeave";
         group = "rel_number_toggle";
         desc = "Turn relative line numbers on when leaving insert mode";
-        callback = { 
+        callback = {
           __raw = ''
             function()
-	          vim.wo.relativenumber = true
-	        end
+              vim.wo.relativenumber = true
+            end
           '';
         };
       }
@@ -42,7 +42,7 @@
         event = "TextYankPost";
         group = "highlight_yank";
         desc = "Highlight selection on yank";
-        callback = { 
+        callback = {
           __raw = ''
             function()
               vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
@@ -53,10 +53,10 @@
 
       {
         event = "FileType";
-        pattern = ["nix"];
+        pattern = [ "nix" ];
         group = "filetype_indents";
         desc = "Set indent to 2 for given filetypes";
-        callback = { 
+        callback = {
           __raw = ''
             function()
               vim.opt_local.shiftwidth = 2
