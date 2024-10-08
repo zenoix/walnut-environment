@@ -10,13 +10,13 @@
 
       listener = [
         {
-          timeout = 150; # 2.5min.
+          timeout = 180; # 3min.
           on-timeout = "brightnessctl -s set 10"; # set monitor backlight to minimum, avoid 0 on OLED monitor.
           on-resume = "brightnessctl -r"; # monitor backlight restore.
         }
 
         {
-          timeout = 180; # 3min
+          timeout = 300; # 5min
           on-timeout = "loginctl lock-session"; # lock screen when timeout has passed
         }
       ];
