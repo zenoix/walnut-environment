@@ -6,7 +6,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "9 18 -10 18";
+        margin = "8 10 -5 10";
 
         modules-left = [
           "hyprland/workspaces"
