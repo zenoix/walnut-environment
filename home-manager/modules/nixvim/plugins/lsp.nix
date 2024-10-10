@@ -52,7 +52,7 @@
           package = pkgs-unstable.bash-language-server;
         };
         dockerls.enable = true;
-        golangci-lint-ls = {
+        golangci_lint_ls = {
           enable = true;
           filetypes = [
             "go"
@@ -63,14 +63,14 @@
         };
         gopls.enable = true;
         marksman.enable = true;
-        nil-ls.enable = true;
+        nil_ls.enable = true;
         pylsp.enable = true;
         ruff = {
           enable = true;
           package = pkgs-unstable.ruff;
         };
         taplo.enable = true;
-        typos-lsp = {
+        typos_lsp = {
           enable = true;
           extraOptions.init_options.diagnosticSeverity = "Hint";
         };
