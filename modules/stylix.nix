@@ -1,9 +1,16 @@
+{ lib, config, ... }:
 {
-  imports = [ ../themes/stylix.nix ];
+  options = {
+    stylix.enable = lib.mkEnableOption "enable stylix";
+  };
 
-  stylix = {
-    targets = {
-      grub.enable = false;
+  config = lib.mkIf config.stylix.enable {
+    imports = [ ../themes/stylix.nix ];
+
+    stylix = {
+      targets = {
+        grub.enable = false;
+      };
     };
   };
 }
