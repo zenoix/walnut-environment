@@ -1,13 +1,20 @@
+{ lib, config, ... }:
 {
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    settings = {
-      General = {
-        Enable = "Source,Sink,Media,Socket";
-      };
-    };
+  options = {
+    bluetooth.enable = lib.mkEnableOption "enable bluetooth and blueman";
   };
 
-  services.blueman.enable = true;
+  config = lib.mkIf config.bluetooth.enable {
+    hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+          Enable = "Source,Sink,Media,Socket";
+        };
+      };
+    };
+
+    services.blueman.enable = true;
+  };
 }
