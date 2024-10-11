@@ -62,7 +62,7 @@
           inherit inputs system personal;
         };
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/walnut-nixos/configuration.nix
           stylix.nixosModules.stylix
         ];
       };
