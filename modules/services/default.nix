@@ -1,0 +1,4 @@
+[
+  ./networking.nix
+  ./tlp.nix
+]

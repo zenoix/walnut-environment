@@ -1,0 +1,4 @@
+[
+  ./mullvad.nix
+  ./stylix.nix
+]
