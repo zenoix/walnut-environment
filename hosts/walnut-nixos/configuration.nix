@@ -12,6 +12,7 @@
   ];
 
   walnut = {
+    anki.enable = true;
     bluetooth.enable = true;
     brightnessctl.enable = true;
     coding-stuff.enable = true;
@@ -37,8 +38,10 @@
     stylix.enable = true;
     swap.enable = true;
     thunar.enable = true;
+    obsidian.enable = true;
     tlp.enable = true;
     users.enable = true;
+    vesktop.enable = true;
     vlc.enable = true;
     xdg-portal.enable = true;
     xkb.enable = true;

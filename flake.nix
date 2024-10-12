@@ -77,7 +77,8 @@
         };
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
-          ./home-manager/home.nix
+          ./hosts/walnut-nixos/home.nix
+          ./home-manager-modules
           inputs.stylix.homeManagerModules.stylix
           inputs.nixvim.homeManagerModules.nixvim
         ];
