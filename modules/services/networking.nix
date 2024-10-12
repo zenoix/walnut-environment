@@ -2,10 +2,10 @@
 {
 
   options = {
-    networking.enable = lib.mkEnableOption "enable networking";
+    walnut.networking.enable = lib.mkEnableOption "enable networking";
   };
 
-  config = lib.mkIf config.networking.enable {
+  config = lib.mkIf config.walnut.networking.enable {
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Configure network proxy if necessary

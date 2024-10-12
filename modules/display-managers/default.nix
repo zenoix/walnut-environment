@@ -1,1 +1,1 @@
-[ ./sddm.nix ]
+{ imports = [ ./sddm.nix ]; }

@@ -1,6 +1,8 @@
-[
-  ./bluetooth.nix
-  ./brightnessctl.nix
-  ./sound.nix
-  ./swap.nix
-]
+{
+  imports = [
+    ./bluetooth.nix
+    ./brightnessctl.nix
+    ./sound.nix
+    ./swap.nix
+  ];
+}

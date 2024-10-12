@@ -1,4 +1,6 @@
-[
-  ./networking.nix
-  ./tlp.nix
-]
+{
+  imports = [
+    ./networking.nix
+    ./tlp.nix
+  ];
+}

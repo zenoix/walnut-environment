@@ -7,10 +7,10 @@
 {
 
   options = {
-    mullvad.enable = lib.mkEnableOption "enable mullvad";
+    walnut.mullvad.enable = lib.mkEnableOption "enable mullvad";
   };
 
-  config = lib.mkIf config.mullvad.enable {
+  config = lib.mkIf config.walnut.mullvad.enable {
     services.mullvad-vpn = {
       enable = true;
       package = pkgs.mullvad-vpn;

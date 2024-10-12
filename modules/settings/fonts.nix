@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    fonts.enable = lib.mkEnableOption "enable fonts";
+    walnut.fonts.enable = lib.mkEnableOption "enable fonts";
   };
 
-  config = lib.mkIf config.fonts.enable {
+  config = lib.mkIf config.walnut.fonts.enable {
     fonts.packages = with pkgs; [
       jetbrains-mono
       noto-fonts

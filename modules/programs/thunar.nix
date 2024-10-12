@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    thunar.enable = lib.mkEnableOption "enable thunar";
+    walnut.thunar.enable = lib.mkEnableOption "enable thunar";
   };
 
-  config = lib.mkIf config.thunar.enable {
+  config = lib.mkIf config.walnut.thunar.enable {
     programs.thunar.enable = true;
     services.gvfs.enable = true;
     services.tumbler.enable = true;
