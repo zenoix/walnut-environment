@@ -67,6 +67,18 @@
         ];
       };
 
+      # nixos - system hostname
+      nixosConfigurations.work-wsl = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs system personal;
+        };
+        modules = [ ./hosts/work-wsl/configuration.nix ];
+      };
+
       homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
@@ -78,6 +90,24 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./hosts/walnut-nixos/home.nix
+          ./home-manager-modules
+          inputs.stylix.homeManagerModules.stylix
+          inputs.nixvim.homeManagerModules.nixvim
+        ];
+      };
+
+      # TODO: Set username as work wsl username
+      homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
+        extraSpecialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs personal;
+        };
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [
+          ./hosts/work-wsl/home.nix
           ./home-manager-modules
           inputs.stylix.homeManagerModules.stylix
           inputs.nixvim.homeManagerModules.nixvim
