@@ -9,14 +9,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # Desktop apps
-    libreoffice-qt6-fresh
-    signal-desktop
-    vlc
-
-    # CLI utils
-    cocogitto
-
     # Other
     pop-icon-theme
   ];
