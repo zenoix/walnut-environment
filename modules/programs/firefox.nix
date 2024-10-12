@@ -6,8 +6,10 @@
 }:
 {
   options = {
-    firefox.enable = lib.mkEnableOption "enable firefox";
+    walnut.firefox.enable = lib.mkEnableOption "enable firefox";
   };
 
-  config = lib.mkIf config.firefox.enable { environment.systemPackages = with pkgs; [ firefox ]; };
+  config = lib.mkIf config.walnut.firefox.enable {
+    environment.systemPackages = with pkgs; [ firefox ];
+  };
 }

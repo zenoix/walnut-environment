@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    bluetooth.enable = lib.mkEnableOption "enable bluetooth and blueman";
+    walnut.bluetooth.enable = lib.mkEnableOption "enable bluetooth and blueman";
   };
 
-  config = lib.mkIf config.bluetooth.enable {
+  config = lib.mkIf config.walnut.bluetooth.enable {
     hardware.bluetooth = {
       enable = true;
       powerOnBoot = true;

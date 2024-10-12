@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    sound.enable = lib.mkEnableOption "enable sound";
+    walnut.sound.enable = lib.mkEnableOption "enable sound";
   };
 
-  config = lib.mkIf config.sound.enable {
+  config = lib.mkIf config.walnut.sound.enable {
     sound.enable = true;
 
     security.rtkit.enable = true;

@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    swap.enable = lib.mkEnableOption "enable swap";
+    walnut.swap.enable = lib.mkEnableOption "enable swap";
   };
 
-  config = lib.mkIf config.swap.enable {
+  config = lib.mkIf config.walnut.swap.enable {
     swapDevices = [
       {
         device = "/swapfile";

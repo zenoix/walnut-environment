@@ -1,4 +1,6 @@
-[
-  ./hyprland.nix
-  ./hyprland-screenshot.nix
-]
+{
+  imports = [
+    ./hyprland.nix
+    ./hyprland-screenshot.nix
+  ];
+}

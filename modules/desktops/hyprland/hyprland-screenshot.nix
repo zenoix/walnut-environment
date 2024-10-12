@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    hyprland.screenshot.enable = lib.mkEnableOption "enable screenshotting in hyprland";
+    walnut.hyprland.screenshot.enable = lib.mkEnableOption "enable screenshotting in hyprland";
   };
 
-  config = lib.mkIf config.hyprland.screenshot.enable {
+  config = lib.mkIf config.walnut.hyprland.screenshot.enable {
 
     environment.systemPackages = with pkgs; [
       grim

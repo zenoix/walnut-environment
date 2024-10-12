@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  img_path = ../assets/tokyo_train.jpg;
+  img_path = ../../assets/tokyo_train.jpg;
 in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";

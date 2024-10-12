@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    tlp.enable = lib.mkEnableOption "enable tlp";
+    walnut.tlp.enable = lib.mkEnableOption "enable tlp";
   };
 
-  config = lib.mkIf config.tlp.enable {
+  config = lib.mkIf config.walnut.tlp.enable {
     services.tlp = {
       enable = true;
       settings = {

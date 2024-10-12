@@ -6,9 +6,9 @@
 }:
 {
   options = {
-    sddm.enable = lib.mkEnableOption "enable sddm";
+    walnut.sddm.enable = lib.mkEnableOption "enable sddm";
   };
-  config = lib.mkIf config.sddm.enable {
+  config = lib.mkIf config.walnut.sddm.enable {
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;

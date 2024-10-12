@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    brightnessctl.enable = lib.mkEnableOption "enable brightnessctl";
+    walnut.brightnessctl.enable = lib.mkEnableOption "enable brightnessctl";
   };
 
-  config = lib.mkIf config.brightnessctl.enable {
+  config = lib.mkIf config.walnut.brightnessctl.enable {
     environment.systemPackages = with pkgs; [ brightnessctl ];
   };
 }

@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    grub.enable = lib.mkEnableOption "enable grub";
+    walnut.grub.enable = lib.mkEnableOption "enable grub";
   };
 
-  config = lib.mkIf config.grub.enable {
+  config = lib.mkIf config.walnut.grub.enable {
     boot.loader.systemd-boot.enable = false;
     boot.loader.grub = {
       enable = true;

@@ -1,1 +1,1 @@
-[ ./grub.nix ]
+{ imports = [ ./grub.nix ]; }

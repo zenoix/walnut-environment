@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    neovim.enable = lib.mkEnableOption "enable neovim";
+    walnut.neovim.enable = lib.mkEnableOption "enable neovim";
   };
 
-  config = lib.mkIf config.neovim.enable {
+  config = lib.mkIf config.walnut.neovim.enable {
     programs.neovim = {
       enable = true;
       defaultEditor = true;

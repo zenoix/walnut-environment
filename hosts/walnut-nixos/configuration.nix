@@ -8,9 +8,44 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./packages.nix
-    ./../../modules/bundle.nix
+    ./../../modules/bootloaders
+    ./../../modules/desktops
+    ./../../modules/display-managers
+    ./../../modules/hardware
+    ./../../modules/programs
+    ./../../modules/services
+    ./../../modules/settings
   ];
+
+  walnut = {
+    bluetooth.enable = true;
+    brightnessctl.enable = true;
+    coding-stuff.enable = true;
+    firefox.enable = true;
+    fonts.enable = true;
+    grub.enable = true;
+    home-manager.enable = true;
+    hyprland = {
+      enable = true;
+      screenshot.enable = true;
+    };
+    kitty.enable = true;
+    locale.enable = true;
+    mullvad.enable = true;
+    neovim.enable = true;
+    networking.enable = true;
+    qt-libs.enable = true;
+    sddm.enable = true;
+    shell-config.enable = true;
+    sound.enable = true;
+    stylix.enable = true;
+    swap.enable = true;
+    thunar.enable = true;
+    tlp.enable = true;
+    users.enable = true;
+    xdg-portal.enable = true;
+    xkb.enable = true;
+  };
 
   # Enable flakes
   nix.settings.experimental-features = [
