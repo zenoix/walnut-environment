@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   options = {
     sound.enable = lib.mkEnableOption "enable sound";
@@ -19,5 +24,12 @@
       jack.enable = true;
       wireplumber.enable = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      pamixer
+      pavucontrol
+      pulseaudio
+      playerctl
+    ];
   };
 }
