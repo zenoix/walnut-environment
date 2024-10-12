@@ -8,13 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./../../modules/bootloaders
-    ./../../modules/desktops
-    ./../../modules/display-managers
-    ./../../modules/hardware
-    ./../../modules/programs
-    ./../../modules/services
-    ./../../modules/settings
+    ./../../modules
   ];
 
   walnut = {
