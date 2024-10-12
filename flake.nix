@@ -53,7 +53,7 @@
     in
     {
       # nixos - system hostname
-      nixosConfigurations.${personal.host} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.walnut-nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
             inherit system;
