@@ -24,6 +24,7 @@
       screenshot.enable = true;
     };
     kitty.enable = true;
+    libreoffice.enable = true;
     locale.enable = true;
     mullvad.enable = true;
     neovim.enable = true;
@@ -31,12 +32,14 @@
     qt-libs.enable = true;
     sddm.enable = true;
     shell-config.enable = true;
+    signal.enable = true;
     sound.enable = true;
     stylix.enable = true;
     swap.enable = true;
     thunar.enable = true;
     tlp.enable = true;
     users.enable = true;
+    vlc.enable = true;
     xdg-portal.enable = true;
     xkb.enable = true;
   };
