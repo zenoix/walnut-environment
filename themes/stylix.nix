@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [ base16-schemes ];
+
   stylix = {
     enable = true;
     polarity = "dark";

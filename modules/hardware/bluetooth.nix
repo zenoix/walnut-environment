@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   options = {
     bluetooth.enable = lib.mkEnableOption "enable bluetooth and blueman";
@@ -16,5 +21,10 @@
     };
 
     services.blueman.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      bluez
+      bluez-tools
+    ];
   };
 }
