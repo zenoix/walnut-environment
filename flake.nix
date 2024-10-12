@@ -90,7 +90,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./hosts/walnut-nixos/home.nix
-          ./home-manager-modules
+          ./homeManagerModules
           inputs.stylix.homeManagerModules.stylix
           inputs.nixvim.homeManagerModules.nixvim
         ];
@@ -108,7 +108,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./hosts/work-wsl/home.nix
-          ./home-manager-modules
+          ./homeManagerModules
           inputs.stylix.homeManagerModules.stylix
           inputs.nixvim.homeManagerModules.nixvim
         ];
