@@ -16,6 +16,7 @@
     bluetooth.enable = true;
     brightnessctl.enable = true;
     coding-stuff.enable = true;
+    docker.enable = true;
     firefox.enable = true;
     fonts.enable = true;
     grub.enable = true;

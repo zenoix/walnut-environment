@@ -15,6 +15,7 @@
       isNormalUser = true;
       description = "${personal.user}";
       extraGroups = [
+        "docker"
         "networkmanager"
         "wheel"
       ];
