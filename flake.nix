@@ -50,6 +50,10 @@
         gitUser = "zenoix";
         gitEmail = "41812358+zenoix@users.noreply.github.com";
       };
+
+      work = {
+        user = "jeffwang2";
+      };
     in
     {
       # nixos - system hostname
@@ -102,7 +106,7 @@
             inherit system;
             config.allowUnfree = true;
           };
-          inherit inputs personal;
+          inherit inputs work;
         };
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
