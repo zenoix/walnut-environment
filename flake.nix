@@ -96,8 +96,7 @@
         ];
       };
 
-      # TODO: Set username as work wsl username
-      homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.jeffwang2 = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
             inherit system;
