@@ -302,6 +302,7 @@
             border: none;
             border-radius: 0;
             /* `otf-font-awesome` is required to be installed for icons */
+            font-size: 14px;
             font-family: JetBrains Mono;
             font-weight: bold;
             min-height: 20px;
@@ -337,8 +338,13 @@
             margin-right: 8px;
           }
 
-          #bluetooth {
-            padding-right: 4px;
+          #network,
+          #bluetooth,
+          #pulseaudio,
+          #pulseaudio#microphone,
+          #idle_inhibitor {
+            padding-left: 5px;
+            padding-right: 5px;
           }
 
           #custom-power,
@@ -363,11 +369,17 @@
 
           #group2 {
             background: #${colors.base00};
-            padding-left: 10px;
-            padding-right: 6px;
+            padding-left: 16px;
+            padding-right: 16px;
             border-radius: 10px;
             margin-right: 8px;
             transition: none;
+          }
+
+          #battery,
+          #backlight {
+            padding-left: 5px;
+            padding-right: 5px;
           }
 
           #backlight {
@@ -462,24 +474,6 @@
             background: #383c4a;
           }
 
-          #custom-pacman {
-            padding-left: 16px;
-            padding-right: 8px;
-            border-radius: 10px 0px 0px 10px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-          }
-
-          #custom-mail {
-            margin-right: 8px;
-            padding-right: 16px;
-            border-radius: 0px 10px 10px 0px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-          }
-
           #submap {
             padding-left: 16px;
             padding-right: 16px;
@@ -496,48 +490,6 @@
             transition: none;
             color: #${colors.base05};
             background: #${colors.base00};
-          }
-
-          #custom-weather {
-            padding-right: 16px;
-            border-radius: 0px 10px 10px 0px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-          }
-
-          #custom-mem {
-            margin-right: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-          }
-
-          #cpu {
-            margin-right: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-          }
-
-          #temperature {
-            margin-right: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-          }
-
-          #temperature.critical {
-            background-color: #eb4d4b;
           }
 
           #tray {
