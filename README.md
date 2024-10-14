@@ -60,6 +60,8 @@ As at 04/10/2024
 | Window Manager | Hyprland |
 
 ## Layout
+> [!WARNING]
+> The layout of my configuration has changed in the commit starting at [24e45ab](https://github.com/zenoix/walnut-environment/commit/24e45abb43689ac49977082d65bf67f25c23622b). I am currently in the process of updating this section.
 ```
 walnut-environment
 ├── assets              # Assets used in configurations
@@ -71,6 +73,10 @@ walnut-environment
 ```
 
 ## To set it up:
+
+> [!WARNING]
+> The setup instructures have are now outdated due to the structural changes to my configuration in the commit starting at [24e45ab](https://github.com/zenoix/walnut-environment/commit/24e45abb43689ac49977082d65bf67f25c23622b). I am currently in the process of updating these instructions.
+
 First clone and place the directory in the right place
 ```sh
 git clone https://github.com/zenoix/walnut-environment
