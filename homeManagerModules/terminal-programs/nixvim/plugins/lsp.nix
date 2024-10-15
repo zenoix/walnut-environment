@@ -52,6 +52,17 @@
         basedpyright = {
           enable = true;
           package = pkgs-unstable.basedpyright;
+          settings = {
+            basedpyright = {
+              analysis = {
+                diagnosticSeverityOverrides = {
+                  reportSelfClsParameterName = false;
+                  reportMissingParameterType = false;
+                  reportUnknownParameterType = false;
+                };
+              };
+            };
+          };
         };
         bashls = {
           enable = true;
