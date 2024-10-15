@@ -12,10 +12,7 @@
   config = lib.mkIf config.walnut.coding-stuff.enable {
     nixpkgs.config = {
       allowUnfree = true;
-      permittedInsecurePackages = [
-        "python-2.7.18.8"
-        "electron-25.9.0"
-      ];
+      permittedInsecurePackages = [ "electron-25.9.0" ];
     };
 
     environment.systemPackages = with pkgs; [
@@ -25,8 +22,7 @@
       gnumake
       go
       nodejs
-      python
-      (python3.withPackages (ps: with ps; [ requests ]))
+      (python312.withPackages (ps: with ps; [ requests ]))
     ];
   };
 }
