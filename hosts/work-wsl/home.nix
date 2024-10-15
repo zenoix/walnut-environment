@@ -30,6 +30,7 @@
       git
       gnumake
       go
+      home-manager
       htop
       killall
       nodejs
