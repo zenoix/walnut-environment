@@ -11,10 +11,7 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = [
-        "python-2.7.18.8"
-        "electron-25.9.0"
-      ];
+      permittedInsecurePackages = [ "electron-25.9.0" ];
     };
   };
 
@@ -38,7 +35,7 @@
       unzip
       wget
       zip
-      (python3.withPackages (ps: with ps; [ requests ]))
+      (python312.withPackages (ps: with ps; [ requests ]))
 
       jetbrains-mono
       noto-fonts
