@@ -14,7 +14,10 @@
   programs.nixvim.plugins = {
     lsp-format.enable = true;
 
-    lsp-lines.enable = true;
+    lsp-lines = {
+      enable = true;
+      package = pkgs-unstable.vimPlugins.lsp_lines-nvim;
+    };
 
     lsp = {
       enable = true;
