@@ -29,7 +29,6 @@
         options = {
           navigate = true;
           side-by-side = true;
-          features = "rosepine";
         };
       };
     };
