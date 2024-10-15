@@ -1,4 +1,4 @@
-target-version = "py310"
+target-version = "py312"
 exclude = [
     ".bzr",
     ".direnv",
@@ -33,65 +33,7 @@ line-length = 88
 
 
 [lint]
-select = [
-    "E",      # pycodestyle
-    "F",      # Pyflakes
-    "UP",     # pyupgrade
-    "B",      # flake8-bugbear
-    "SIM",    # flake8-simplify
-    "I",      # isort
-    "W",      # pycodestyle warning
-    "Q",      # flake8-quotes
-    "N",      # pep8-naming
-    "C90",    # mccabe
-    "ANN",    # flake8-annotations
-    "ASYNC",  # flake8-async
-    "S",      # flake8-bandit
-    "BLE",    # flake8-blind-except
-    "FBT",    # flake8-boolean-trap
-    "A",      # flake8-builtins
-    "COM819", # prohibited-trailing-comma
-    "C4",     # flake8-comprehensions
-    "DTZ",    # flake8-datetimez
-    "EM",     # flake8-errmsg
-    "FA",     # flake8-future-annotations
-    "ISC",    # flake8-implicit-str-concat
-    "ICN",    # flake8-import-conventions
-    "LOG",    # flake8-logging
-    "INP",    # flake8-no-pep420
-    "PIE",    # flake8-pie
-    "T20",    # flake8-print
-    "PT",     # flake8-pytest-style
-    "RET",    # flake8-return
-    "SLF",    # flake8-self
-    "SLOT",   # flake8-slots
-    "TCH",    # flake8-type-checking
-    "ARG",    # flake8-unused-arguments
-    "PTH",    # flake8-use-pathlib
-    "TD",     # flake8-todos
-    "PD",     # pandas-vet
-    "PL",     # pylint
-    "FLY",    # flynt
-    "NPY",    # NumPy-specific-rules
-    "PERF",   # Perflint
-    "RUF",    # Ruff-specific-rules
-
-    # pydocstyle
-    "D201", # no-blank-line-before-function
-    "D204", # one-blank-line-after-class
-    "D205", # blank-line-after-summary
-    "D209", # new-line-after-last-paragraph
-    "D210", # surrounding-whitespace
-    "D211", # blank-line-before-class
-    "D301", # escape-sequence-in-docstring
-    "D400", # ends-in-period
-    "D401", # non-imperative-mood
-    "D403", # first-line-capitalized
-    "D404", # docstring-starts-with-this
-    "D419", # empty-docstring
-
-
-]
+select = ["ALL"]
 
 ignore = [
     "TD003",  # missing-todo-link
