@@ -2,7 +2,10 @@
 {
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
   nixpkgs = {
@@ -19,7 +22,7 @@
     username = "${work.user}";
     homeDirectory = "/home/${work.user}";
     stateVersion = "24.05";
-    
+
     packages = with pkgs; [
       cocogitto
       fd
@@ -50,7 +53,6 @@
   };
 
   fonts.fontconfig.enable = true;
-
 
   walnut-home = {
     bat.enable = true;
