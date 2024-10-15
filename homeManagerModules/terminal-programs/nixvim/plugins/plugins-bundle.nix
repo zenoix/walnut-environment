@@ -10,6 +10,7 @@
     ./gitgutter.nix
     ./illuminate.nix
     ./indent-blankline.nix
+    ./iron.nix
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
