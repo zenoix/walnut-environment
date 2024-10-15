@@ -17,6 +17,9 @@
     lsp-lines = {
       enable = true;
       package = pkgs-unstable.vimPlugins.lsp_lines-nvim;
+
+      # NOTE: Currently doesn't work with ruff
+      # luaConfig.post = "vim.diagnostic.config({ virtual_lines = { only_current_line = true } })";
     };
 
     lsp = {
