@@ -81,7 +81,6 @@
         gopls.enable = true;
         marksman.enable = true;
         nil_ls.enable = true;
-        pylsp.enable = true;
         ruff = {
           enable = true;
           package = pkgs-unstable.ruff;
