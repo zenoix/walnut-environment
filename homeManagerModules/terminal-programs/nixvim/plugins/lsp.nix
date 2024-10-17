@@ -59,6 +59,7 @@
                   reportSelfClsParameterName = false;
                   reportMissingParameterType = false;
                   reportUnknownParameterType = false;
+                  reportUnusedVariable = false;
                 };
               };
             };
