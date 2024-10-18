@@ -20,6 +20,7 @@
     ./nvim-ts-context-commentstring.nix
     ./oil.nix
     ./render-markdown.nix
+    ./screenkey.nix
     ./telescope.nix
     ./tmux-navigator.nix
     ./todo-comments.nix
