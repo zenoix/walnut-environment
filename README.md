@@ -60,16 +60,21 @@ As at 04/10/2024
 | Window Manager | Hyprland |
 
 ## Layout
-> [!WARNING]
-> The layout of my configuration has changed in the commit starting at [24e45ab](https://github.com/zenoix/walnut-environment/commit/24e45abb43689ac49977082d65bf67f25c23622b). I am currently in the process of updating this section.
+
 ```
 walnut-environment
-├── assets              # Assets used in configurations
-├── home-manager        # User specific configurations
-├── nixos               # System configurations
-├── themes              # Shared stylix configurations (system and user)
-├── flake.nix           # Flake (main entry point)
-└── flake.lock          # Flake lock file
+├── assets                  # Assets used in configurations
+├── homeManagerModules      # Home manager modules
+│   ├── ...
+│   └── README.md           # Readme explaining home manager modules layout
+├── hosts                   # Different hosts and their configurations
+│   ├── walnut-nixos
+│   └── work-wsl
+├── modules                 # System modules
+│   ├── ...
+│   └── README.md           # Readme explaining modules layout
+├── flake.nix               # Flake (main entry point)
+└── flake.lock              # Flake lock file
 ```
 
 ## To set it up:
