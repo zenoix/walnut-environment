@@ -1,7 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
-    extraPlugins = [
-      pkgs.vimPlugins.nvim-ts-context-commentstring
-    ];
+    extraPlugins = [ pkgs.vimPlugins.nvim-ts-context-commentstring ];
   };
 }
