@@ -73,8 +73,8 @@
       "<leader>pg" = {
         action = "live_grep";
       };
-      "<leader>fg" = {
-        action = "git_files";
+      "<leader>pk" = {
+        action = "keymaps";
       };
     };
   };
