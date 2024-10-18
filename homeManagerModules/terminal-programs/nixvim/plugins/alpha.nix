@@ -77,7 +77,7 @@
             (mkButton "n" "<CMD>enew<CR>" "  New file" "string")
             (mkButton "f" "<CMD>lua require('telescope.builtin').find_files()<CR>" "  Find File" "String")
             (mkButton "t" "<CMD>lua require('telescope.builtin').live_grep()<CR>" "󰊄  Find Text" "String")
-            (mkButton "r" "<CMD>lua require('telescope.builtin').old_files()<CR>" "  Recent Files" "String")
+            (mkButton "r" "<CMD>lua require('telescope.builtin').oldfiles()<CR>" "  Recent Files" "String")
             (mkButton "q" "<CMD>q<CR>" "󰅙  Quit Neovim" "String")
           ];
       }
