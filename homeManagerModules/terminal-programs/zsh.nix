@@ -240,6 +240,7 @@
           mkdir = "mkdir -p";
           python = "python3";
           type = "type -a";
+          wal = "cd ${flakeDir}";
           which-command = "whence";
         };
 
