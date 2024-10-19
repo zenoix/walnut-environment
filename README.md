@@ -177,6 +177,14 @@ home-manager --extra-experimental-features "nix-command flakes" switch --flake ~
 
 This command is aliased in my home manager configuration to `hms` which makes future rebuilding easier. 
 
+### Setting Up New Hosts
+
+TODO
+
+## Configuration
+
+TODO
+
 ## Credits:
 
 Wallpapers are from reddit:
