@@ -1,4 +1,4 @@
-{ pkgs, work, ... }:
+{ pkgs, wsl, ... }:
 {
   nix = {
     package = pkgs.nix;
@@ -16,8 +16,8 @@
   };
 
   home = {
-    username = "${work.user}";
-    homeDirectory = "/home/${work.user}";
+    username = "${wsl.user}";
+    homeDirectory = "/home/${wsl.user}";
     stateVersion = "24.05";
 
     packages = with pkgs; [

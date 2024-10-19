@@ -50,7 +50,7 @@
         gitEmail = "41812358+zenoix@users.noreply.github.com";
       };
 
-      work = {
+      wsl = {
         user = "jeffwang2";
       };
     in
@@ -93,11 +93,11 @@
             inherit system;
             config.allowUnfree = true;
           };
-          inherit inputs work;
+          inherit inputs wsl;
         };
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
-          ./hosts/work-wsl/home.nix
+          ./hosts/wsl/home.nix
           ./homeManagerModules
           inputs.stylix.homeManagerModules.stylix
           inputs.nixvim.homeManagerModules.nixvim
