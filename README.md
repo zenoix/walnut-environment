@@ -77,10 +77,7 @@ walnut-environment
 └── flake.lock              # Flake lock file
 ```
 
-## To set it up:
-
-> [!WARNING]
-> The setup instructures have are now outdated due to the structural changes to my configuration in the commit starting at [24e45ab](https://github.com/zenoix/walnut-environment/commit/24e45abb43689ac49977082d65bf67f25c23622b). I am currently in the process of updating these instructions.
+## Setup
 
 First clone and place the directory in the right place
 ```sh
@@ -88,12 +85,41 @@ git clone https://github.com/zenoix/walnut-environment
 mv walnut-environment $HOME # Config should be placed in ~/
 cd $HOME/walnut-environment
 ```
-Then replace the hardware configuration file
-```sh
-rm nixos/hardware-configuration.nix
-cp /etc/nixos/hardware-configuration.nix nixos/hardware-configuration.nix
+
+You'll want to then edit `flake.nix`'s  `personal` attribute set to your own information so that it has your username, hostname, timezone, local, city, and git information. For example:
+
+```nix
+let
+  system = "x86_64-linux";
+
+  personal = {
+    user = "bob";
+    host = "mycomputer";
+    timeZone = "America/New_York";
+    defaultLocale = "en_US.UTF-8";
+    city = "New York";
+
+    # Used for gitconfig
+    gitUser = "gituser1234";
+    gitEmail = "gituser1234@gmail.com";
+  };
+
+  ...
+in
+{
+  ...
 ```
-Next, you'll want to change the values in the `personal` attribute set in `flake.nix`.
+
+The remaining steps depend on if you are using NixOS, WSL, or both. At the end of the setup section, there are instructions for creating and adding more hosts.
+
+### NixOS Setup
+
+If you're using NixOS, you'll want to replace the hardware configuration file in the `hosts/walnut-nixos` directory:
+
+```sh
+rm hosts/walnut-nixos/hardware-configuration.nix
+cp /etc/nixos/hardware-configuration.nix hosts/wanut-nixos/hardware-configuration.nix
+```
 
 Lastly, to rebuild the system, use 
 ```sh
