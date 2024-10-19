@@ -70,18 +70,6 @@
         ];
       };
 
-      # nixos - system hostname
-      nixosConfigurations.work-wsl = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          pkgs-unstable = import nixpkgs-unstable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          inherit inputs system personal;
-        };
-        modules = [ ./hosts/work-wsl/configuration.nix ];
-      };
-
       homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
