@@ -132,6 +132,51 @@ home-manager switch --flake ~/walnut-environment
 
 These two switch commands are aliased in my home manager configuration to `rb` and `hms` respectively which makes future rebuilding easier. 
 
+### WSL Setup
+
+First, start with installing Nix (the package manager) onto your WSL distribution by following the instructions on the [NixOS website](https://nixos.org/download/#nix-install-windows).
+
+> [!TIP]
+> In my experience, Nix and home manager only work when **multi-user** installation is used.
+
+Then follow the [home manager installation instructions](https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone) for standalone installation.
+
+> [!IMPORTANT]
+> Do not close or restart your terminal as home manager will not be permanently installed yet at this point.
+
+Next, in `flake.nix`, you'll want to change the `wsl.user` value to whatever your WSL username is. Make sure to also edit the `personal` attribute set to your own information (if you haven't already). For example:
+
+```nix
+let
+  system = "x86_64-linux";
+
+  personal = {
+    user = "i_am_a_wsl_user"; # This isn't used by WSL-only config
+    host = "mywsl"; # This isn't used by WSL-only config
+    timeZone = "America/New_York";
+    defaultLocale = "en_US.UTF-8";
+    city = "New York";
+
+    # Used for gitconfig
+    gitUser = "gituser1234";
+    gitEmail = "gituser1234@gmail.com";
+  };
+
+  wsl = {
+    user = "i_am_a_wsl_user";
+  };
+in
+{
+  ...
+```
+
+Lastly, run the following command to get everything set up (including permanently having home manager installed):
+```sh
+home-manager --extra-experimental-features "nix-command flakes" switch --flake ~/walnut-environment
+```
+
+This command is aliased in my home manager configuration to `hms` which makes future rebuilding easier. 
+
 ## Credits:
 
 Wallpapers are from reddit:
