@@ -39,6 +39,7 @@
     stylix.enable = true;
     swap.enable = true;
     thunar.enable = true;
+    tor-browser.enable = true;
     obsidian.enable = true;
     tlp.enable = true;
     users.enable = true;

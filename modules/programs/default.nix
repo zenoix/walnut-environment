@@ -13,6 +13,7 @@
     ./signal.nix
     ./stylix.nix
     ./thunar.nix
+    ./tor-browser.nix
     ./vesktop.nix
     ./vlc.nix
   ];
