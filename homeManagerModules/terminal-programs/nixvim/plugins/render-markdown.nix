@@ -7,8 +7,8 @@
         src = pkgs.fetchFromGitHub {
           owner = "MeanderingProgrammer";
           repo = "render-markdown.nvim";
-          rev = "2f9d4f0be8784ed4fef5960eb7b80bf60c5fdf56";
-          hash = "sha256-VCGAkcUIynRTErcGlaMWd+uo2KN1f3suPpGEimAhWHM=";
+          rev = "e1a2289106a9ce5ea1b20b78c90aef4d890950b7";
+          hash = "sha256-9ash/ev12Elee2YIRiX5KCCR55jN+DA2dshQ7Uwjrpc=";
         };
       })
     ];
