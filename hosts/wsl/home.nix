@@ -34,6 +34,7 @@
       tree
       unzip
       wget
+      xclip
       zip
       (python312.withPackages (ps: with ps; [ requests ]))
 
