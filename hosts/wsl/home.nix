@@ -56,6 +56,7 @@
   walnut-home = {
     bat.enable = true;
     cava.enable = true;
+    direnv.enable = true;
     fastfetch.enable = true;
     fzf.enable = true;
     git.enable = true;
