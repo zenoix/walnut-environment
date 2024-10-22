@@ -17,6 +17,7 @@
   walnut-home = {
     bat.enable = true;
     cava.enable = true;
+    direnv.enable = true;
     dunst.enable = true;
     fastfetch.enable = true;
     firefox.enable = true;
