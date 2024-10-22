@@ -181,7 +181,7 @@ format = " [$symbol($version)]($style)"
 [nix_shell]
 symbol = " "
 # format = " [$symbol$state( \\($name\\))]($style)"
-format = " [$symbol( \\($name\\))]($style)"
+format = " [$symbol(\\($name\\))]($style)"
 
 [nodejs]
 symbol = " "
