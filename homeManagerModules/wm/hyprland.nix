@@ -11,6 +11,10 @@
           "double"
         ]);
     };
+    walnut-home.hyprland.mouse-sensitivity = lib.mkOption {
+      default = "-0.5";
+      type = with lib.types; nullOr (strMatching "-?[0-1].[0-9]+");
+    };
   };
 
   config = lib.mkMerge [
@@ -53,7 +57,8 @@
                 natural_scroll = true;
               };
 
-              sensitivity = "-0.15"; # -1.0 - 1.0, 0 means no modification.
+              accel_profile = "flat";
+              sensitivity = config.walnut-home.hyprland.mouse-sensitivity; # -1.0 - 1.0, 0 means no modification.
             };
 
             general = {
