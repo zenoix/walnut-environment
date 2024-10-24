@@ -69,6 +69,21 @@
         ];
       };
 
+      # Desktop NixOS
+      nixosConfigurations.walnut-desktop = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs system personal;
+        };
+        modules = [
+          ./hosts/walnut-desktop/configuration.nix
+          stylix.nixosModules.stylix
+        ];
+      };
+
       homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
