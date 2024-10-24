@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ personal, ... }:
+{ personal, config, ... }:
 
 {
   imports = [
@@ -10,6 +10,32 @@
     ./hardware-configuration.nix
     ./../../modules
   ];
+
+  # For my Nvidia GPU
+  hardware.opengl = {
+    enable = true;
+  };
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+
+    powerManagement = {
+      enable = false;
+      finegrained = false;
+    };
+
+    open = false;
+
+    nvidiaSettings = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  boot.loader.grub = {
+    enable = true;
+    device = "/dev/sdb";
+    useOSProber = true;
+  };
 
   walnut = {
     anki.enable = true;
@@ -19,7 +45,7 @@
     docker.enable = true;
     firefox.enable = true;
     fonts.enable = true;
-    grub.enable = true;
+    grub.enable = false; # Override my grub config due to dual boot
     home-manager.enable = true;
     hyprland = {
       enable = true;
