@@ -85,21 +85,40 @@
       };
 
       # NixOS/personal home manager
-      homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
-        extraSpecialArgs = {
-          pkgs-unstable = import nixpkgs-unstable {
-            inherit system;
-            config.allowUnfree = true;
+      homeConfigurations = {
+        "${personal.user}@walnut-laptop" = home-manager.lib.homeManagerConfiguration {
+          extraSpecialArgs = {
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+            inherit inputs personal;
           };
-          inherit inputs personal;
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [
+            ./hosts/walnut-laptop/home.nix
+            ./homeManagerModules
+            inputs.stylix.homeManagerModules.stylix
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
         };
-        pkgs = nixpkgs.legacyPackages.${system};
-        modules = [
-          ./hosts/walnut-nixos/home.nix
-          ./homeManagerModules
-          inputs.stylix.homeManagerModules.stylix
-          inputs.nixvim.homeManagerModules.nixvim
-        ];
+
+        "${personal.user}@walnut-desktop" = home-manager.lib.homeManagerConfiguration {
+          extraSpecialArgs = {
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+            inherit inputs personal;
+          };
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [
+            ./hosts/walnut-desktop/home.nix
+            ./homeManagerModules
+            inputs.stylix.homeManagerModules.stylix
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
+        };
       };
 
       # WSL home manager
