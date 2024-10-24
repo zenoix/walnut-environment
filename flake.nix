@@ -54,7 +54,7 @@
       };
     in
     {
-      # nixos - system hostname
+      # Laptop NixOS
       nixosConfigurations.walnut-laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
@@ -84,6 +84,7 @@
         ];
       };
 
+      # NixOS/personal home manager
       homeConfigurations.${personal.user} = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
@@ -101,6 +102,7 @@
         ];
       };
 
+      # WSL home manager
       homeConfigurations.jeffwang2 = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
