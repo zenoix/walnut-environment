@@ -130,6 +130,15 @@ and/or for home manager
 home-manager switch --flake ~/walnut-environment
 ```
 
+> [!TIP]
+> You may need to add the following to your current NixOS configuration (`/etc/nixos/configuration.nix`) if you haven't enabled flakes before:
+> ```nix
+> nix.settings.experimental-features = [
+>  "nix-command"
+>  "flakes"
+> ];
+> and rebuild your system to enable flakes.
+
 These two switch commands are aliased in my home manager configuration to `rb` and `hms` respectively which makes future rebuilding easier. 
 
 ### WSL Setup
