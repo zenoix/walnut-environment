@@ -40,7 +40,6 @@
 
       personal = {
         user = "zenoix";
-        host = "walnut-nixos";
         timeZone = "Pacific/Auckland";
         defaultLocale = "en_NZ.UTF-8";
         city = "Auckland";
@@ -56,7 +55,7 @@
     in
     {
       # nixos - system hostname
-      nixosConfigurations.walnut-nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.walnut-laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {
           pkgs-unstable = import nixpkgs-unstable {
             inherit system;
@@ -65,7 +64,7 @@
           inherit inputs system personal;
         };
         modules = [
-          ./hosts/walnut-nixos/configuration.nix
+          ./hosts/walnut-laptop/configuration.nix
           stylix.nixosModules.stylix
         ];
       };

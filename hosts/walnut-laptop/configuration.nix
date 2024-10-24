@@ -62,7 +62,7 @@
     options = "--delete-older-than 30d";
   };
 
-  networking.hostName = "${personal.host}"; # Define your hostname.
+  networking.hostName = "walnut-laptop";
 
   # Set your time zone.
   time.timeZone = "${personal.timeZone}";
