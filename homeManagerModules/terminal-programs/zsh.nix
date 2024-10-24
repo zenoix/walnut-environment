@@ -21,7 +21,7 @@
           flakeDir = "~/walnut-environment";
         in
         {
-          rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
+          rb = "sudo nixos-rebuild switch --flake ${flakeDir}#$(hostname)";
           upd = "nix flake update ${flakeDir}";
           upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
