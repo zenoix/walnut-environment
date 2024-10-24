@@ -25,7 +25,10 @@
     git.enable = true;
     gtk-config.enable = true;
     hypridle.enable = true;
-    hyprland.enable = true;
+    hyprland = {
+      enable = true;
+      monitor-setup = "double";
+    };
     hyprlock.enable = true;
     i18n.enable = true;
     kitty.enable = true;
