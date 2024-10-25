@@ -67,7 +67,7 @@
     thunar.enable = true;
     tor-browser.enable = true;
     obsidian.enable = true;
-    tlp.enable = true;
+    tlp.enable = false;
     users.enable = true;
     vesktop.enable = true;
     vlc.enable = true;
