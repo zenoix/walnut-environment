@@ -47,6 +47,10 @@
         # Used for gitconfig
         gitUser = "zenoix";
         gitEmail = "41812358+zenoix@users.noreply.github.com";
+
+        # For gammastep
+        latitude = 36.8509;
+        longitude = 174.7645;
       };
 
       wsl = {

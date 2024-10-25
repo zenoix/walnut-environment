@@ -22,6 +22,7 @@
     fastfetch.enable = true;
     firefox.enable = true;
     fzf.enable = true;
+    gammastep.enable = true;
     git.enable = true;
     gtk-config.enable = true;
     hypridle.enable = true;
