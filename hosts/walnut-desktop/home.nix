@@ -43,7 +43,10 @@
     stylix.enable = true;
     syncthing.enable = true;
     tmux.enable = true;
-    waybar.enable = true;
+    waybar = {
+      enable = true;
+      group2.enable = false;
+    };
     yazi.enable = true;
     zathura.enable = true;
     zoxide.enable = true;
