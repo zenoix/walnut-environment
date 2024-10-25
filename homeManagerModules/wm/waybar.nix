@@ -534,5 +534,20 @@
         };
       };
     })
+
+    (lib.mkIf
+      (config.walnut-home.hyprland.enable && config.walnut-home.hyprland.monitor-setup == "double")
+      {
+        programs.waybar = {
+          settings = {
+            mainBar = {
+              "hyprland/workspaces" = {
+                persistent-workspaces = lib.mkForce { "*" = 6; };
+              };
+            };
+          };
+        };
+      }
+    )
   ];
 }
