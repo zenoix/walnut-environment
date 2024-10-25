@@ -343,7 +343,11 @@
               margin-right: 8px;
             }
 
-            #network,
+            #network {
+              padding-left: 5px;
+              padding-right: 2px;
+            }
+
             #bluetooth,
             #pulseaudio,
             #pulseaudio#microphone,
