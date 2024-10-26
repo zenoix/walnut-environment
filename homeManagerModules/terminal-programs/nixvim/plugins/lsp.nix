@@ -56,6 +56,7 @@
             basedpyright = {
               analysis = {
                 diagnosticSeverityOverrides = {
+                  reportCallInDefaultInitializer = false;
                   reportSelfClsParameterName = false;
                   reportMissingParameterType = false;
                   reportUnknownParameterType = false;
