@@ -39,7 +39,7 @@
 
   walnut = {
     anki.enable = true;
-    bluetooth.enable = true;
+    bluetooth.enable = false;
     brightnessctl.enable = true;
     coding-stuff.enable = true;
     docker.enable = true;
