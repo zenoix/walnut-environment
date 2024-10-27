@@ -17,6 +17,7 @@
 
       settings = {
         formatters_by_ft = {
+          astro = [ "prettier" ];
           bash = [ "beautysh" ];
           css = [ "prettier" ];
           go = [
@@ -36,6 +37,8 @@
             # To organize the imports.
             "ruff_organize_imports"
           ];
+
+          tsx = [ "prettier" ];
           yaml = [ "prettier" ];
           zsh = [ "beautysh" ];
         };

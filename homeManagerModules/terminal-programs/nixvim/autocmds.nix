@@ -87,6 +87,7 @@
       {
         event = "FileType";
         pattern = [
+          "astro"
           "css"
           "html"
           "js"

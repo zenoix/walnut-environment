@@ -49,6 +49,10 @@
       '';
 
       servers = {
+        astro = {
+          enable = true;
+          package = pkgs-unstable.basedpyright;
+        };
         basedpyright = {
           enable = true;
           package = pkgs-unstable.basedpyright;
@@ -92,6 +96,7 @@
           package = pkgs-unstable.ruff;
         };
         taplo.enable = true;
+        ts_ls.enable = true;
         typos_lsp = {
           enable = true;
           extraOptions.init_options.diagnosticSeverity = "Hint";
