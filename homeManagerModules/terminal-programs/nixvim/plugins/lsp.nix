@@ -96,7 +96,10 @@
           package = pkgs-unstable.ruff;
         };
         taplo.enable = true;
-        ts_ls.enable = true;
+        ts_ls = {
+          enable = true;
+          package = pkgs-unstable.typescript-language-server;
+        };
         typos_lsp = {
           enable = true;
           extraOptions.init_options.diagnosticSeverity = "Hint";
