@@ -7,6 +7,11 @@
 {
   imports = [ ./../../modules ];
 
+  nix.settings.trusted-users = [
+    "root"
+    "@wheel"
+  ];
+
   walnut = {
     anki.enable = true;
     bluetooth.enable = true;
