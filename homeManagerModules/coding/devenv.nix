@@ -1,5 +1,5 @@
 {
-  pkgs,
+  pkgs-unstable,
   lib,
   config,
   ...
@@ -12,7 +12,7 @@
   config = lib.mkIf config.walnut-home.devenv.enable {
 
     home = {
-      packages = with pkgs; [ devenv ];
+      packages = with pkgs-unstable; [ devenv ];
     };
 
   };
