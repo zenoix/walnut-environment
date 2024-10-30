@@ -2,20 +2,61 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
+{ personal, config, ... }:
+
 {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./../common/configuration.nix
-  ];
+  imports = [ ./../../modules ];
 
   walnut = {
-    brightnessctl.enable = true;
-    grub.enable = true;
-    tlp.enable = true;
+    anki.enable = true;
+    bluetooth.enable = true;
+    coding-stuff.enable = true;
+    docker.enable = true;
+    firefox.enable = true;
+    fonts.enable = true;
+    home-manager.enable = true;
+    hyprland = {
+      enable = true;
+      screenshot.enable = true;
+    };
+    kitty.enable = true;
+    libreoffice.enable = true;
+    locale.enable = true;
+    mullvad.enable = true;
+    neovim.enable = true;
+    networking.enable = true;
+    qt-libs.enable = true;
+    sddm.enable = true;
+    shell-config.enable = true;
+    signal.enable = true;
+    sound.enable = true;
+    stylix.enable = true;
+    swap.enable = true;
+    thunar.enable = true;
+    tor-browser.enable = true;
+    obsidian.enable = true;
+    users.enable = true;
+    vesktop.enable = true;
+    vlc.enable = true;
+    xdg-portal.enable = true;
+    xkb.enable = true;
   };
 
-  networking.hostName = "walnut-laptop";
+  # Enable flakes
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+  # Delete configurations older than 30 days
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  # Set your time zone.
+  time.timeZone = "${personal.timeZone}";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
