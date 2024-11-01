@@ -263,8 +263,8 @@
       {
         wayland.windowManager.hyprland = {
           settings.monitor = lib.mkForce [
-            "DP-3,preferred,0x0,1,bitdepth,10"
-            "DP-2,preferred,2560x0,1,bitdepth,10"
+            "DP-2,preferred,0x0,1,bitdepth,10"
+            "DP-3,preferred,2560x0,1,bitdepth,10"
           ];
         };
       }
