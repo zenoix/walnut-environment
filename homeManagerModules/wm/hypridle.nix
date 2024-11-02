@@ -14,18 +14,27 @@
           after_sleep_cmd = "hyprctl dispatch dpms on"; # to avoid having to press a key twice to turn on the display.
         };
 
-        listener = [
-          {
-            timeout = 180; # 3min.
-            on-timeout = "brightnessctl -s set 10"; # set monitor backlight to minimum, avoid 0 on OLED monitor.
-            on-resume = "brightnessctl -r"; # monitor backlight restore.
-          }
+        listener =
+          (
+            # NOTE: This is very hacky, will find a more robust way another time
+            if config.walnut-home.hyprland.monitor-setup != "double" then
+              [
+                {
+                  timeout = 180; # 3min.
+                  on-timeout = "brightnessctl -s set 10"; # set monitor backlight to minimum, avoid 0 on OLED monitor.
+                  on-resume = "brightnessctl -r"; # monitor backlight restore.
+                }
+              ]
+            else
+              [ ]
+          )
+          ++ [
 
-          {
-            timeout = 300; # 5min
-            on-timeout = "loginctl lock-session"; # lock screen when timeout has passed
-          }
-        ];
+            {
+              timeout = 300; # 5min
+              on-timeout = "loginctl lock-session"; # lock screen when timeout has passed
+            }
+          ];
       };
     };
   };
