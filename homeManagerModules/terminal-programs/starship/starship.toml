@@ -179,7 +179,7 @@ format = " [$symbol$branch(:$topic)]($style)"
 format = " [$symbol($version)]($style)"
 
 [nix_shell]
-symbol = " "
+symbol = ""
 # format = " [$symbol$state( \\($name\\))]($style)"
 format = " [$symbol(\\($name\\))]($style)"
 
