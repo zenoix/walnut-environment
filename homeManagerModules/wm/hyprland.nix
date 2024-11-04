@@ -1,9 +1,4 @@
-{
-  pkgs-unstable,
-  lib,
-  config,
-  ...
-}:
+{ lib, config, ... }:
 {
   options = {
     walnut-home.hyprland.enable = lib.mkEnableOption "enable hyprland";
@@ -27,7 +22,6 @@
       wayland.windowManager.hyprland = {
         enable = true;
         xwayland.enable = true;
-        package = pkgs-unstable.hyprland;
         settings =
           let
             inherit (config.lib.stylix) colors;
