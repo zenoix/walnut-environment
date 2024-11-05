@@ -38,6 +38,24 @@
     let
       system = "x86_64-linux";
 
+      pkgs = nixpkgs.legacyPackages.${system};
+
+      specialArgs = {
+        pkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        inherit inputs system personal;
+      };
+
+      extraSpecialArgs = {
+        pkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        inherit inputs personal;
+      };
+
       personal = {
         user = "zenoix";
         timeZone = "Pacific/Auckland";
@@ -60,13 +78,7 @@
     {
       # Laptop NixOS
       nixosConfigurations.walnut-laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          pkgs-unstable = import nixpkgs-unstable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          inherit inputs system personal;
-        };
+        inherit specialArgs;
         modules = [
           ./hosts/walnut-laptop/configuration.nix
           stylix.nixosModules.stylix
@@ -75,13 +87,7 @@
 
       # Desktop NixOS
       nixosConfigurations.walnut-desktop = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          pkgs-unstable = import nixpkgs-unstable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          inherit inputs system personal;
-        };
+        inherit specialArgs;
         modules = [
           ./hosts/walnut-desktop/configuration.nix
           stylix.nixosModules.stylix
@@ -91,14 +97,7 @@
       # NixOS/personal home manager
       homeConfigurations = {
         "${personal.user}@walnut-laptop" = home-manager.lib.homeManagerConfiguration {
-          extraSpecialArgs = {
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
-            };
-            inherit inputs personal;
-          };
-          pkgs = nixpkgs.legacyPackages.${system};
+          inherit extraSpecialArgs pkgs;
           modules = [
             ./hosts/walnut-laptop/home.nix
             ./homeManagerModules
@@ -108,14 +107,7 @@
         };
 
         "${personal.user}@walnut-desktop" = home-manager.lib.homeManagerConfiguration {
-          extraSpecialArgs = {
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
-            };
-            inherit inputs personal;
-          };
-          pkgs = nixpkgs.legacyPackages.${system};
+          inherit extraSpecialArgs pkgs;
           modules = [
             ./hosts/walnut-desktop/home.nix
             ./homeManagerModules
@@ -127,14 +119,7 @@
 
       # WSL home manager
       homeConfigurations.jeffwang2 = home-manager.lib.homeManagerConfiguration {
-        extraSpecialArgs = {
-          pkgs-unstable = import nixpkgs-unstable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          inherit inputs wsl;
-        };
-        pkgs = nixpkgs.legacyPackages.${system};
+        inherit extraSpecialArgs pkgs wsl;
         modules = [
           ./hosts/wsl/home.nix
           ./homeManagerModules
