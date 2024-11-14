@@ -53,7 +53,7 @@
           inherit system;
           config.allowUnfree = true;
         };
-        inherit inputs personal;
+        inherit inputs personal wsl;
       };
 
       personal = {
@@ -119,7 +119,7 @@
 
       # WSL home manager
       homeConfigurations.jeffwang2 = home-manager.lib.homeManagerConfiguration {
-        inherit extraSpecialArgs pkgs wsl;
+        inherit extraSpecialArgs pkgs;
         modules = [
           ./hosts/wsl/home.nix
           ./homeManagerModules
