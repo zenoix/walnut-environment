@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    devbox = {
+      url = "github:jetify-com/devbox";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     #INFO: Commit 3190239 breaks stylix cursors
     # stylix.url = "github:danth/stylix";
     stylix.url = "github:danth/stylix/993fcabd83d1e0ee5ea038b87041593cc73c1ebe";
@@ -36,9 +41,13 @@
     }@inputs:
 
     let
+      inherit (self) outputs;
       system = "x86_64-linux";
 
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        inherit overlays;
+      };
 
       specialArgs = {
         pkgs-unstable = import nixpkgs-unstable {
@@ -73,6 +82,11 @@
 
       wsl = {
         user = "jeffwang2";
+      };
+
+      overlays = import ./overlays {
+        inherit inputs outputs system;
+        inherit (nixpkgs) lib;
       };
     in
     {

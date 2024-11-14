@@ -24,6 +24,7 @@
 
   walnut-home = {
     bat.enable = true;
+    devbox.enable = true;
     devenv.enable = true;
     direnv.enable = true;
     fastfetch.enable = true;
