@@ -18,6 +18,10 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [ ];
+
+    sessionVariables = {
+      DEVBOX_NO_PROMPT = "true";
+    };
   };
 
   fonts.fontconfig.enable = true;
