@@ -73,6 +73,7 @@ walnut-environment
 ├── modules                 # System modules
 │   ├── ...
 │   └── README.md           # Readme explaining modules layout
+├── overlays                # Overlays
 ├── flake.nix               # Flake (main entry point)
 └── flake.lock              # Flake lock file
 ```
