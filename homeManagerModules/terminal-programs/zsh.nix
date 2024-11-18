@@ -276,8 +276,6 @@
 
         autoload -Uz is-at-least
 
-        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
         source ${pkgs.fzf-git-sh}/share/fzf-git-sh/fzf-git.sh
 
         function git_current_branch() {
