@@ -21,6 +21,7 @@
 
     sessionVariables = {
       DEVBOX_NO_PROMPT = "true";
+      MANPAGER = "nvim +Man!";
     };
   };
 
