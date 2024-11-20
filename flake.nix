@@ -129,17 +129,17 @@
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };
-      };
 
-      # WSL home manager
-      homeConfigurations.jeffwang2 = home-manager.lib.homeManagerConfiguration {
-        inherit extraSpecialArgs pkgs;
-        modules = [
-          ./hosts/wsl/home.nix
-          ./homeManagerModules
-          inputs.stylix.homeManagerModules.stylix
-          inputs.nixvim.homeManagerModules.nixvim
-        ];
+        # WSL home manager
+        "${wsl.user}" = home-manager.lib.homeManagerConfiguration {
+          inherit extraSpecialArgs pkgs;
+          modules = [
+            ./hosts/wsl/home.nix
+            ./homeManagerModules
+            inputs.stylix.homeManagerModules.stylix
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
+        };
       };
     };
 }
