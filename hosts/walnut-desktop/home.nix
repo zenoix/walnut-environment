@@ -15,7 +15,7 @@
     firefox.enable = true;
     gammastep.enable = true;
     gtk-config.enable = true;
-    hypridle.enable = true;
+    hypridle.enable = false;
     hyprland = {
       enable = true;
       monitor-setup = "double";
