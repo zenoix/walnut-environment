@@ -142,7 +142,7 @@
         };
 
         # Work Mac home manager
-        "${work.user}@Mac" =
+        "${work.user}@NZ-MN9L6DMQ6YM.local" =
           let
             system = "aarch64-darwin";
           in
