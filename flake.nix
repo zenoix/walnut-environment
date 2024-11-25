@@ -149,7 +149,10 @@
           home-manager.lib.homeManagerConfiguration {
             pkgs = import nixpkgs {
               inherit system;
-              inherit overlays;
+              overlays = import ./overlays {
+                inherit inputs outputs system;
+                inherit (nixpkgs) lib;
+              };
             };
 
             extraSpecialArgs = {
