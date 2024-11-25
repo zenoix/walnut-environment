@@ -29,7 +29,7 @@
       vimdiffAlias = true;
       package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.neovim-unwrapped;
 
-      extraPackages = with pkgs-unstable; [ astro-language-server ];
+      extraPackages = with pkgs-unstable; [ ];
     };
   };
 }
