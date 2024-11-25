@@ -16,7 +16,6 @@
       home-manager
       htop
       killall
-      nodejs
       tree
       unzip
       wget
