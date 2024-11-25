@@ -140,6 +140,33 @@
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };
+
+        # Work Mac home manager
+        "${work.user}@Mac" =
+          let
+            system = "aarch64-darwin";
+          in
+          home-manager.lib.homeManagerConfiguration {
+            pkgs = import nixpkgs {
+              inherit system;
+              inherit overlays;
+            };
+
+            extraSpecialArgs = {
+              pkgs-unstable = import nixpkgs-unstable {
+                inherit system;
+                config.allowUnfree = true;
+              };
+              inherit inputs personal work;
+            };
+
+            modules = [
+              ./hosts/work-mac/home.nix
+              ./homeManagerModules
+              inputs.stylix.homeManagerModules.stylix
+              inputs.nixvim.homeManagerModules.nixvim
+            ];
+          };
       };
     };
 }
