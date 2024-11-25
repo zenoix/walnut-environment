@@ -13,6 +13,7 @@
 
     packages = with pkgs; [
       cocogitto
+      coreutils
       fd
       gcc
       git
