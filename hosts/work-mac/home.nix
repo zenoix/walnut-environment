@@ -1,4 +1,9 @@
-{ pkgs, work, ... }:
+{
+  pkgs,
+  lib,
+  work,
+  ...
+}:
 {
   imports = [ ./../common/home.nix ];
 
@@ -41,4 +46,6 @@
   walnut-home = {
     kitty.enable = true;
   };
+
+  stylix.opacity.terminal = lib.mkForce 0.97;
 }
