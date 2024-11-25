@@ -62,7 +62,7 @@
           inherit system;
           config.allowUnfree = true;
         };
-        inherit inputs personal wsl;
+        inherit inputs personal work;
       };
 
       personal = {
@@ -80,7 +80,7 @@
         longitude = 174.7645;
       };
 
-      wsl = {
+      work = {
         user = "jeffwang2";
       };
 
@@ -130,11 +130,11 @@
           ];
         };
 
-        # WSL home manager
-        "${wsl.user}" = home-manager.lib.homeManagerConfiguration {
+        # Work WSL home manager
+        "${work.user}@NZ-WPF4GDYVJ" = home-manager.lib.homeManagerConfiguration {
           inherit extraSpecialArgs pkgs;
           modules = [
-            ./hosts/wsl/home.nix
+            ./hosts/work-wsl/home.nix
             ./homeManagerModules
             inputs.stylix.homeManagerModules.stylix
             inputs.nixvim.homeManagerModules.nixvim

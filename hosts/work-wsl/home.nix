@@ -1,10 +1,10 @@
-{ pkgs, wsl, ... }:
+{ pkgs, work, ... }:
 {
   imports = [ ./../common/home.nix ];
 
   home = {
-    username = "${wsl.user}";
-    homeDirectory = "/home/${wsl.user}";
+    username = "${work.user}";
+    homeDirectory = "/home/${work.user}";
 
     packages = with pkgs; [
       cocogitto
