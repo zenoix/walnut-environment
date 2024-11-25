@@ -38,5 +38,7 @@
 
   fonts.fontconfig.enable = true;
 
-  walnut-home = { };
+  walnut-home = {
+    kitty.enable = true;
+  };
 }
