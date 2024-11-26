@@ -13,6 +13,7 @@
 
     file = {
       ".config/aerospace/aerospace.toml".source = ./../../homeManagerModules/wm/aerospace.toml;
+      ".hushlogin".text = "";
     };
 
     packages = with pkgs; [
