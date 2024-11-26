@@ -11,6 +11,10 @@
     username = "${work.user}";
     homeDirectory = "/Users/${work.user}";
 
+    file = {
+      ".config/aerospace/aerospace.toml".source = ./../../homeManagerModules/wm/aerospace.toml;
+    };
+
     packages = with pkgs; [
       cocogitto
       coreutils
