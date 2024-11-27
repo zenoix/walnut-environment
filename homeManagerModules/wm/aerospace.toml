@@ -93,7 +93,7 @@ outer.right = 10
 # end tell'
 # '''
 
-cmd-f = 'fullscreen'
+alt-shift-f = 'fullscreen'
 
 alt-shift-left = 'join-with left'
 alt-shift-down = 'join-with down'
