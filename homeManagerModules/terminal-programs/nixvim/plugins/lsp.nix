@@ -51,7 +51,7 @@
       servers = {
         astro = {
           enable = true;
-          package = pkgs-unstable.basedpyright;
+          package = pkgs-unstable.astro-language-server;
         };
         basedpyright = {
           enable = true;
