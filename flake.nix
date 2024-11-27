@@ -142,7 +142,8 @@
         };
 
         # Work Mac home manager
-        "${work.user}@NZ-MN9L6DMQ6YM.local" =
+        # For some reason the host name keeps changing so no host name here
+        "${work.user}" =
           let
             system = "aarch64-darwin";
           in
