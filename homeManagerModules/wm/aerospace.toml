@@ -161,3 +161,10 @@ f = [
     'mode main',
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
+
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = ['^P27q-30$']
+5 = ['^built-in retina display$']
