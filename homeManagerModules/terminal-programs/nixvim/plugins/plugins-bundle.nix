@@ -1,6 +1,7 @@
 {
   imports = [
     ./alpha.nix
+    ./bigfile.nix
     ./biscuits.nix
     ./completion.nix
     ./conform-nvim.nix
