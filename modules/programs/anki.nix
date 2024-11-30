@@ -10,6 +10,9 @@
   };
 
   config = lib.mkIf config.walnut.anki.enable {
-    environment.systemPackages = with pkgs; [ anki-bin ];
+    environment.systemPackages = with pkgs; [
+      anki-bin
+      mpv
+    ];
   };
 }
