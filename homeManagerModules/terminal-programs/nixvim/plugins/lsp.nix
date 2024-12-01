@@ -57,9 +57,11 @@
               analysis = {
                 diagnosticSeverityOverrides = {
                   reportCallInDefaultInitializer = false;
-                  reportSelfClsParameterName = false;
                   reportMissingParameterType = false;
+                  reportSelfClsParameterName = false;
+                  reportUndefinedVariable = false;
                   reportUnknownParameterType = false;
+                  reportUnusedExpression = false;
                   reportUnusedImport = false;
                   reportUnusedVariable = false;
                 };
