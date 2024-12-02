@@ -7,9 +7,9 @@
   config = lib.mkIf config.walnut-home.kitty.enable {
     programs.kitty = {
       enable = true;
-      # font = {
-      #   name = "JetBrainsMono";
-      # };
+      font = {
+        name = lib.mkForce "JetBrains Mono";
+      };
 
       settings = {
         enable_audio_bell = false;
