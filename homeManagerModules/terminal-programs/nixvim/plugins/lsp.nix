@@ -73,6 +73,7 @@
           enable = true;
           package = pkgs-unstable.bash-language-server;
         };
+        clangd.enable = true;
         dockerls.enable = true;
         golangci_lint_ls = {
           enable = true;

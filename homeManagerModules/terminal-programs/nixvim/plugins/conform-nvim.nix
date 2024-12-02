@@ -20,6 +20,7 @@
           astro = [ "prettier" ];
           bash = [ "beautysh" ];
           css = [ "prettier" ];
+          cpp = [ "clang_format" ];
           go = [
             "gofmt"
             "goimports-reviser"
