@@ -89,6 +89,7 @@
         pattern = [
           "astro"
           "css"
+          "cpp"
           "html"
           "js"
           "json"
