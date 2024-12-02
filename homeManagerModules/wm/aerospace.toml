@@ -166,5 +166,5 @@ backspace = ['close-all-windows-but-current', 'mode main']
 1 = 'main'
 2 = 'main'
 3 = 'main'
-4 = ['^P27q-30$']
+4 = ['^P27q-30$', 'main']
 5 = ['^built-in retina display$']
