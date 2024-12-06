@@ -23,6 +23,7 @@
     ./oil.nix
     ./render-markdown.nix
     ./screenkey.nix
+    ./tiny-inline-diagnostic.nix
     ./telescope.nix
     ./tmux-navigator.nix
     ./todo-comments.nix

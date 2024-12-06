@@ -14,14 +14,6 @@
   programs.nixvim.plugins = {
     lsp-format.enable = true;
 
-    lsp-lines = {
-      enable = true;
-      package = pkgs-unstable.vimPlugins.lsp_lines-nvim;
-
-      # NOTE: Currently doesn't work with ruff
-      # luaConfig.post = "vim.diagnostic.config({ virtual_lines = { only_current_line = true } })";
-    };
-
     lsp = {
       enable = true;
       package = pkgs-unstable.vimPlugins.nvim-lspconfig;
@@ -41,6 +33,7 @@
       onAttach = "require('lsp_signature').on_attach(signature_setup, bufnr)";
 
       postConfig = ''
+        vim.diagnostic.config({ virtual_text = false })
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
           local hl = "DiagnosticSign" .. type
