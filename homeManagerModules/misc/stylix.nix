@@ -42,6 +42,9 @@
       targets = {
         waybar.enable = false;
         hyprlock.enable = false;
+        neovim.enable = false;
+        nixvim.enable = false;
+        kitty.variant256Colors = true;
       };
     };
   };
