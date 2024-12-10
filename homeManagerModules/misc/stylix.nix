@@ -45,6 +45,7 @@
         neovim.enable = false;
         nixvim.enable = false;
         kitty.variant256Colors = true;
+        tmux.enable = false;
       };
     };
   };
