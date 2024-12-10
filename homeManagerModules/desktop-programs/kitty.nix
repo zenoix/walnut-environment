@@ -8,7 +8,7 @@
     programs.kitty = {
       enable = true;
       font = {
-        name = lib.mkForce "JetBrains Mono";
+        name = lib.mkForce "SFMono Nerd Font";
         size = lib.mkForce 10;
       };
 

@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 {
@@ -21,6 +22,7 @@
       powerline-fonts
       powerline-symbols
       (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+      inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd
     ];
   };
 }

@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 {
@@ -21,8 +22,8 @@
 
       fonts = {
         monospace = {
-          package = pkgs.jetbrains-mono;
-          name = "JetBrainsMono";
+          package = inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd;
+          name = "SFMono Nerd Font";
         };
       };
 
