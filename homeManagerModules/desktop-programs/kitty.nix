@@ -9,6 +9,7 @@
       enable = true;
       font = {
         name = lib.mkForce "JetBrains Mono";
+        size = lib.mkForce 10;
       };
 
       settings = {
