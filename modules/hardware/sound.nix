@@ -10,8 +10,6 @@
   };
 
   config = lib.mkIf config.walnut.sound.enable {
-    sound.enable = true;
-
     security.rtkit.enable = true;
 
     services.pipewire = {
