@@ -16,9 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    #INFO: Commit 3190239 breaks stylix cursors
-    # stylix.url = "github:danth/stylix";
-    stylix.url = "github:danth/stylix/993fcabd83d1e0ee5ea038b87041593cc73c1ebe";
+    stylix.url = "github:danth/stylix";
 
     nixvim = {
       url = "github:nix-community/nixvim";
