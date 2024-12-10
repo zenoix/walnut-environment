@@ -20,7 +20,7 @@
           type = "kitty";
           height = 15;
           padding = {
-            top = 2;
+            top = 1;
             left = 2;
           };
         };
