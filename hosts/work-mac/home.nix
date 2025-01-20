@@ -2,6 +2,7 @@
   pkgs,
   lib,
   work,
+  inputs,
   ...
 }:
 {
@@ -44,6 +45,7 @@
       powerline-fonts
       powerline-symbols
       (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+      inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd
     ];
   };
 
@@ -56,6 +58,6 @@
   stylix.opacity.terminal = lib.mkForce 0.97;
 
   programs.kitty = {
-    font.size = lib.mkForce 13;
+    font.size = lib.mkOverride 30 13;
   };
 }
