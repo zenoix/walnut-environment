@@ -29,6 +29,8 @@
         bind % split-window -h -c "#{pane_current_path}"
 
         set -g allow-passthrough on
+
+        set -g default-command "$SHELL"
       '';
 
       plugins = with pkgs; [
