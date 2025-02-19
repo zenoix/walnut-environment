@@ -18,11 +18,11 @@
     ./lualine.nix
     ./mini.nix
     ./neogen.nix
-    ./notify.nix
     ./nvim-ts-context-commentstring.nix
     ./oil.nix
     ./render-markdown.nix
     ./screenkey.nix
+    ./snacks.nix
     ./tiny-inline-diagnostic.nix
     ./telescope.nix
     ./tmux-navigator.nix
