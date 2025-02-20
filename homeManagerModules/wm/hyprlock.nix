@@ -63,7 +63,7 @@
               color = textColor;
               font_size = 22;
               font_family = "JetBrains Mono";
-              position = "0, 100";
+              position = "0, 50";
               halign = "center";
               valign = "center";
             }
@@ -75,7 +75,7 @@
               color = textColor;
               font_size = 95;
               font_family = "JetBrains Mono Extrabold";
-              position = "0, 110";
+              position = "0, 150";
               halign = "center";
               valign = "center";
             }
