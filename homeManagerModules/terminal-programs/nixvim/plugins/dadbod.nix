@@ -1,8 +1,7 @@
-{ pkgs, ... }:
 {
-  programs.nixvim.extraPlugins = with pkgs.vimPlugins; [
-    vim-dadbod
-    vim-dadbod-ui
-    vim-dadbod-completion
-  ];
+  programs.nixvim.plugins = {
+    vim-dadbod.enable = true;
+    vim-dadbod-completion.enable = true;
+    vim-dadbod-ui.enable = true;
+  };
 }
