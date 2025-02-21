@@ -18,6 +18,7 @@
     };
 
     packages = with pkgs; [
+      azure-cli
       cocogitto
       coreutils
       fd
