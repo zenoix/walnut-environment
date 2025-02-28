@@ -59,10 +59,6 @@
               # Unmap s and S
               "s" = "<Nop>";
               "S" = "<Nop>";
-
-              # Move cursor to next and prev line in wrap mode
-              "j" = "gj";
-              "k" = "gk";
             };
         terminal =
           lib.mapAttrsToList
