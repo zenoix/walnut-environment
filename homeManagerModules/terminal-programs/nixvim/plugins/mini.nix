@@ -7,6 +7,8 @@
       local ext = require("mini.extra")
     '';
 
+    mockDevIcons = true;
+
     modules = {
 
       extra = { };
@@ -66,6 +68,8 @@
       };
 
       cursorword = { };
+
+      icons = { };
 
     };
   };

@@ -30,6 +30,5 @@
     ./treesitter.nix
     ./trouble.nix
     ./undotree.nix
-    ./web-devicons.nix
   ];
 }
