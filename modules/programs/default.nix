@@ -11,6 +11,7 @@
     ./obsidian.nix
     ./shell-config.nix
     ./signal.nix
+    ./steam.nix
     ./stylix.nix
     ./thunar.nix
     ./tor-browser.nix
