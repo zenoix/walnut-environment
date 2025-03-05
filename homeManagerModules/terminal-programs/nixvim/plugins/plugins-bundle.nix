@@ -10,7 +10,6 @@
     ./dressing.nix
     ./gitgutter.nix
     ./harpoon.nix
-    ./illuminate.nix
     ./indent-blankline.nix
     ./iron.nix
     ./lint.nix
