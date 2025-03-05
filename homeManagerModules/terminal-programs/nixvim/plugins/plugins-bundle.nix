@@ -8,7 +8,6 @@
     ./conform-nvim.nix
     ./dadbod.nix
     ./dressing.nix
-    ./fugitive.nix
     ./gitgutter.nix
     ./harpoon.nix
     ./illuminate.nix
