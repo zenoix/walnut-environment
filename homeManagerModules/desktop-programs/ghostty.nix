@@ -11,8 +11,8 @@
       installBatSyntax = true;
       installVimSyntax = true;
       settings = {
-        # name = lib.mkForce "SFMono Nerd Font";
         font-size = lib.mkForce 10;
+        font-family = "SFMono Nerd Font";
         # enable_audio_bell = false;
         # window_padding_width = 5;
         # background_blur = 1;
