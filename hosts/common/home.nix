@@ -34,6 +34,7 @@
     direnv.enable = true;
     fastfetch.enable = true;
     fzf.enable = true;
+    ghostty.enable = true;
     git.enable = true;
     nixvim.enable = true;
     ripgrep.enable = true;
