@@ -27,6 +27,7 @@
     ./tmux-navigator.nix
     ./todo-comments.nix
     ./treesitter-context.nix
+    ./treesitter-textobjects.nix
     ./treesitter.nix
     ./trouble.nix
     ./undotree.nix
