@@ -16,6 +16,8 @@
         # enable_audio_bell = false;
         # window_padding_width = 5;
         # background_blur = 1;
+        window-padding-x = 5;
+        window-padding-y = 5;
       };
     };
   };
