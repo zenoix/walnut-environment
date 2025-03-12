@@ -53,6 +53,7 @@
   fonts.fontconfig.enable = true;
 
   walnut-home = {
+    ghostty.enable = lib.mkForce false;
     kitty.enable = true;
   };
 
