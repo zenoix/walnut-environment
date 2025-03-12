@@ -46,6 +46,7 @@
       pairs = { };
 
       ai = {
+        n_lines = 500;
         custom_textobjects = {
           s = {
             __raw = ''
