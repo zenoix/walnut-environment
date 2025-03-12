@@ -4,6 +4,7 @@
     ./cava.nix
     ./fastfetch.nix
     ./fzf.nix
+    ./gh-cli.nix
     ./nixvim/nixvim.nix
     ./ripgrep.nix
     ./starship/starship.nix
