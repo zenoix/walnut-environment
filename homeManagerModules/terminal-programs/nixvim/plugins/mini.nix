@@ -48,20 +48,60 @@
       ai = {
         n_lines = 500;
         custom_textobjects = {
-          s = {
+          # code block
+          o = {
             __raw = ''
-              ai.gen_spec.treesitter({
-                  a = {"@block.outer", "@conditional.outer"},
-                  i = {"@block.inner", "@conditional.inner"},
-                  })
-            '';
+              ai.gen_spec.treesitter({ 
+                        a = { "@block.outer", "@conditional.outer", "@loop.outer" },
+                        i = { "@block.inner", "@conditional.inner", "@loop.inner" },
+                      })'';
           };
+
+          # function
           f = {
-            __raw = ''ai.gen_spec.treesitter({a = "@function.outer", i = "@function.inner" })'';
+            __raw = ''ai.gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" })'';
           };
+
+          # class
+          c = {
+            __raw = ''ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" })'';
+          };
+
+          # tags
+          t = {
+            __raw = ''{ "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" }'';
+          };
+
+          # digits
+          d = {
+            __raw = ''{ "%f[%d]%d+" }'';
+          };
+
+          # word with case
+          e = {
+            __raw = ''
+              { 
+                        { "%u[%l%d]+%f[^%l%d]", "%f[%S][%l%d]+%f[^%l%d]", "%f[%P][%l%d]+%f[^%l%d]", "^[%l%d]+%f[^%l%d]" },
+                        "^().*()$",
+                      }'';
+          };
+
+          # u for "Usage"
+          u = {
+            __raw = ''ai.gen_spec.function_call()'';
+          };
+
+          # without dot in function name
+          U = {
+            __raw = ''ai.gen_spec.function_call({ name_pattern = "[%w_]" })'';
+          };
+
+          # indent level
           i = {
             __raw = ''ext.gen_ai_spec.indent()'';
           };
+
+          # buffer
           g = {
             __raw = ''ext.gen_ai_spec.buffer()'';
           };
