@@ -14,6 +14,9 @@
       # Set cursor to block
       guicursor = "";
 
+      # Highlight line that cursor is on
+      cursorline = true;
+
       # Set highlight on search
       hlsearch = false;
 
