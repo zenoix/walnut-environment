@@ -7,7 +7,6 @@
     ./completion.nix
     ./conform-nvim.nix
     ./dadbod.nix
-    ./dressing.nix
     ./gitgutter.nix
     ./harpoon.nix
     ./indent-blankline.nix
