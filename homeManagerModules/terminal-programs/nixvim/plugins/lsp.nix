@@ -33,7 +33,7 @@
       onAttach = "require('lsp_signature').on_attach(signature_setup, bufnr)";
 
       postConfig = ''
-        vim.diagnostic.config({ virtual_text = false })
+        vim.diagnostic.config({ virtual_text = false, severity_sort = true })
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
           local hl = "DiagnosticSign" .. type
