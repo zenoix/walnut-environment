@@ -22,7 +22,7 @@
     };
     hyprlock.enable = true;
     i18n.enable = true;
-    kitty.enable = true;
+    kitty.enable = false;
     obs.enable = true;
     rofi.enable = true;
     spicetify.enable = true;

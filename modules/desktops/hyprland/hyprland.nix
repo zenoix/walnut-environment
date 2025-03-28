@@ -15,7 +15,7 @@
 
     environment.systemPackages = with pkgs; [
       cliphist
-      kitty
+      ghostty
       wl-clipboard
       xdg-desktop-portal-gtk
       xwayland
