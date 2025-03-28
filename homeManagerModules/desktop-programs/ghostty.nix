@@ -15,6 +15,7 @@
         font-size = 10;
         window-padding-x = 5;
         window-padding-y = 5;
+        resize-overlay = "never";
       };
     };
   };
