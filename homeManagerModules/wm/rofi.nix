@@ -16,6 +16,8 @@
       enable = true;
       package = pkgs.rofi-wayland;
 
+      terminal = "${pkgs.ghostty}/bin/ghostty";
+
       extraConfig = {
         show-icons = true;
         icon-theme = "Pop";
