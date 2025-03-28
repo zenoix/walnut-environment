@@ -162,7 +162,7 @@
             bind = [
               # "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
-              "$mainMod, T, exec, kitty"
+              "$mainMod, T, exec, ghostty"
               "$mainMod, W, killactive,"
               "$mainMod, M, exit,"
               "$mainMod, E, exec, thunar"

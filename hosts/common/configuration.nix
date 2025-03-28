@@ -24,7 +24,7 @@
       enable = true;
       screenshot.enable = true;
     };
-    kitty.enable = true;
+    kitty.enable = false;
     libreoffice.enable = true;
     locale.enable = true;
     mullvad.enable = true;
