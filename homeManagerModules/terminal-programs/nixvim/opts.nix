@@ -68,6 +68,9 @@
       # NOTE: You should make sure your terminal supports this
       termguicolors = true;
 
+      # Disable showmode as lualine shows the mode for you
+      showmode = false;
+
     };
   };
 }
