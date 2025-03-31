@@ -136,8 +136,8 @@
           glola = "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\" --all";
           glols = "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\" --stat";
           glp = "_git_log_prettily";
-          gluc = "git pull upstream $(git_current_branch)";
-          glum = "git pull upstream $(git_main_branch)";
+          gluc = "git pull origin $(git_current_branch)";
+          glum = "git pull origin $(git_main_branch)";
           gm = "git merge";
           gma = "git merge --abort";
           gmc = "git merge --continue";
@@ -145,7 +145,7 @@
           gms = "git merge --squash";
           gmtl = "git mergetool --no-prompt";
           gmtlvim = "git mergetool --no-prompt --tool=vimdiff";
-          gmum = "git merge upstream/$(git_main_branch)";
+          gmum = "git merge origin/$(git_main_branch)";
           gp = "git push";
           gpd = "git push --dry-run";
           gpf = "git push --force-with-lease --force-if-includes";
@@ -161,7 +161,7 @@
           gprv = "git pull --rebase -v";
           gpsup = "git push --set-upstream origin $(git_current_branch)";
           gpsupf = "git push --set-upstream origin $(git_current_branch) --force-with-lease --force-if-includes";
-          gpu = "git push upstream";
+          gpu = "git push origin";
           gpv = "git push --verbose";
           gr = "git remote";
           gra = "git remote add";
