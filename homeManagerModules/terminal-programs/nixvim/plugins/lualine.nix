@@ -31,7 +31,12 @@
           "diff"
           "diagnostics"
         ];
-        lualine_c = [ "filename" ];
+        lualine_c = [
+          {
+            __unkeyed-1 = "filename";
+            path = 4;
+          }
+        ];
         lualine_x = [
           "encoding"
           "fileformat"
