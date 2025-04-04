@@ -11,5 +11,7 @@
 
   config = lib.mkIf config.walnut-home.uv.enable {
     home.packages = with pkgs-unstable; [ uv ];
+
+    programs.zsh.initExtra = ''eval "$(uv generate-shell-completion zsh)"'';
   };
 }
