@@ -27,6 +27,7 @@
     rofi.enable = true;
     spicetify.enable = true;
     syncthing.enable = true;
+    uv.enable = true;
     waybar.enable = true;
     zathura.enable = true;
   };
