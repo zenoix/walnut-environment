@@ -55,6 +55,7 @@
   walnut-home = {
     ghostty.enable = lib.mkForce false;
     kitty.enable = true;
+    uv.enable = true;
   };
 
   stylix.opacity.terminal = lib.mkForce 0.97;
