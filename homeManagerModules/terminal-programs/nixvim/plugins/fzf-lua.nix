@@ -24,6 +24,13 @@
           "--exclude '**/.vscode/*'"
           "--exclude '**/venv/*'"
           "--exclude '**/.venv/*'"
+          "--exclude '**/.idea/*'"
+          "--exclude '**/.vscode/*'"
+          "--exclude '**/build/*'"
+          "--exclude '**/dist/*'"
+          "--exclude '**/yarn.lock'"
+          "--exclude '**/package-lock.json'"
+
         ];
         follow = true;
       };
