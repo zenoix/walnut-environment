@@ -23,7 +23,6 @@
     ./screenkey.nix
     ./snacks.nix
     ./tiny-inline-diagnostic.nix
-    ./telescope.nix
     ./tmux-navigator.nix
     ./todo-comments.nix
     ./treesitter-context.nix
