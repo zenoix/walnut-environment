@@ -1,7 +1,7 @@
 { pkgs-unstable, ... }:
 {
   programs.nixvim.plugins.telescope = {
-    enable = true;
+    enable = false;
     package = pkgs-unstable.vimPlugins.telescope-nvim;
     settings = {
       defaults = {

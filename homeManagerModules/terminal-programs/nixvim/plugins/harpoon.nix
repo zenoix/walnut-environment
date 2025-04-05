@@ -1,7 +1,7 @@
 {
   programs.nixvim.plugins.harpoon = {
     enable = true;
-    enableTelescope = true;
+    enableTelescope = false;
     keymaps = {
       addFile = "<leader>h";
       toggleQuickMenu = "<leader>ph";
