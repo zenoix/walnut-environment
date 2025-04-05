@@ -18,6 +18,7 @@
           dashboard = true;
           dap_ui = true;
           flash = true;
+          fzf = true;
           gitsigns = true;
           harpoon = true;
           headlines = true;
