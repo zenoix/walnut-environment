@@ -16,7 +16,7 @@
     anki.enable = true;
     bluetooth.enable = true;
     coding-stuff.enable = true;
-    docker.enable = true;
+    docker.enable = false;
     firefox.enable = true;
     fonts.enable = true;
     home-manager.enable = true;
