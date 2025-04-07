@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ags
     ./dunst.nix
     ./hypridle.nix
     ./hyprland.nix
