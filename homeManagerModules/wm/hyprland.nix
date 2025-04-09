@@ -150,6 +150,12 @@
               "stayfocused, class:(rofi)"
             ];
 
+            layerrule = [
+              "noanim, selection"
+              "noanim, hyprpicker"
+
+            ];
+
             exec-once = [
               # "hyprpaper"
               "waybar"
