@@ -4,7 +4,8 @@
     ./alpha.nix
     ./bigfile.nix
     ./biscuits.nix
-    ./completion.nix
+    ./blink-cmp.nix
+    # ./completion.nix
     ./conform-nvim.nix
     ./dadbod.nix
     ./fzf-lua.nix
