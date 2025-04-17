@@ -6,7 +6,7 @@
 
       settings = {
         bigfile = {
-          enabled = false;
+          enabled = true;
         };
 
         input = {
