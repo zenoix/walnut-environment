@@ -30,6 +30,9 @@
               # Keep cursor in the middle of screen when searching for text
               "n" = "nzzzv";
               "N" = "Nzzzv";
+
+              # Use fzf-lua for code actions
+              "<leader>ca" = "<CMD>FzfLua lsp_code_actions previewer=codeaction_native<CR>";
             };
         visual =
           lib.mapAttrsToList

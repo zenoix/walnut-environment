@@ -11,7 +11,6 @@
         silent = true;
         lspBuf = {
           K = "hover";
-          "<leader>ca" = "code_action";
           "<leader>gd" = "definition";
           "<leader>gi" = "implementation";
           "<leader>gr" = "references";
