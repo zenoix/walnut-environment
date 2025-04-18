@@ -9,6 +9,7 @@
 {
   imports = [
     ./autocmds.nix
+    ./highlights.nix
     ./opts.nix
     ./remap.nix
     ./theme.nix
