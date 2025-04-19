@@ -54,8 +54,8 @@ As at 04/10/2024
 | Screenshot Software    | Grim + Slurp + Swappy |
 | Shell          | Zsh |
 | Status Bar     | Waybar |
-| Terminal       | Kitty |
-| Terminal Font  | JetBrainsMono |
+| Terminal       | Ghostty |
+| Terminal Font  | SFMono |
 | Theme         | Catppuccin Mocha |
 | Window Manager | Hyprland |
 
