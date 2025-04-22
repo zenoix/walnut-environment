@@ -18,6 +18,22 @@
     autoCmd = [
       {
         event = [
+          "VimEnter"
+        ];
+        desc = "Add rounded border to LSP hover window";
+        callback = {
+          __raw = ''
+            function()
+                vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+                border = 'rounded',
+              })
+            end
+          '';
+        };
+      }
+
+      {
+        event = [
           "LspAttach"
         ];
         desc = "Disable hover capability from Ruff";
