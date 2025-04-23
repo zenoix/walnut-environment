@@ -40,6 +40,10 @@ convention = "google"
     # The below are debatable
     "PLR2004", # Magic value used in comparison, ...
     "S311",    # Standard pseudo-random generators are not suitable for cryptographic purposes
+    "D100",
+    "D101",
+    "D102",
+    "D104",
 ]
 
 [format]
