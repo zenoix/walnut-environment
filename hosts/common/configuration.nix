@@ -24,6 +24,7 @@
       enable = true;
       screenshot.enable = true;
     };
+    keymapp.enable = true;
     kitty.enable = false;
     libreoffice.enable = true;
     locale.enable = true;

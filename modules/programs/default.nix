@@ -4,6 +4,7 @@
     ./coding.nix
     ./docker.nix
     ./firefox.nix
+    ./keymapp.nix
     ./kitty.nix
     ./libreoffice.nix
     ./mullvad.nix
