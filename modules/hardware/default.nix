@@ -4,5 +4,6 @@
     ./brightnessctl.nix
     ./sound.nix
     ./swap.nix
+    ./zsa.nix
   ];
 }

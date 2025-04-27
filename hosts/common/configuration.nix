@@ -46,6 +46,7 @@
     vlc.enable = true;
     xdg-portal.enable = true;
     xkb.enable = true;
+    zsa.enable = true;
   };
 
   # Enable flakes
