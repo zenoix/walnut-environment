@@ -37,6 +37,7 @@
     gh.enable = true;
     ghostty.enable = true;
     git.enable = true;
+    git-work.enable = false;
     nixvim.enable = true;
     ripgrep.enable = true;
     ruff.enable = true;

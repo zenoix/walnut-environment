@@ -1,4 +1,9 @@
-{ pkgs, work, ... }:
+{
+  lib,
+  pkgs,
+  work,
+  ...
+}:
 {
   imports = [ ./../common/home.nix ];
 
@@ -39,5 +44,7 @@
 
   fonts.fontconfig.enable = true;
 
-  walnut-home = { };
+  walnut-home = {
+    git-work.enable = lib.mkForce true;
+  };
 }

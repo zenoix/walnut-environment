@@ -54,6 +54,7 @@
 
   walnut-home = {
     ghostty.enable = lib.mkForce false;
+    git-work.enable = lib.mkForce true;
     kitty.enable = true;
     uv.enable = true;
   };
