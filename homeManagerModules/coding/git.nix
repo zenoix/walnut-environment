@@ -69,6 +69,13 @@
           "git@github.com:" = {
             insteadOf = "gh:";
           };
+          "https://github.com/zenoix/" = {
+            insteadOf = "zh:";
+          };
+
+          "https://github.com/" = {
+            insteadOf = "ghh:";
+          };
         };
 
         color = {
