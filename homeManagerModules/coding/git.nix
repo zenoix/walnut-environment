@@ -30,10 +30,6 @@
 
         init.defaultBranch = "main";
 
-        interactive = {
-          diffFilter = "delta --color-only";
-        };
-
         log = {
           abbreCommit = true;
           graphColors = "blue,yellow,cyan,magenta,green,red";
@@ -68,10 +64,10 @@
 
         url = {
           "git@github.com:zenoix/" = {
-            insteadOf = "z/";
-            "git@github.com:" = {
-              insteadOf = "gh:";
-            };
+            insteadOf = "z:";
+          };
+          "git@github.com:" = {
+            insteadOf = "gh:";
           };
         };
 
