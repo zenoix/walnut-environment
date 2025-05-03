@@ -33,8 +33,8 @@
       # Start scrolling 8 lines before the top/bottom
       scrolloff = 8;
 
-      # Enable mouse mode
-      mouse = "a";
+      # Enable mouse mode only in normal mode
+      mouse = "n";
 
       # Enable break indent
       breakindent = true;
