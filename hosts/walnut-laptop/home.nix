@@ -25,6 +25,7 @@
     kitty.enable = false;
     obs.enable = true;
     rofi.enable = true;
+    sioyek.enable = true;
     spicetify.enable = true;
     syncthing.enable = true;
     uv.enable = true;
