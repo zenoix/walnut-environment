@@ -23,7 +23,7 @@
       gnumake
       go
       pkgs-unstable.nodejs
-      (python312.withPackages (ps: with ps; [ requests ]))
+      (python313.withPackages (ps: with ps; [ requests ]))
     ];
   };
 }
