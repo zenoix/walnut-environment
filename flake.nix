@@ -27,10 +27,6 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    apple-fonts = {
-      url = "github:Lyndeno/apple-fonts.nix";
-    };
-
   };
 
   outputs =

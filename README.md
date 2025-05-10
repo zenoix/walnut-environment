@@ -55,7 +55,7 @@ As at 04/10/2024
 | Shell          | Zsh |
 | Status Bar     | Waybar |
 | Terminal       | Ghostty |
-| Terminal Font  | SFMono |
+| Terminal Font  | Monaspace Neon |
 | Theme         | Catppuccin Mocha |
 | Window Manager | Hyprland |
 

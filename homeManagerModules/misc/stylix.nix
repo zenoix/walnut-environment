@@ -1,8 +1,8 @@
 {
   pkgs,
+  pkgs-unstable,
   lib,
   config,
-  inputs,
   ...
 }:
 {
@@ -22,8 +22,8 @@
 
       fonts = {
         monospace = {
-          package = inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd;
-          name = "SFMono Nerd Font";
+          package = pkgs-unstable.monaspace;
+          name = "Monaspace Neon";
         };
       };
 

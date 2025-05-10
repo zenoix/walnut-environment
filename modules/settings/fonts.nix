@@ -1,5 +1,5 @@
 {
-  pkgs,
+  pkgs-unstable,
   lib,
   config,
   inputs,
@@ -11,8 +11,11 @@
   };
 
   config = lib.mkIf config.walnut.fonts.enable {
-    fonts.packages = with pkgs; [
+    fonts.packages = with pkgs-unstable; [
       jetbrains-mono
+      monaspace
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.monaspace
       noto-fonts
       noto-fonts-emoji
       noto-fonts-cjk-sans
@@ -21,8 +24,6 @@
       font-awesome
       powerline-fonts
       powerline-symbols
-      (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
-      inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd
     ];
   };
 }
