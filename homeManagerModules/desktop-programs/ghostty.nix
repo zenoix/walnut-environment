@@ -12,7 +12,7 @@
       installVimSyntax = true;
       settings = {
         font-family = "Monaspace Neon";
-        font-size = 10;
+        font-size = 9;
         font-feature = "calt,ss01,ss02,ss03,ss04,ss06,ss07,ss08,ss09,liga";
         window-padding-x = 5;
         window-padding-y = 5;
