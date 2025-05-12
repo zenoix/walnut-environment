@@ -1,6 +1,4 @@
 {
-  inputs,
-  pkgs,
   pkgs-unstable,
   lib,
   config,
@@ -28,7 +26,7 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
-      package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.neovim-unwrapped;
+      package = pkgs-unstable.neovim-unwrapped;
 
       extraPackages = with pkgs-unstable; [ ];
     };
