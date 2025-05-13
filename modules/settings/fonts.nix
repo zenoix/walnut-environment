@@ -11,8 +11,6 @@
 
   config = lib.mkIf config.walnut.fonts.enable {
     fonts.packages = with pkgs-unstable; [
-      jetbrains-mono
-      monaspace
       nerd-fonts.jetbrains-mono
       nerd-fonts.monaspace
       noto-fonts
