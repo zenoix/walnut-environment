@@ -21,7 +21,7 @@
         {
           global = {
             corner_radius = 10;
-            font = lib.mkForce "JetBrainsMono 10";
+            font = lib.mkForce "JetBrainsMono Nerd Font 10";
             frame_color = "${colors.base0E}";
             frame_width = 2;
             gap_size = 10;
