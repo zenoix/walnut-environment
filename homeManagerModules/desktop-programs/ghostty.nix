@@ -13,7 +13,7 @@
       settings = {
         font-family = "Monaspace Neon";
         font-size = 10;
-        font-feature = "calt,ss01,ss02,ss03,ss04,ss06,ss07,ss08,ss09,liga";
+        font-feature = "calt,ss01,ss02,ss03,ss04,ss06,ss07,ss08,ss09,liga,cv01 2";
         window-padding-x = 5;
         window-padding-y = 5;
         resize-overlay = "never";
