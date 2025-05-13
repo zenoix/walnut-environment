@@ -17,7 +17,7 @@
     ./lualine.nix
     ./mini.nix
     ./neogen.nix
-    ./noice.nix
+    # ./noice.nix # NOTE: Disabled until nui.nvim stops using tbl_islist
     ./nvim-ts-context-commentstring.nix
     ./oil.nix
     ./render-markdown.nix
