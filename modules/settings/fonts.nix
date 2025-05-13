@@ -2,7 +2,6 @@
   pkgs-unstable,
   lib,
   config,
-  inputs,
   ...
 }:
 {
