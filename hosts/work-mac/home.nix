@@ -1,8 +1,8 @@
 {
   pkgs,
+  pkgs-unstable,
   lib,
   work,
-  inputs,
   ...
 }:
 {
@@ -17,37 +17,42 @@
       ".hushlogin".text = "";
     };
 
-    packages = with pkgs; [
-      azure-cli
-      cocogitto
-      coreutils
-      fd
-      gcc
-      git
-      gnumake
-      go
-      home-manager
-      htop
-      killall
-      tree
-      unzip
-      wget
-      xclip
-      zip
-      (python312.withPackages (ps: with ps; [ requests ]))
+    packages =
+      with pkgs;
+      [
+        azure-cli
+        cocogitto
+        coreutils
+        fd
+        gcc
+        git
+        gnumake
+        go
+        home-manager
+        htop
+        killall
+        tree
+        unzip
+        wget
+        xclip
+        zip
+        (python312.withPackages (ps: with ps; [ requests ]))
 
-      jetbrains-mono
-      noto-fonts
-      noto-fonts-emoji
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
-      twemoji-color-font
-      font-awesome
-      powerline-fonts
-      powerline-symbols
-      (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
-      inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd
-    ];
+      ]
+      ++ (with pkgs-unstable; [
+        jetbrains-mono
+        monaspace
+        noto-fonts
+        noto-fonts-emoji
+        noto-fonts-cjk-sans
+        noto-fonts-cjk-serif
+        twemoji-color-font
+        font-awesome
+        powerline-fonts
+        powerline-symbols
+        nerd-fonts.jetbrains-mono
+        nerd-fonts.monaspace
+      ]);
   };
 
   fonts.fontconfig.enable = true;
