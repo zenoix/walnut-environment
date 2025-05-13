@@ -2,14 +2,13 @@
 {
   programs.nixvim = {
 
-    extraPackages = with pkgs; [
+    extraPackages = with pkgs-unstable; [
       beautysh
       goimports-reviser
       nixfmt-rfc-style
       nodePackages.prettier
+      ruff
       stylua
-
-      pkgs-unstable.ruff
     ];
 
     plugins.conform-nvim = {
