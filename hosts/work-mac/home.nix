@@ -66,6 +66,12 @@
 
   stylix.opacity.terminal = lib.mkForce 0.97;
 
+  programs.gh = {
+    settings = {
+      git_protocol = lib.mkForce "https";
+    };
+  };
+
   programs.kitty = {
     font.size = lib.mkOverride 30 13;
   };
