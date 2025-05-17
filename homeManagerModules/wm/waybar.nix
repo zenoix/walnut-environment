@@ -16,7 +16,7 @@
           mainBar = {
             layer = "top";
             position = "top";
-            margin = "8 10 -5 10";
+            margin = "5 5 -2 5";
 
             modules-left = [
               "hyprland/workspaces"
@@ -315,6 +315,7 @@
 
             window#waybar {
               background: #${colors.base00};
+              border-radius: 5px;
             }
 
             window#waybar.hidden {
