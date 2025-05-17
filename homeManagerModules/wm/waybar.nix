@@ -314,7 +314,7 @@
             }
 
             window#waybar {
-              background: transparent;
+              background: #${colors.base00};
             }
 
             window#waybar.hidden {
