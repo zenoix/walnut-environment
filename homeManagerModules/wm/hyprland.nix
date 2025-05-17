@@ -72,7 +72,7 @@
 
               resize_on_border = true;
 
-              "col.active_border" = lib.mkForce "rgb(${colors.base0E})";
+              "col.active_border" = lib.mkForce "rgb(${colors.base0D})";
             };
 
             decoration = {
