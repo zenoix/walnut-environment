@@ -2,9 +2,9 @@
 
 if pgrep hypridle > /dev/null; then
     killall hypridle;
-    dunstify "Caffeine mode on";
+    dunstify "Hypridle" "Caffeine mode on" -t 1250;
 else
     hyprctl dispatch exec hypridle > /dev/null;
-    dunstify "Caffeine mode off";
+    dunstify "Hypridle" "Caffeine mode off" -t 1250;
 fi
 sleep 1.5
