@@ -291,7 +291,7 @@
                 activated = "󰖨";
                 deactivated = "󰤄";
               };
-              on-click = "~/walnut-environment/home-manager/modules/wm/scripts/caffeine.sh";
+              on-click = "~/walnut-environment/homeManagerModules/wm/scripts/caffeine.sh";
               tooltip-format-activated = "Caffeine mode // On";
               tooltip-format-deactivated = "Caffeine mode // Off";
             };
