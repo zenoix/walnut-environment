@@ -12,7 +12,7 @@
     ./remap.nix
     ./theme.nix
 
-    ./plugins/plugins-bundle.nix
+    ./plugins
   ];
 
   options = {
