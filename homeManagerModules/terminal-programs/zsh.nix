@@ -27,6 +27,10 @@
 
           hms = "home-manager switch --flake ${flakeDir}";
 
+          # Best alias ever
+          please = "sudo !!";
+          pls = "sudo !!";
+
           ".." = "cd ..";
           cat = "bat";
           cls = "clear";
