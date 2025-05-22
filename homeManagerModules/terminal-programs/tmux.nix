@@ -36,16 +36,16 @@
         # status left look and feel
         set -g status-left-length 100
         set -g status-left ""
-        set -ga status-left "#{?client_prefix,#{#[bg=#{@thm_red},fg=#{@thm_bg},bold]  #S },#{#[bg=default,fg=#{@thm_mauve}]  #S }}"
-        set -ga status-left "#[bg=default,fg=#{@thm_overlay_0},none]│"
-        set -ga status-left "#[bg=default,fg=#{@thm_mauve}]  #{pane_current_command} "
-        set -ga status-left "#[bg=default,fg=#{@thm_overlay_0},none]│"
-        set -ga status-left "#[bg=default,fg=#{@thm_mauve}]  #{=/-32/...:#{s|$USER|~|:#{b:pane_current_path}}} "
+        set -ga status-left "#{?client_prefix,#{#[bg=#{@thm_mauve},fg=#{@thm_mantle},bold]  #S },#{#[bg=default,fg=#{@thm_text}]  #S }}"
+        set -ga status-left "#[bg=default,fg=#{@thm_mauve},none]│"
+        set -ga status-left "#[bg=default,fg=#cdd6f4]  #{pane_current_command} "
+        set -ga status-left "#[bg=default,fg=#{@thm_mauve},none]│"
+        set -ga status-left "#[bg=default,fg=#cdd6f4]  #{=/-32/...:#{s|$USER|~|:#{b:pane_current_path}}} "
 
         # status right look and feel
         set -g status-right-length 100
         set -g status-right ""
-        set -ga status-right "#[bg=default,fg=#{@thm_mauve}] 󰭦 %Y-%m-%d 󰅐 %H:%M "
+        set -ga status-right "#[bg=default,fg=#{@thm_text}] 󰭦 %Y-%m-%d 󰅐 %H:%M "
 
         # Configure Tmux
         set -g status-position top
@@ -104,9 +104,9 @@
             set -g @catppuccin_window_flags_icon_activity ""
             set -g @catppuccin_window_flags_icon_bell ""
             set -g @catppuccin_window_number ""
-            set -g @catppuccin_window_text "#[fg=#{@thm_mauve},bg=default] #I#{?#{!=:#{window_name},},: #W,}"
+            set -g @catppuccin_window_text "#[fg=default,bg=default] #I#{?#{!=:#{window_name},},: #W,}"
             set -g @catppuccin_window_current_number ""
-            set -g @catppuccin_window_current_text "#[fg=#{@thm_mauve},bg=#{@thm_surface}] #I#{?#{!=:#{window_name},},: #W,}"
+            set -g @catppuccin_window_current_text "#[fg=#{@thm_mantle},bg=#{@thm_mauve}] #I#{?#{!=:#{window_name},},: #W,}"
           '';
         }
       ];
