@@ -182,7 +182,7 @@
             };
 
             pulseaudio = {
-              format = "{icon} {volume}";
+              format = "{icon}  {volume}";
               rotate = 0;
               format-muted = "";
               on-click = "pavucontrol -t 3";
