@@ -40,7 +40,7 @@
                 "network"
                 "bluetooth"
                 "pulseaudio"
-                "pulseaudio#microphone"
+                # "pulseaudio#microphone"
                 "idle_inhibitor"
               ];
             };
