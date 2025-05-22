@@ -336,8 +336,6 @@
             #power {
               padding-left: 10px;
               padding-right: 10px;
-              border-radius: 10px;
-              background: #${colors.base00};
             }
 
             #group1 {
@@ -366,7 +364,6 @@
               border-radius: 10px;
               border-width: 0px;
               transition: none;
-              background: #${colors.base00};
             }
 
             #custom-power {
@@ -378,7 +375,6 @@
             }
 
             #group2 {
-              background: #${colors.base00};
               padding-left: 16px;
               padding-right: 16px;
               border-radius: 10px;
@@ -426,7 +422,6 @@
               padding-right: 8px;
               border-radius: 10px;
               transition: none;
-              background: #${colors.base00};
             }
 
             #workspaces button {
@@ -472,7 +467,6 @@
               border-radius: 10px;
               transition: none;
               color: #${colors.base05};
-              background: #${colors.base00};
             }
 
             #keyboard-state {
@@ -499,7 +493,6 @@
               border-radius: 10px 10px 10px 10px;
               transition: none;
               color: #${colors.base05};
-              background: #${colors.base00};
             }
 
             #tray {
@@ -508,7 +501,6 @@
               border-radius: 10px;
               transition: none;
               color: #${colors.base05};
-              background: #${colors.base00};
             }
 
             @keyframes blink {
