@@ -36,16 +36,18 @@
         # status left look and feel
         set -g status-left-length 100
         set -g status-left ""
-        set -ga status-left "#{?client_prefix,#{#[bg=#{@thm_mauve},fg=#{@thm_mantle},bold]  #S },#{#[bg=default,fg=#{@thm_text}]  #S }}"
+        set -ga status-left "#{?client_prefix,#{#[bg=#{@thm_mauve},fg=#{@thm_mantle},bold]  #S },#{#[bg=default,fg=#{@thm_blue}]  #S }}"
         set -ga status-left "#[bg=default,fg=#{@thm_mauve},none]│"
-        set -ga status-left "#[bg=default,fg=#cdd6f4]  #{pane_current_command} "
+        set -ga status-left "#[bg=default,fg=#{@thm_blue}]  #{pane_current_command} "
         set -ga status-left "#[bg=default,fg=#{@thm_mauve},none]│"
-        set -ga status-left "#[bg=default,fg=#cdd6f4]  #{=/-32/...:#{s|$USER|~|:#{b:pane_current_path}}} "
+        set -ga status-left "#[bg=default,fg=#{@thm_blue}]  #{=/-32/...:#{s|$USER|~|:#{b:pane_current_path}}} "
 
         # status right look and feel
         set -g status-right-length 100
         set -g status-right ""
-        set -ga status-right "#[bg=default,fg=#{@thm_text}] 󰭦 %Y-%m-%d 󰅐 %H:%M "
+        set -ga status-right "#[bg=default,fg=#{@thm_blue}] 󰭦 %Y-%m-%d "
+        set -ga status-right "#[bg=default,fg=#{@thm_mauve},none]│"
+        set -ga status-right "#[bg=default,fg=#{@thm_blue}] 󰅐 %H:%M "
 
         # Configure Tmux
         set -g status-position top
