@@ -1,5 +1,4 @@
 {
-  pkgs,
   pkgs-unstable,
   lib,
   config,
@@ -62,24 +61,9 @@
         setw -g pane-border-lines single
 
       '';
-      # # window look and feel
-      #       set -wg automatic-rename on
-      #         set -g automatic-rename-format "Window"
-      #
-      #         set -g window-status-format " #I#{?#{!=:#{window_name},Window},: #W,} "
-      #         set -g window-status-style "bg=#{@thm_bg},fg=#{@thm_rosewater}"
-      #         set -g window-status-last-style "bg=#{@thm_bg},fg=#{@thm_peach}"
-      #         set -g window-status-activity-style "bg=#{@thm_red},fg=#{@thm_bg}"
-      #         set -g window-status-bell-style "bg=#{@thm_red},fg=#{@thm_bg},bold"
-      #         set -gF window-status-separator "#[bg=#{@thm_bg},fg=#{@thm_overlay_0}]│"
-      #
-      #         set -g window-status-current-format " #I#{?#{!=:#{window_name},Window},: #W,} "
-      #         set -g window-status-current-style "bg=#{@thm_peach},fg=#{@thm_bg},bold"
 
       plugins = with pkgs-unstable; [
         tmuxPlugins.vim-tmux-navigator
-        tmuxPlugins.online-status
-        tmuxPlugins.battery
         {
           plugin = tmuxPlugins.catppuccin;
           extraConfig = ''
