@@ -3,11 +3,11 @@
 
   inputs = {
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    stylix.url = "github:danth/stylix/release-24.11";
+    stylix.url = "github:danth/stylix/release-25.05";
 
     nixvim = {
       url = "github:nix-community/nixvim/";
@@ -114,7 +114,7 @@
           modules = [
             ./hosts/walnut-laptop/home.nix
             ./homeManagerModules
-            inputs.stylix.homeManagerModules.stylix
+            inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };
@@ -124,7 +124,7 @@
           modules = [
             ./hosts/walnut-desktop/home.nix
             ./homeManagerModules
-            inputs.stylix.homeManagerModules.stylix
+            inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };
@@ -135,7 +135,7 @@
           modules = [
             ./hosts/work-wsl/home.nix
             ./homeManagerModules
-            inputs.stylix.homeManagerModules.stylix
+            inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim
           ];
         };
@@ -166,7 +166,7 @@
             modules = [
               ./hosts/work-mac/home.nix
               ./homeManagerModules
-              inputs.stylix.homeManagerModules.stylix
+              inputs.stylix.homeModules.stylix
               inputs.nixvim.homeManagerModules.nixvim
             ];
           };

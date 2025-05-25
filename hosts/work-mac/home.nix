@@ -77,7 +77,7 @@
   };
 
   programs.zsh = {
-    initExtraFirst = ''
+    initContent = lib.mkOrder 500 ''
       [[ ! $(command -v nix) && -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]] && source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
     '';
   };

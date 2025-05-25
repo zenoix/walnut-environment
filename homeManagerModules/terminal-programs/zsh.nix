@@ -154,7 +154,7 @@
         autoload -Uz bashcompinit && bashcompinit
       '';
 
-      initExtra = ''
+      initContent = ''
         zstyle :compinstall filename "$HOME/.zshrc"
 
         unsetopt beep
