@@ -83,7 +83,7 @@
             # Spotify
             {
               monitor = "";
-              text = "cmd[update:1000] echo \"$($HOME/walnut-environment/home-manager/modules/wm/scripts/now_playing.sh)\"";
+              text = "cmd[update:1000] echo \"$($HOME/walnut-environment/nonNix/scripts/now_playing.sh)\"";
               color = textColor;
               font_size = 14;
               font_family = "JetBrains Mono";
@@ -95,7 +95,7 @@
             # # Battery
             # {
             #   monitor = "";
-            #   text = "cmd[update:1000] echo \"$($HOME/walnut-environment/home-manager/modules/wm/scripts/battery.sh)\"";
+            #   text = "cmd[update:1000] echo \"$($HOME/walnut-environment/nonNix/scripts/battery.sh)\"";
             #   color = textColor;
             #   font_size = 12;
             #   font_family = "JetBrains Mono";
