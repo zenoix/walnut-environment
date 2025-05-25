@@ -14,7 +14,7 @@
     programs.ruff = {
       enable = true;
       package = pkgs-unstable.ruff;
-      settings = pkgs.lib.importTOML ./ruff.toml;
+      settings = pkgs.lib.importTOML ../../nonNix/ruff.toml;
     };
   };
 }

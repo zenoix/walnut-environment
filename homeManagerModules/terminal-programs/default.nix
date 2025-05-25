@@ -7,7 +7,7 @@
     ./gh-cli.nix
     ./nixvim/nixvim.nix
     ./ripgrep.nix
-    ./starship/starship.nix
+    ./starship.nix
     ./tmux.nix
     ./yazi.nix
     ./zoxide.nix

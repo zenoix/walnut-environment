@@ -3,9 +3,9 @@
     ./devbox.nix
     ./devenv.nix
     ./direnv.nix
-    ./git.nix
     ./git-work.nix
+    ./git.nix
+    ./ruff.nix
     ./uv.nix
-    ./ruff/ruff.nix
   ];
 }
