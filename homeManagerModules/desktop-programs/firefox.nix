@@ -11,7 +11,7 @@
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # enable userChrome.css
         };
-        userChrome = builtins.readFile ./userChrome.css;
+        userChrome = builtins.readFile ../../nonNix/firefox/userChrome.css;
       };
     };
   };

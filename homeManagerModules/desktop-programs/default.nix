@@ -1,6 +1,6 @@
 {
   imports = [
-    ./firefox/firefox.nix
+    ./firefox.nix
     ./ghostty.nix
     ./kitty.nix
     ./obs.nix
