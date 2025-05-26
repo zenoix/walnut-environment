@@ -140,11 +140,6 @@
               disable_hyprland_logo = true;
             };
 
-            windowrule = [
-              "float, ^(imv)$"
-              "float, ^(mpv)$"
-            ];
-
             windowrulev2 = [
               "bordercolor rgb(${colors.base08}) rgb(${colors.base09}), fullscreen:1" # set bordercolor to red if window is fullscreen
               "stayfocused, class:(rofi)"
