@@ -14,5 +14,9 @@
         userChrome = builtins.readFile ../../nonNix/firefox/userChrome.css;
       };
     };
+
+    stylix.targets.firefox.profileNames = lib.mkIf (config.walnut-home.stylix.enable == true) [
+      "default"
+    ];
   };
 }
