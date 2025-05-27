@@ -15,7 +15,7 @@
         font-size = 10;
         font-feature = "calt,ss01,ss02,ss03,ss04,ss06,ss07,ss08,ss09,liga,cv01 2";
         window-padding-x = 5;
-        window-padding-y = "5,0";
+        window-padding-y = "7,0";
         resize-overlay = "never";
       };
     };
