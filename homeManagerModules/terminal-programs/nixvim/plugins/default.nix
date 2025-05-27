@@ -9,6 +9,7 @@
     ./dadbod.nix
     ./fzf-lua.nix
     ./gitgutter.nix
+    ./hardtime.nix
     ./harpoon.nix
     ./indent-blankline.nix
     ./iron.nix
