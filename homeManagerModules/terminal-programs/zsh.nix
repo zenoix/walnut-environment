@@ -165,11 +165,6 @@
 
         zstyle -e ':completion:*:default' list-colors 'reply=("''${PREFIX:+=(#bi)($PREFIX:t)(?)*==02=01}:''${(s.:.)LS_COLORS}")'
 
-        # Open tmux by default
-        if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-          exec tmux
-        fi
-
         autoload -Uz is-at-least
 
         source ${pkgs.fzf-git-sh}/share/fzf-git-sh/fzf-git.sh
