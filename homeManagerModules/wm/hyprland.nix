@@ -35,7 +35,7 @@
               "XDG_CURRENT_DESKTOP,Hyprland"
               "XDG_SESSION_TYPE,wayland"
               "XDG_SESSION_DESKTOP,Hyprland"
-              "XCURSOR_SIZE,24"
+              "XCURSOR_SIZE,12"
               "QT_QPA_PLATFORM,wayland"
               "XDG_SCREENSHOTS_DIR,~/screenshots"
               "GLFW_IM_MODULE,ibus"

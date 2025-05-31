@@ -30,7 +30,7 @@
       cursor = {
         package = pkgs.catppuccin-cursors.mochaDark;
         name = "catppuccin-mocha-dark-cursors";
-        size = 16;
+        size = 12;
       };
 
       opacity = {
