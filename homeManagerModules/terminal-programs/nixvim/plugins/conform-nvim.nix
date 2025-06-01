@@ -37,8 +37,8 @@
             # To organize the imports.
             "ruff_organize_imports"
           ];
-
           tsx = [ "prettier" ];
+          typescript = [ "prettier" ];
           yaml = [ "prettier" ];
           zsh = [ "beautysh" ];
         };
