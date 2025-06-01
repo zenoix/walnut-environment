@@ -30,7 +30,13 @@
 
         set -g allow-passthrough on
 
+        set -g history-limit 10000
+
         set -g default-command "$SHELL"
+
+        set -sg terminal-overrides ",*:RGB"
+
+        set -g renumber-windows on
 
         # status left look and feel
         set -g status-left-length 100
@@ -58,7 +64,7 @@
         setw -g pane-border-format ""
         setw -g pane-active-border-style "bg=default,fg=#{@thm_overlay_0}"
         setw -g pane-border-style "bg=default,fg=#{@thm_surface_0}"
-        setw -g pane-border-lines single
+        setw -g pane-border-lines heavy
 
       '';
 
