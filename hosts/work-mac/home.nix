@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  work,
   ...
 }:
 {
@@ -10,6 +11,8 @@
   ];
 
   home = {
+    homeDirectory = "/Users/${work.user}";
+
     file = {
       ".config/aerospace/aerospace.toml".source = ../../nonNix/aerospace.toml;
       ".hushlogin".text = "";

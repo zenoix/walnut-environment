@@ -10,7 +10,6 @@
 
   home = {
     username = "${work.user}";
-    homeDirectory = "/Users/${work.user}";
 
     packages =
       with pkgs;
