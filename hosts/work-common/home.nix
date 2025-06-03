@@ -17,6 +17,7 @@
         azure-cli
         cocogitto
         fd
+        gcc
         home-manager
         htop
         killall
