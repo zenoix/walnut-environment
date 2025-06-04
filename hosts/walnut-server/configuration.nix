@@ -17,6 +17,7 @@
     bluetooth.enable = lib.mkForce false;
     firefox.enable = lib.mkForce false;
     fonts.enable = lib.mkForce false;
+    glance.enable = true;
     home-manager.enable = lib.mkForce false;
     hyprland = {
       enable = lib.mkForce false;
