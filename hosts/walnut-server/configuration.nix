@@ -63,6 +63,7 @@
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDQCjJqY4aAGqN7NroiFadKXW5XAryPt5SaJIH2YNGjs zenoix@walnut-laptop"
     ];
+    shell = pkgs.zsh;
   };
 
   # List packages installed in system profile. To search, run:
