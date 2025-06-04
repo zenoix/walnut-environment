@@ -66,7 +66,12 @@
           inherit system;
           config.allowUnfree = true;
         };
-        inherit inputs personal work;
+        inherit
+          inputs
+          personal
+          work
+          server
+          ;
       };
 
       personal = {
@@ -141,6 +146,16 @@
           inherit extraSpecialArgs pkgs;
           modules = [
             ./hosts/walnut-desktop/home.nix
+            ./homeManagerModules
+            inputs.stylix.homeModules.stylix
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
+        };
+
+        "${server.user}@walnut-server" = home-manager.lib.homeManagerConfiguration {
+          inherit extraSpecialArgs pkgs;
+          modules = [
+            ./hosts/walnut-sever/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim
