@@ -8,32 +8,32 @@
   ];
 
   walnut = {
-    anki.enable = lib.mkOverride false;
-    bluetooth.enable = lib.mkOverride false;
-    firefox.enable = lib.mkOverride false;
-    fonts.enable = lib.mkOverride false;
-    home-manager.enable = lib.mkOverride false;
+    anki.enable = lib.mkForce false;
+    bluetooth.enable = lib.mkForce false;
+    firefox.enable = lib.mkForce false;
+    fonts.enable = lib.mkForce false;
+    home-manager.enable = lib.mkForce false;
     hyprland = {
-      enable = lib.mkOverride false;
-      screenshot.enable = lib.mkOverride false;
+      enable = lib.mkForce false;
+      screenshot.enable = lib.mkForce false;
     };
-    keymapp.enable = lib.mkOverride false;
-    libreoffice.enable = lib.mkOverride false;
-    mullvad.enable = lib.mkOverride false;
-    qt-libs.enable = lib.mkOverride false;
-    sddm.enable = lib.mkOverride false;
-    signal.enable = lib.mkOverride false;
-    sound.enable = lib.mkOverride false;
-    swap.enable = lib.mkOverride false;
-    thunar.enable = lib.mkOverride false;
-    tor-browser.enable = lib.mkOverride false;
-    obsidian.enable = lib.mkOverride false;
-    users.enable = lib.mkOverride false;
-    vesktop.enable = lib.mkOverride false;
-    vlc.enable = lib.mkOverride false;
-    xdg-portal.enable = lib.mkOverride false;
-    xkb.enable = lib.mkOverride false;
-    zsa.enable = lib.mkOverride false;
+    keymapp.enable = lib.mkForce false;
+    libreoffice.enable = lib.mkForce false;
+    mullvad.enable = lib.mkForce false;
+    qt-libs.enable = lib.mkForce false;
+    sddm.enable = lib.mkForce false;
+    signal.enable = lib.mkForce false;
+    sound.enable = lib.mkForce false;
+    swap.enable = lib.mkForce false;
+    thunar.enable = lib.mkForce false;
+    tor-browser.enable = lib.mkForce false;
+    obsidian.enable = lib.mkForce false;
+    users.enable = lib.mkForce false;
+    vesktop.enable = lib.mkForce false;
+    vlc.enable = lib.mkForce false;
+    xdg-portal.enable = lib.mkForce false;
+    xkb.enable = lib.mkForce false;
+    zsa.enable = lib.mkForce false;
   };
 
   # Bootloader.
@@ -98,6 +98,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = lib.mkOverride "25.05"; # Did you read the comment?
+  system.stateVersion = lib.mkForce "25.05"; # Did you read the comment?
 
 }
