@@ -1,71 +1,70 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./../common/configuration.nix
+  ];
+
+  walnut = {
+    anki.enable = lib.mkOverride false;
+    bluetooth.enable = lib.mkOverride false;
+    firefox.enable = lib.mkOverride false;
+    fonts.enable = lib.mkOverride false;
+    home-manager.enable = lib.mkOverride false;
+    hyprland = {
+      enable = lib.mkOverride false;
+      screenshot.enable = lib.mkOverride false;
+    };
+    keymapp.enable = lib.mkOverride false;
+    libreoffice.enable = lib.mkOverride false;
+    mullvad.enable = lib.mkOverride false;
+    qt-libs.enable = lib.mkOverride false;
+    sddm.enable = lib.mkOverride false;
+    signal.enable = lib.mkOverride false;
+    sound.enable = lib.mkOverride false;
+    swap.enable = lib.mkOverride false;
+    thunar.enable = lib.mkOverride false;
+    tor-browser.enable = lib.mkOverride false;
+    obsidian.enable = lib.mkOverride false;
+    users.enable = lib.mkOverride false;
+    vesktop.enable = lib.mkOverride false;
+    vlc.enable = lib.mkOverride false;
+    xdg-portal.enable = lib.mkOverride false;
+    xkb.enable = lib.mkOverride false;
+    zsa.enable = lib.mkOverride false;
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "walnut-server"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Pacific/Auckland";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_NZ.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_NZ.UTF-8";
-    LC_IDENTIFICATION = "en_NZ.UTF-8";
-    LC_MEASUREMENT = "en_NZ.UTF-8";
-    LC_MONETARY = "en_NZ.UTF-8";
-    LC_NAME = "en_NZ.UTF-8";
-    LC_NUMERIC = "en_NZ.UTF-8";
-    LC_PAPER = "en_NZ.UTF-8";
-    LC_TELEPHONE = "en_NZ.UTF-8";
-    LC_TIME = "en_NZ.UTF-8";
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.walnut = {
     isNormalUser = true;
     description = "walnut-server";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDQCjJqY4aAGqN7NroiFadKXW5XAryPt5SaJIH2YNGjs zenoix@walnut-laptop"
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDQCjJqY4aAGqN7NroiFadKXW5XAryPt5SaJIH2YNGjs zenoix@walnut-laptop"
     ];
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -99,6 +98,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = lib.mkOverride "25.05"; # Did you read the comment?
 
 }

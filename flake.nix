@@ -107,6 +107,15 @@
         ];
       };
 
+      # Server NixOS
+      nixosConfigurations.walnut-server = nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        modules = [
+          ./hosts/walnut-server/configuration.nix
+          stylix.nixosModules.stylix
+        ];
+      };
+
       # NixOS/personal home manager
       homeConfigurations = {
         "${personal.user}@walnut-laptop" = home-manager.lib.homeManagerConfiguration {
