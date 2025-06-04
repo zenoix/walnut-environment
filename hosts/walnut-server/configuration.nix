@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  server,
+  ...
+}:
 
 {
   imports = [
@@ -47,7 +52,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.walnut = {
+  users.users.${server.user} = {
     isNormalUser = true;
     description = "walnut-server";
     extraGroups = [

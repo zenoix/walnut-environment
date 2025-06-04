@@ -53,7 +53,12 @@
           inherit system;
           config.allowUnfree = true;
         };
-        inherit inputs system personal;
+        inherit
+          inputs
+          system
+          personal
+          server
+          ;
       };
 
       extraSpecialArgs = {
@@ -77,6 +82,10 @@
         # For gammastep
         latitude = 36.8509;
         longitude = 174.7645;
+      };
+
+      server = {
+        user = "walnut";
       };
 
       work = {
