@@ -155,7 +155,7 @@
         "${server.user}@walnut-server" = home-manager.lib.homeManagerConfiguration {
           inherit extraSpecialArgs pkgs;
           modules = [
-            ./hosts/walnut-sever/home.nix
+            ./hosts/walnut-server/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim
