@@ -143,6 +143,7 @@ format = " [$symbol($version)]($style)"
 
 [hostname]
 ssh_symbol = " "
+format = " [$ssh_symbol]($style) on [$hostname]($style)"
 
 [java]
 symbol = " "
@@ -281,7 +282,7 @@ format = " at [$time]($style)"
 format = " [$symbol($version)]($style)"
 
 [username]
-format = " [$user]($style) in"
+format = " user: [$user]($style)"
 
 [vagrant]
 format = " [$symbol($version)]($style)"
