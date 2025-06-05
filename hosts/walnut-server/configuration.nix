@@ -31,6 +31,7 @@
     signal.enable = lib.mkForce false;
     sound.enable = lib.mkForce false;
     swap.enable = lib.mkForce false;
+    terminfo.enable = true;
     thunar.enable = lib.mkForce false;
     tor-browser.enable = lib.mkForce false;
     obsidian.enable = lib.mkForce false;
