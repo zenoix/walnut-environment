@@ -9,6 +9,10 @@
   home = {
     username = "${server.user}";
     homeDirectory = "/home/${server.user}";
+
+    sessionVariables = {
+      TERM = "xterm-256color";
+    };
   };
 
   walnut-home = {
@@ -21,5 +25,9 @@
     ruff.enable = lib.mkForce false;
     yazi.enable = lib.mkForce false;
     zoxide.enable = lib.mkForce false;
+  };
+
+  programs.zsh = {
+    autosuggestion.enable = lib.mkForce false;
   };
 }
