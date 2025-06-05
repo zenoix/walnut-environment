@@ -23,6 +23,7 @@
       screenshot.enable = lib.mkForce false;
     };
     jellyfin.enable = true;
+    jellyseerr.enable = true;
     keymapp.enable = lib.mkForce false;
     libreoffice.enable = lib.mkForce false;
     mullvad.enable = lib.mkForce false;
