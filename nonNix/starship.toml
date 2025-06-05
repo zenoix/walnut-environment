@@ -143,7 +143,7 @@ format = " [$symbol($version)]($style)"
 
 [hostname]
 ssh_symbol = " "
-format = " [$ssh_symbol]($style) on [$hostname]($style)"
+format = " host: [$hostname]($style)"
 
 [java]
 symbol = " "
