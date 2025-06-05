@@ -20,6 +20,5 @@
     ghostty.enable = lib.mkForce false;
     ruff.enable = lib.mkForce false;
     yazi.enable = lib.mkForce false;
-    zoxide.enable = lib.mkForce false;
   };
 }
