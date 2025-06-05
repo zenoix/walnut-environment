@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  server,
   ...
 }:
 {
@@ -13,6 +14,7 @@
     services.jellyfin = {
       enable = true;
       openFirewall = true;
+      user = server.name;
     };
     environment.systemPackages = with pkgs; [
       jellyfin
