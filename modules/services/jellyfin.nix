@@ -14,7 +14,7 @@
     services.jellyfin = {
       enable = true;
       openFirewall = true;
-      user = server.name;
+      user = server.user;
     };
     environment.systemPackages = with pkgs; [
       jellyfin
