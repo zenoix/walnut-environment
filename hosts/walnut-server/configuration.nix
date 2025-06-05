@@ -15,6 +15,7 @@
   walnut = {
     anki.enable = lib.mkForce false;
     bluetooth.enable = lib.mkForce false;
+    fail2ban.enable = true;
     firefox.enable = lib.mkForce false;
     fonts.enable = lib.mkForce false;
     hyprland = {
