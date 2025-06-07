@@ -12,6 +12,7 @@
   walnut = {
     brightnessctl.enable = true;
     grub.enable = true;
+    sops.enable = true;
     steam.enable = true;
     tlp.enable = true;
   };
