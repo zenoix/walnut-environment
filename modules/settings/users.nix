@@ -22,5 +22,9 @@
       # packages = with pkgs; [ ];
       shell = pkgs.zsh;
     };
+
+    security.sudo.extraConfig = ''
+      Defaults timestamp_timeout=30 # only ask for sudo password every 30 minutes
+    '';
   };
 }
