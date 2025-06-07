@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   server,
   ...
 }:
@@ -30,6 +31,7 @@
     qt-libs.enable = lib.mkForce false;
     sddm.enable = lib.mkForce false;
     signal.enable = lib.mkForce false;
+    sops.enable = true;
     sound.enable = lib.mkForce false;
     swap.enable = lib.mkForce false;
     terminfo.enable = true;
@@ -54,9 +56,13 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  sops.secrets."user-passwords/walnut".neededForUsers = true;
+  users.mutableUsers = false;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${server.user} = {
     isNormalUser = true;
+    hashedPasswordFile = config.sops.secrets."user-passwords/walnut".path;
     description = "walnut-server";
     extraGroups = [
       "networkmanager"
