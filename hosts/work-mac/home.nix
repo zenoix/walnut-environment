@@ -32,7 +32,10 @@
   stylix.opacity.terminal = lib.mkForce 0.97;
 
   programs.kitty = {
-    font.size = lib.mkOverride 30 13;
+    font = {
+      size = lib.mkOverride 30 13;
+      name = lib.mkOverride 30 "Monaspace Neon Var";
+    };
   };
 
   programs.zsh = {
