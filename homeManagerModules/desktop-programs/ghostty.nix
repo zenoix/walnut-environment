@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  pkgs-unstable,
+  lib,
+  config,
+  ...
+}:
 {
   options = {
     walnut-home.ghostty.enable = lib.mkEnableOption "enable ghostty";
@@ -7,6 +12,7 @@
   config = lib.mkIf config.walnut-home.ghostty.enable {
     programs.ghostty = {
       enable = true;
+      package = pkgs-unstable.ghostty;
       enableZshIntegration = true;
       installBatSyntax = true;
       installVimSyntax = true;
