@@ -25,6 +25,7 @@
   };
 
   walnut-home = {
+    firefox.enable = true;
     ghostty.enable = lib.mkForce false;
     kitty.enable = true;
   };
