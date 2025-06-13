@@ -19,7 +19,7 @@
     xdg.configFile."obs-studio/themes/Catppuccin_Mocha.ovt" = {
       source = pkgs.fetchurl {
         url = "https://raw.githubusercontent.com/catppuccin/obs/refs/heads/main/themes/Catppuccin_Mocha.ovt";
-        sha256 = "sha256-6jatJRRojATjSjKDoOP6U1av927uoP1fQh4EB8+gfgs=";
+        sha256 = "sha256-xItrF0igUTAdh9+vngMbzrQKJO7HjXcKT06mnfVadgY=";
       };
     };
   };
