@@ -19,7 +19,7 @@
 
       age = {
         # Automatically import host SSH keys as age keys
-        sshKeyPaths = [ ];
+        sshKeyPaths = [ "/home/zenoix/.ssh/walnut-server" ];
         # This will use an age key that is already expected to exist in the filesystem
         keyFile = "/var/lib/sops-nix/key.txt";
         # Generate a new key if the key specified above does not exist
