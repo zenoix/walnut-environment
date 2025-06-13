@@ -64,7 +64,7 @@
     ];
     packages = with pkgs; [ ];
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDQCjJqY4aAGqN7NroiFadKXW5XAryPt5SaJIH2YNGjs zenoix@walnut-laptop"
+      (builtins.readFile ../../keys/walnutLaptop/id_ed25519.pub)
     ];
     shell = pkgs.zsh;
   };
