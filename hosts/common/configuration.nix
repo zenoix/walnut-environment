@@ -12,6 +12,8 @@
     "@wheel"
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   walnut = {
     anki.enable = true;
     bluetooth.enable = true;
