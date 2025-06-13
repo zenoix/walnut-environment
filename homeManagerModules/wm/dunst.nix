@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.dunst.enable = lib.mkEnableOption "enable dunst";
+    walnutHome.dunst.enable = lib.mkEnableOption "enable dunst";
   };
 
-  config = lib.mkIf config.walnut-home.dunst.enable {
+  config = lib.mkIf config.walnutHome.dunst.enable {
     home.packages = with pkgs; [ pop-icon-theme ];
 
     services.dunst = {

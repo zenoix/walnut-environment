@@ -7,10 +7,10 @@
 }:
 {
   options = {
-    walnut-home.ruff.enable = lib.mkEnableOption "enable walnut-home.ruff";
+    walnutHome.ruff.enable = lib.mkEnableOption "enable walnutHome.ruff";
   };
 
-  config = lib.mkIf config.walnut-home.ruff.enable {
+  config = lib.mkIf config.walnutHome.ruff.enable {
     programs.ruff = {
       enable = true;
       package = pkgs-unstable.ruff;

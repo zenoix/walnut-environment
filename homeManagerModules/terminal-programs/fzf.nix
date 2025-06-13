@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.fzf.enable = lib.mkEnableOption "enable fzf";
+    walnutHome.fzf.enable = lib.mkEnableOption "enable fzf";
   };
 
-  config = lib.mkIf config.walnut-home.fzf.enable {
+  config = lib.mkIf config.walnutHome.fzf.enable {
     programs.fzf = {
       enable = true;
       enableZshIntegration = true;

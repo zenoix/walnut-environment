@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.ghostty.enable = lib.mkEnableOption "enable ghostty";
+    walnutHome.ghostty.enable = lib.mkEnableOption "enable ghostty";
   };
 
-  config = lib.mkIf config.walnut-home.ghostty.enable {
+  config = lib.mkIf config.walnutHome.ghostty.enable {
     programs.ghostty = {
       enable = true;
       package = pkgs-unstable.ghostty;

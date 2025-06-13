@@ -107,7 +107,7 @@
       nixosConfigurations.walnut-laptop = nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         modules = [
-          ./hosts/walnut-laptop/configuration.nix
+          ./hosts/walnutLaptop/configuration.nix
           stylix.nixosModules.stylix
         ];
       };
@@ -116,7 +116,7 @@
       nixosConfigurations.walnut-desktop = nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         modules = [
-          ./hosts/walnut-desktop/configuration.nix
+          ./hosts/walnutDesktop/configuration.nix
           stylix.nixosModules.stylix
         ];
       };
@@ -125,7 +125,7 @@
       nixosConfigurations.walnut-server = nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         modules = [
-          ./hosts/walnut-server/configuration.nix
+          ./hosts/walnutServer/configuration.nix
           stylix.nixosModules.stylix
         ];
       };
@@ -135,7 +135,7 @@
         "${personal.user}@walnut-laptop" = home-manager.lib.homeManagerConfiguration {
           inherit extraSpecialArgs pkgs;
           modules = [
-            ./hosts/walnut-laptop/home.nix
+            ./hosts/walnutLaptop/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim
@@ -145,7 +145,7 @@
         "${personal.user}@walnut-desktop" = home-manager.lib.homeManagerConfiguration {
           inherit extraSpecialArgs pkgs;
           modules = [
-            ./hosts/walnut-desktop/home.nix
+            ./hosts/walnutDesktop/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim
@@ -155,7 +155,7 @@
         "${server.user}@walnut-server" = home-manager.lib.homeManagerConfiguration {
           inherit extraSpecialArgs pkgs;
           modules = [
-            ./hosts/walnut-server/home.nix
+            ./hosts/walnutServer/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeManagerModules.nixvim

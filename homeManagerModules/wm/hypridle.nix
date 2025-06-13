@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.hypridle.enable = lib.mkEnableOption "enable hypridle";
+    walnutHome.hypridle.enable = lib.mkEnableOption "enable hypridle";
   };
 
-  config = lib.mkIf config.walnut-home.hypridle.enable {
+  config = lib.mkIf config.walnutHome.hypridle.enable {
     services.hypridle = {
       enable = true;
       settings = {
@@ -17,7 +17,7 @@
         listener =
           (
             # NOTE: This is very hacky, will find a more robust way another time
-            if config.walnut-home.hyprland.monitor-setup != "double" then
+            if config.walnutHome.hyprland.monitor-setup != "double" then
               [
                 {
                   timeout = 180; # 3min.

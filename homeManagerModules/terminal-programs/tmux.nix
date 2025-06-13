@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.tmux.enable = lib.mkEnableOption "enable tmux";
+    walnutHome.tmux.enable = lib.mkEnableOption "enable tmux";
   };
 
-  config = lib.mkIf config.walnut-home.tmux.enable {
+  config = lib.mkIf config.walnutHome.tmux.enable {
     programs.tmux = {
       enable = true;
 

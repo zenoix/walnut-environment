@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.fastfetch.enable = lib.mkEnableOption "enable fastfetch";
+    walnutHome.fastfetch.enable = lib.mkEnableOption "enable fastfetch";
   };
 
-  config = lib.mkIf config.walnut-home.fastfetch.enable {
+  config = lib.mkIf config.walnutHome.fastfetch.enable {
     programs.fastfetch = {
       enable = true;
       package = pkgs-unstable.fastfetch;

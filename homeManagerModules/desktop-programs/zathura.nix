@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.zathura.enable = lib.mkEnableOption "enable zathura";
+    walnutHome.zathura.enable = lib.mkEnableOption "enable zathura";
   };
 
-  config = lib.mkIf config.walnut-home.zathura.enable {
+  config = lib.mkIf config.walnutHome.zathura.enable {
     programs.zathura = {
       enable = true;
       options = {

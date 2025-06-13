@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.rofi.enable = lib.mkEnableOption "enable rofi";
+    walnutHome.rofi.enable = lib.mkEnableOption "enable rofi";
   };
 
-  config = lib.mkIf config.walnut-home.rofi.enable {
+  config = lib.mkIf config.walnutHome.rofi.enable {
     home.packages = with pkgs; [ pop-icon-theme ];
 
     programs.rofi = {

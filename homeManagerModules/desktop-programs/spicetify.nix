@@ -12,10 +12,10 @@ in
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
   options = {
-    walnut-home.spicetify.enable = lib.mkEnableOption "enable spicetify";
+    walnutHome.spicetify.enable = lib.mkEnableOption "enable spicetify";
   };
 
-  config = lib.mkIf config.walnut-home.spicetify.enable {
+  config = lib.mkIf config.walnutHome.spicetify.enable {
     programs.spicetify = {
       enable = true;
 

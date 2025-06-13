@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.kitty.enable = lib.mkEnableOption "enable kitty";
+    walnutHome.kitty.enable = lib.mkEnableOption "enable kitty";
   };
 
-  config = lib.mkIf config.walnut-home.kitty.enable {
+  config = lib.mkIf config.walnutHome.kitty.enable {
     programs.kitty = {
       enable = true;
       font = {

@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.uv.enable = lib.mkEnableOption "enable uv";
+    walnutHome.uv.enable = lib.mkEnableOption "enable uv";
   };
 
-  config = lib.mkIf config.walnut-home.uv.enable {
+  config = lib.mkIf config.walnutHome.uv.enable {
     home.packages = with pkgs-unstable; [ uv ];
 
     programs.zsh.initContent = ''eval "$(uv generate-shell-completion zsh)"'';

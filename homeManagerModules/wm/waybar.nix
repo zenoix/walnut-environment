@@ -1,15 +1,15 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.waybar.enable = lib.mkEnableOption "enable waybar";
-    walnut-home.waybar.group2.enable = lib.mkOption {
+    walnutHome.waybar.enable = lib.mkEnableOption "enable waybar";
+    walnutHome.waybar.group2.enable = lib.mkOption {
       default = true;
       type = with lib.types; nullOr (bool);
     };
   };
 
   config = lib.mkMerge [
-    (lib.mkIf config.walnut-home.waybar.enable {
+    (lib.mkIf config.walnutHome.waybar.enable {
       programs.waybar = {
         enable = true;
         settings = {
@@ -513,7 +513,7 @@
       };
     })
 
-    (lib.mkIf (config.walnut-home.waybar.enable && !config.walnut-home.waybar.group2.enable) {
+    (lib.mkIf (config.walnutHome.waybar.enable && !config.walnutHome.waybar.group2.enable) {
       programs.waybar = {
         settings = {
           mainBar = {
@@ -529,7 +529,7 @@
     })
 
     (lib.mkIf
-      (config.walnut-home.hyprland.enable && config.walnut-home.hyprland.monitor-setup == "double")
+      (config.walnutHome.hyprland.enable && config.walnutHome.hyprland.monitor-setup == "double")
       {
         programs.waybar = {
           settings = {

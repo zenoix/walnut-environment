@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.gh.enable = lib.mkEnableOption "enable github cli";
+    walnutHome.gh.enable = lib.mkEnableOption "enable github cli";
   };
 
-  config = lib.mkIf config.walnut-home.gh.enable {
+  config = lib.mkIf config.walnutHome.gh.enable {
     programs.gh = {
       enable = true;
 

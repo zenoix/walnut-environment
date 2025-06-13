@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.cava.enable = lib.mkEnableOption "enable cava";
+    walnutHome.cava.enable = lib.mkEnableOption "enable cava";
   };
 
-  config = lib.mkIf config.walnut-home.cava.enable {
+  config = lib.mkIf config.walnutHome.cava.enable {
     programs.cava = {
       enable = true;
       settings = {

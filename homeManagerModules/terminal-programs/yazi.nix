@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.yazi.enable = lib.mkEnableOption "enable yazi";
+    walnutHome.yazi.enable = lib.mkEnableOption "enable yazi";
   };
 
-  config = lib.mkIf config.walnut-home.yazi.enable {
+  config = lib.mkIf config.walnutHome.yazi.enable {
     programs.yazi = {
       enable = true;
       enableZshIntegration = true;

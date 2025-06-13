@@ -9,28 +9,38 @@
     packages = with pkgs; [ ];
   };
 
-  walnut-home = {
+  walnutHome = {
     cava.enable = true;
     dunst.enable = true;
     firefox.enable = true;
     gammastep.enable = true;
     gtk-config.enable = true;
-    hypridle.enable = false;
+    hypridle.enable = true;
     hyprland = {
       enable = true;
-      monitor-setup = "double";
+      mouse-sensitivity = "-0.15";
     };
     hyprlock.enable = true;
     i18n.enable = true;
     kitty.enable = false;
     obs.enable = true;
     rofi.enable = true;
+    sioyek.enable = true;
     spicetify.enable = true;
     syncthing.enable = true;
-    waybar = {
-      enable = true;
-      group2.enable = false;
-    };
+    uv.enable = true;
+    waybar.enable = true;
     zathura.enable = true;
   };
+
+  #programs.ssh = {
+  #  enable = true;
+  #  matchBlocks = {
+  #    walnut-server = {
+  #      hostname = "10.0.0.56";
+  #      user = "walnut";
+  #      identityFile = "/home/${personal.user}/.ssh/walnut-server";
+  #    };
+  #  };
+  #};
 }

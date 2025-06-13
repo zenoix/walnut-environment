@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.direnv.enable = lib.mkEnableOption "enable direnv";
+    walnutHome.direnv.enable = lib.mkEnableOption "enable direnv";
   };
 
-  config = lib.mkIf config.walnut-home.direnv.enable {
+  config = lib.mkIf config.walnutHome.direnv.enable {
     programs.direnv = {
       enable = true;
       enableZshIntegration = true;

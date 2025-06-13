@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.git.enable = lib.mkEnableOption "enable git";
+    walnutHome.git.enable = lib.mkEnableOption "enable git";
   };
 
-  config = lib.mkIf config.walnut-home.git.enable {
+  config = lib.mkIf config.walnutHome.git.enable {
     programs.git = {
       enable = true;
       userName = "${personal.gitUser}";

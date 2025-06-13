@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.starship.enable = lib.mkEnableOption "enable starship";
+    walnutHome.starship.enable = lib.mkEnableOption "enable starship";
   };
 
-  config = lib.mkIf config.walnut-home.starship.enable {
+  config = lib.mkIf config.walnutHome.starship.enable {
     programs.starship = {
       enable = true;
       enableZshIntegration = true;

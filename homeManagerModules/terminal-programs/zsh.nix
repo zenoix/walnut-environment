@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.zsh.enable = lib.mkEnableOption "enable zsh";
+    walnutHome.zsh.enable = lib.mkEnableOption "enable zsh";
   };
 
-  config = lib.mkIf config.walnut-home.zsh.enable {
+  config = lib.mkIf config.walnutHome.zsh.enable {
     programs.zsh = {
       enable = true;
       enableCompletion = true;

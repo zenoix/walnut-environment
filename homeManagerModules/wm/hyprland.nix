@@ -1,8 +1,8 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.hyprland.enable = lib.mkEnableOption "enable hyprland";
-    walnut-home.hyprland.monitor-setup = lib.mkOption {
+    walnutHome.hyprland.enable = lib.mkEnableOption "enable hyprland";
+    walnutHome.hyprland.monitor-setup = lib.mkOption {
       default = "single";
       type =
         with lib.types;
@@ -11,14 +11,14 @@
           "double"
         ]);
     };
-    walnut-home.hyprland.mouse-sensitivity = lib.mkOption {
+    walnutHome.hyprland.mouse-sensitivity = lib.mkOption {
       default = "-0.5";
       type = with lib.types; nullOr (strMatching "-?[0-1].[0-9]+");
     };
   };
 
   config = lib.mkMerge [
-    (lib.mkIf config.walnut-home.hyprland.enable {
+    (lib.mkIf config.walnutHome.hyprland.enable {
       wayland.windowManager.hyprland = {
         enable = true;
         xwayland.enable = true;
@@ -58,7 +58,7 @@
               };
 
               accel_profile = "flat";
-              sensitivity = config.walnut-home.hyprland.mouse-sensitivity; # -1.0 - 1.0, 0 means no modification.
+              sensitivity = config.walnutHome.hyprland.mouse-sensitivity; # -1.0 - 1.0, 0 means no modification.
             };
 
             general = {
@@ -256,7 +256,7 @@
     })
 
     (lib.mkIf
-      (config.walnut-home.hyprland.enable && config.walnut-home.hyprland.monitor-setup == "double")
+      (config.walnutHome.hyprland.enable && config.walnutHome.hyprland.monitor-setup == "double")
       {
         wayland.windowManager.hyprland = {
           settings.monitor = lib.mkForce [

@@ -7,10 +7,10 @@
 }:
 {
   options = {
-    walnut-home.stylix.enable = lib.mkEnableOption "enable stylix";
+    walnutHome.stylix.enable = lib.mkEnableOption "enable stylix";
   };
 
-  config = lib.mkIf config.walnut-home.stylix.enable {
+  config = lib.mkIf config.walnutHome.stylix.enable {
     stylix = {
       enable = true;
       polarity = "dark";

@@ -27,7 +27,7 @@
 
   fonts.fontconfig.enable = true;
 
-  walnut-home = {
+  walnutHome = {
     bat.enable = true;
     devbox.enable = true;
     devenv.enable = true;

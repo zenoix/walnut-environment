@@ -16,10 +16,10 @@
   ];
 
   options = {
-    walnut-home.nixvim.enable = lib.mkEnableOption "enable nixvim";
+    walnutHome.nixvim.enable = lib.mkEnableOption "enable nixvim";
   };
 
-  config = lib.mkIf config.walnut-home.nixvim.enable {
+  config = lib.mkIf config.walnutHome.nixvim.enable {
     programs.nixvim = {
       enable = true;
       defaultEditor = true;

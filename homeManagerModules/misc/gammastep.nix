@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.gammastep.enable = lib.mkEnableOption "enable gammastep config";
+    walnutHome.gammastep.enable = lib.mkEnableOption "enable gammastep config";
   };
 
-  config = lib.mkIf config.walnut-home.gammastep.enable {
+  config = lib.mkIf config.walnutHome.gammastep.enable {
     services.gammastep = {
       enable = true;
       latitude = personal.latitude;

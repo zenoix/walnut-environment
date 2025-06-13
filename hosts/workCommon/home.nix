@@ -47,7 +47,7 @@
 
   fonts.fontconfig.enable = true;
 
-  walnut-home = {
+  walnutHome = {
     git-work.enable = lib.mkForce true;
     uv.enable = true;
   };

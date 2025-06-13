@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.bat.enable = lib.mkEnableOption "enable bat";
+    walnutHome.bat.enable = lib.mkEnableOption "enable bat";
   };
 
-  config = lib.mkIf config.walnut-home.bat.enable {
+  config = lib.mkIf config.walnutHome.bat.enable {
     programs.bat = {
       enable = true;
     };

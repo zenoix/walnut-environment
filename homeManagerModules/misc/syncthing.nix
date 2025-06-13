@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.syncthing.enable = lib.mkEnableOption "enable syncthing";
+    walnutHome.syncthing.enable = lib.mkEnableOption "enable syncthing";
   };
 
-  config = lib.mkIf config.walnut-home.syncthing.enable {
+  config = lib.mkIf config.walnutHome.syncthing.enable {
 
     services.syncthing = {
       enable = true;

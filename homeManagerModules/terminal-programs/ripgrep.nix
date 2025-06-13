@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.ripgrep.enable = lib.mkEnableOption "enable ripgrep";
+    walnutHome.ripgrep.enable = lib.mkEnableOption "enable ripgrep";
   };
 
-  config = lib.mkIf config.walnut-home.ripgrep.enable {
+  config = lib.mkIf config.walnutHome.ripgrep.enable {
     programs.ripgrep = {
       enable = true;
     };

@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    walnut-home.devbox.enable = lib.mkEnableOption "enable devbox";
+    walnutHome.devbox.enable = lib.mkEnableOption "enable devbox";
   };
 
-  config = lib.mkIf config.walnut-home.devbox.enable {
+  config = lib.mkIf config.walnutHome.devbox.enable {
 
     home = {
       packages = with pkgs-unstable; [ devbox ];

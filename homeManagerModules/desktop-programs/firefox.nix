@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.firefox.enable = lib.mkEnableOption "enable firefox";
+    walnutHome.firefox.enable = lib.mkEnableOption "enable firefox";
   };
 
-  config = lib.mkIf config.walnut-home.firefox.enable {
+  config = lib.mkIf config.walnutHome.firefox.enable {
     programs.firefox = {
       enable = true;
       profiles =
@@ -29,7 +29,7 @@
         };
     };
 
-    stylix.targets.firefox.profileNames = lib.mkIf (config.walnut-home.stylix.enable == true) [
+    stylix.targets.firefox.profileNames = lib.mkIf (config.walnutHome.stylix.enable == true) [
       "default"
       "default-rebase"
     ];

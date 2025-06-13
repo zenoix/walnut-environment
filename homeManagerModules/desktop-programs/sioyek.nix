@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.sioyek.enable = lib.mkEnableOption "enable sioyek";
+    walnutHome.sioyek.enable = lib.mkEnableOption "enable sioyek";
   };
 
-  config = lib.mkIf config.walnut-home.sioyek.enable {
+  config = lib.mkIf config.walnutHome.sioyek.enable {
     programs.sioyek = {
       enable = true;
       bindings = {

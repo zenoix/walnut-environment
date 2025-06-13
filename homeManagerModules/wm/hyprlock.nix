@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   options = {
-    walnut-home.hyprlock.enable = lib.mkEnableOption "enable hyprlock";
+    walnutHome.hyprlock.enable = lib.mkEnableOption "enable hyprlock";
   };
 
-  config = lib.mkIf config.walnut-home.hyprlock.enable {
+  config = lib.mkIf config.walnutHome.hyprlock.enable {
     programs.hyprlock =
       let
         textColor = "rgb(225, 225, 225)";
