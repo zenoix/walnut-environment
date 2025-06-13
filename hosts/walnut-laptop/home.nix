@@ -26,7 +26,6 @@
     obs.enable = true;
     rofi.enable = true;
     sioyek.enable = true;
-    sops.enable = true;
     spicetify.enable = true;
     syncthing.enable = true;
     uv.enable = true;
@@ -44,5 +43,4 @@
       };
     };
   };
-
 }
