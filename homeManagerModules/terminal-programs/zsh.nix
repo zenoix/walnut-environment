@@ -27,6 +27,7 @@
           upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
           hms = "home-manager switch --flake ${flakeDir}";
+          hmss = "ssh walnut@walnut-server 'cd ~/walnut-environment && git pull &> /dev/null && home-manager switch --flake .'";
 
           # Best alias ever
           please = "sudo !!";
