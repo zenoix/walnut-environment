@@ -44,6 +44,8 @@
     zsa.enable = lib.mkForce false;
   };
 
+  nix.settings.trusted-users = [ "walnut" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
