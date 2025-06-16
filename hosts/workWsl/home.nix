@@ -6,7 +6,7 @@
 {
   imports = [
     ./../common/home.nix
-    ./../work-common/home.nix
+    ./../workCommon/home.nix
   ];
 
   home = {

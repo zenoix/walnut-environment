@@ -197,7 +197,7 @@
             };
 
             modules = [
-              ./hosts/work-mac/home.nix
+              ./hosts/workMac/home.nix
               ./homeManagerModules
               inputs.stylix.homeModules.stylix
               inputs.nixvim.homeManagerModules.nixvim
