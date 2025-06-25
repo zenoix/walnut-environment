@@ -1,4 +1,11 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  system,
+  ...
+}:
 {
   options = {
     walnutHome.firefox.enable = lib.mkEnableOption "enable firefox";
@@ -9,21 +16,36 @@
       enable = true;
       profiles =
         let
+          extensionsConfig = {
+            extensions = {
+              packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+                bitwarden
+                darkreader
+                stylus
+                ublock-origin
+                vimium
+                youtube-nonstop
+              ];
+            };
+          };
+
           customCSSConfig = {
             settings = {
               "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # enable userChrome.css
             };
             userChrome = builtins.readFile ../../nonNix/firefox/userChrome.css;
           };
+
+          commonSettings = extensionsConfig // customCSSConfig;
         in
         {
-          default = customCSSConfig // {
+          default = commonSettings // {
             id = 0;
           };
-          default-release = customCSSConfig // {
+          default-release = commonSettings // {
             id = 1;
           };
-          default-rebase = customCSSConfig // {
+          default-rebase = commonSettings // {
             id = 2;
           };
         };
