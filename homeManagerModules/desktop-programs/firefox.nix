@@ -3,7 +3,6 @@
   lib,
   config,
   inputs,
-  system,
   ...
 }:
 {
@@ -21,7 +20,10 @@
               packages = with inputs.firefox-addons.packages.${pkgs.system}; [
                 bitwarden
                 darkreader
+                firefox-color
+                return-youtube-dislikes
                 stylus
+                tabliss
                 ublock-origin
                 vimium
                 youtube-nonstop
