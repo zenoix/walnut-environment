@@ -1,0 +1,99 @@
+{
+  pkgs,
+  config,
+  work,
+  ...
+}:
+{
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = with pkgs; [ ];
+
+  walnutDarwin = {
+    homebrew = {
+      enable = true;
+      brews = [ ];
+      casks = [
+        "displaylink"
+        "kitty"
+        "firefox"
+      ];
+    };
+  };
+
+  system = {
+    stateVersion = 6;
+    primaryUser = "${work.user}";
+
+    defaults = {
+      dock = {
+        autohide = true;
+        persistent-apps = [
+          "/Applications/Firefox.app"
+          "/Applications/kitty.app"
+          "/Applications/Microsoft Teams.app"
+          "/Applications/Microsoft Outlook.app"
+          "/System/Applications/System Settings.app"
+        ];
+      };
+
+      finder = {
+        FXPreferredViewStyle = "clmv";
+        _FXShowPosixPathInTitle = true; # show full path in finder title
+        AppleShowAllExtensions = true; # show all file extensions
+        QuitMenuItem = true; # enable quit menu item
+        ShowPathbar = true; # show path bar
+        ShowStatusBar = true; # show status bar
+      };
+
+      trackpad = {
+        Clicking = false; # enable tap to click
+        TrackpadRightClick = true; # enable two finger right click
+        TrackpadThreeFingerDrag = false; # enable three finger drag
+      };
+
+      loginwindow.GuestEnabled = false;
+
+      NSGlobalDomain = {
+        AppleShowAllFiles = true;
+        AppleShowAllExtensions = true;
+        AppleICUForce24HourTime = true;
+        AppleInterfaceStyle = "Dark";
+        KeyRepeat = 2;
+        "com.apple.swipescrolldirection" = false; # enable natural scrolling(default to true)
+        "com.apple.sound.beep.feedback" = 0; # disable beep sound when pressing volume up/down key
+        NSWindowShouldDragOnGesture = true;
+      };
+    };
+  };
+
+  security = {
+    pam.services.sudo_local.touchIdAuth = true;
+  };
+
+  system.activationScripts.applications.text =
+    let
+      env = pkgs.buildEnv {
+        name = "system-applications";
+        paths = config.environment.systemPackages;
+        pathsToLink = "/Applications";
+      };
+    in
+    pkgs.lib.mkForce ''
+      # Set up applications.
+      echo "setting up /Applications..." >&2
+      rm -rf /Applications/Nix\ Apps
+      mkdir -p /Applications/Nix\ Apps
+      find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
+      while read -r src; do
+        app_name=$(basename "$src")
+        echo "copying $src" >&2
+        ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+      done
+    '';
+
+  nix.settings.experimental-features = "nix-command flakes";
+
+  # The platform the configuration will be used on.
+  nixpkgs.hostPlatform = "aarch64-darwin";
+
+}

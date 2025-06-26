@@ -29,6 +29,8 @@
           hms = "home-manager switch --flake ${flakeDir}";
           hmss = "ssh walnut@walnut-server 'cd ~/walnut-environment && git pull &> /dev/null && home-manager switch --flake .'";
 
+          drs = "sudo darwin-rebuild switch --flake ${flakeDir}";
+
           # Best alias ever
           please = "sudo !!";
           pls = "sudo !!";
