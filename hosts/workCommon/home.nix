@@ -18,6 +18,7 @@
         cocogitto
         fd
         gcc
+        go
         home-manager
         htop
         killall
