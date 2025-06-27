@@ -7,10 +7,13 @@
 {
   imports = [ ./../../modules ];
 
-  nix.settings.trusted-users = [
-    "root"
-    "@wheel"
-  ];
+  nix.settings = {
+    download-buffer-size = 524288000;
+    trusted-users = [
+      "root"
+      "@wheel"
+    ];
+  };
 
   nixpkgs.config.allowUnfree = true;
 
