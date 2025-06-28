@@ -145,29 +145,30 @@
         };
 
       history = {
+        append = true;
         save = 10000;
         size = 10000;
         path = "${config.xdg.dataHome}/zsh/history";
         expireDuplicatesFirst = true;
         ignoreDups = true;
         ignoreSpace = true;
+        share = true;
       };
 
       completionInit = ''
         autoload -Uz compinit && compinit
         autoload -Uz bashcompinit && bashcompinit
+        zstyle :compinstall filename "$HOME/.zshrc"
+        zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+        zstyle ':completion:*' menu select
+        zstyle -e ':completion:*:default' list-colors 'reply=("''${PREFIX:+=(#bi)($PREFIX:t)(?)*==02=01}:''${(s.:.)LS_COLORS}")'
+        setopt auto_menu menu_complete
+        setopt no_case_glob no_case_match
       '';
 
       initContent = ''
-        zstyle :compinstall filename "$HOME/.zshrc"
-
         unsetopt beep
-
-        zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-        zstyle ':completion:*' menu select
-
-        zstyle -e ':completion:*:default' list-colors 'reply=("''${PREFIX:+=(#bi)($PREFIX:t)(?)*==02=01}:''${(s.:.)LS_COLORS}")'
+        setopt interactive_comments
 
         autoload -Uz is-at-least
 
