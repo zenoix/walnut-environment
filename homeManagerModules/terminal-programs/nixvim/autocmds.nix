@@ -81,12 +81,17 @@
         ];
         group = "rel_number_toggle";
         callback = {
+          # NOTE: There is a bug with redraw that will bug out multi-line input which seems to be fixed in 0.11.3
+          # Conditional taken from https://github.com/rockyzhang24/dotfiles/commit/03dd14b5d43f812661b88c4660c03d714132abcf
+          # Workaround for https://github.com/neovim/neovim/issues/32068
           __raw = ''
             function()
               if vim.o.nu then
                 vim.wo.relativenumber = false
                 vim.wo.cursorline = false
-                vim.cmd("redraw")
+                if not vim.tbl_contains({"@", "-"}, vim.v.event.cmdtype) then
+                  vim.cmd("redraw")
+                end
               end
             end
           '';
