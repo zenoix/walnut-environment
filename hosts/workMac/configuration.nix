@@ -62,7 +62,7 @@
         AppleICUForce24HourTime = true;
         AppleInterfaceStyle = "Dark";
         KeyRepeat = 2;
-        "com.apple.swipescrolldirection" = false; # enable natural scrolling(default to true)
+        "com.apple.swipescrolldirection" = true; # enable natural scrolling
         "com.apple.sound.beep.feedback" = 0; # disable beep sound when pressing volume up/down key
         NSWindowShouldDragOnGesture = true;
       };

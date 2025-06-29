@@ -234,7 +234,7 @@
       darwinConfigurations."NZ-MMFP22C32DG" = nix-darwin.lib.darwinSystem {
         modules = [
           ./darwinModules
-          ./hosts/workMac/configration.nix
+          ./hosts/workMac/configuration.nix
 
           (
             { config, ... }:
