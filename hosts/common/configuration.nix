@@ -49,7 +49,6 @@
     users.enable = true;
     vesktop.enable = true;
     vlc.enable = true;
-    xdg-portal.enable = true;
     xkb.enable = true;
     zsa.enable = true;
   };

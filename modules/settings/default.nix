@@ -6,7 +6,6 @@
     ./qt-libs.nix
     ./terminfo.nix
     ./users.nix
-    ./xdg.nix
     ./xkb.nix
   ];
 }

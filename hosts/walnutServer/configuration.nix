@@ -39,7 +39,6 @@
     users.enable = lib.mkForce false;
     vesktop.enable = lib.mkForce false;
     vlc.enable = lib.mkForce false;
-    xdg-portal.enable = lib.mkForce false;
     xkb.enable = lib.mkForce false;
     zsa.enable = lib.mkForce false;
   };
