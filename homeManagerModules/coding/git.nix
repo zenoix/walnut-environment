@@ -35,7 +35,10 @@
           graphColors = "blue,yellow,cyan,magenta,green,red";
         };
 
-        merge.conflictstyle = "zdiff3";
+        merge = {
+          conflictstyle = "zdiff3";
+          ff = "only";
+        };
 
         push = {
           autoSetupRemote = true;
