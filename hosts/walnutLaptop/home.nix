@@ -1,6 +1,14 @@
-{ pkgs, personal, ... }:
 {
-  imports = [ ./../common/home.nix ];
+  inputs,
+  pkgs,
+  personal,
+  ...
+}:
+{
+  imports = [
+    ./../common/home.nix
+    inputs.sops-nix.homeManagerModules.sops
+  ];
 
   home = {
     username = "${personal.user}";
@@ -31,6 +39,20 @@
     uv.enable = true;
     waybar.enable = true;
     zathura.enable = true;
+  };
+
+  sops = {
+    # This is the walnut/dev key and needs to have been copied to this location on the host
+    age.keyFile = "/home/${personal.user}/.config/sops/age/keys.txt";
+
+    defaultSopsFile = ../../secrets.yaml;
+    validateSopsFiles = false;
+
+    secrets = {
+      "private_keys/walnut-laptop" = {
+        path = "/home/${personal.user}/.ssh/id_ed25519";
+      };
+    };
   };
 
   programs.ssh = {
