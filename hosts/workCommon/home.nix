@@ -50,6 +50,7 @@
   walnutHome = {
     git-work.enable = lib.mkForce true;
     uv.enable = true;
+    xdgPortal.enable = lib.mkForce false;
   };
 
   programs.gh = {

@@ -46,6 +46,7 @@
     starship.enable = true;
     stylix.enable = true;
     tmux.enable = true;
+    xdgPortal.enable = true;
     yazi.enable = true;
     zoxide.enable = true;
     zsh.enable = true;
