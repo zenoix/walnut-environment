@@ -30,6 +30,7 @@
     qt-libs.enable = lib.mkForce false;
     sddm.enable = lib.mkForce false;
     signal.enable = lib.mkForce false;
+    sops.enable = true;
     sound.enable = lib.mkForce false;
     swap.enable = lib.mkForce false;
     terminfo.enable = true;
