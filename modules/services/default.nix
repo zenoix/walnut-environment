@@ -5,6 +5,7 @@
     ./jellyfin.nix
     ./jellyseerr.nix
     ./networking.nix
+    ./prowlarr.nix
     ./tlp.nix
   ];
 }
