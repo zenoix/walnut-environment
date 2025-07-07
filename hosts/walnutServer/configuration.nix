@@ -28,7 +28,7 @@
     jellyseerr.enable = true;
     keymapp.enable = lib.mkForce false;
     libreoffice.enable = lib.mkForce false;
-    mullvad.enable = lib.mkForce false;
+    mullvad.enable = true;
     prowlarr.enable = true;
     qt-libs.enable = lib.mkForce false;
     sddm.enable = lib.mkForce false;
