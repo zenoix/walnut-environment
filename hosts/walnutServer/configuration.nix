@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   lib,
   server,
   ...
@@ -15,6 +16,7 @@
   walnut = {
     anki.enable = lib.mkForce false;
     bluetooth.enable = lib.mkForce false;
+    cloudflared.enable = true;
     fail2ban.enable = true;
     firefox.enable = lib.mkForce false;
     fonts.enable = lib.mkForce false;
@@ -42,6 +44,16 @@
     vlc.enable = lib.mkForce false;
     xkb.enable = lib.mkForce false;
     zsa.enable = lib.mkForce false;
+  };
+
+  sops = {
+    # secrets will be output to /run/secrets
+    # e.g. /run/secrets/foo
+    # secrets required for user creation are handled in respective ./user/<username>.nix files
+    # because they will be output to /run/secrets-for-users and only when the user is assigned to a host
+    secrets = {
+      cloudflared-creds = { };
+    };
   };
 
   nix.settings.trusted-users = [ "walnut" ];

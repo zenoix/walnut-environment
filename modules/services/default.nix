@@ -1,5 +1,6 @@
 {
   imports = [
+    ./cloudflared.nix
     ./fail2ban.nix
     ./jellyfin.nix
     ./jellyseerr.nix
