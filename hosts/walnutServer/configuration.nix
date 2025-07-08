@@ -32,6 +32,7 @@
     prowlarr.enable = true;
     qbittorrent.enable = true;
     qt-libs.enable = lib.mkForce false;
+    radarr.enable = true;
     sddm.enable = lib.mkForce false;
     signal.enable = lib.mkForce false;
     sops.enable = true;
@@ -155,6 +156,9 @@
 
     # prowlarr
     9696
+
+    # radarr
+    7878
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
