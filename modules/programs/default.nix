@@ -10,6 +10,7 @@
     ./mullvad.nix
     ./neovim.nix
     ./obsidian.nix
+    ./qbittorrent.nix
     ./shell-config.nix
     ./signal.nix
     ./steam.nix

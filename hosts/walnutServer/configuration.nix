@@ -30,6 +30,7 @@
     libreoffice.enable = lib.mkForce false;
     mullvad.enable = true;
     prowlarr.enable = true;
+    qbittorrent.enable = true;
     qt-libs.enable = lib.mkForce false;
     sddm.enable = lib.mkForce false;
     signal.enable = lib.mkForce false;
@@ -112,7 +113,7 @@
 
   systemd.services.sshd.serviceConfig = {
     ExecStart = lib.mkForce (
-      lib.concatStringsSep "" [
+      lib.concatStringsSep " " [
         "${pkgs.mullvad}/bin/mullvad-exclude"
         (lib.getExe' config.services.openssh.package "sshd")
         "-D"
@@ -133,6 +134,12 @@
             type filter hook input priority -100; policy accept;
             udp dport 22 ct mark set 0x00000f41;
             tcp dport 22 ct mark set 0x00000f41;
+            tcp dport 7070 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+          }
+
+          chain allowOutgoing {
+            type route hook output priority -100; policy accept;
+            tcp sport 7070 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
@@ -140,7 +147,11 @@
   };
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [
+    # qbittorrent webui
+    8080
+    7070
+  ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
