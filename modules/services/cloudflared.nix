@@ -20,6 +20,7 @@
           ingress = {
             "jellyfin.zenoix.com" = "http://localhost:8096";
             "jellyseerr.zenoix.com" = "http://localhost:5055";
+            "prowlarr.zenoix.com" = "http://localhost:9696";
           };
           default = "http_status:404";
         };

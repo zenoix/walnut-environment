@@ -135,11 +135,12 @@
             udp dport 22 ct mark set 0x00000f41;
             tcp dport 22 ct mark set 0x00000f41;
             tcp dport 7070 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp dport 9696 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
 
           chain allowOutgoing {
             type route hook output priority -100; policy accept;
-            tcp sport 7070 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp sport 9696 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
@@ -151,6 +152,9 @@
     # qbittorrent webui
     8080
     7070
+
+    # prowlarr
+    9696
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
