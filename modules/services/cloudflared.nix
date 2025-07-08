@@ -22,6 +22,7 @@
             "jellyseerr.zenoix.com" = "http://localhost:5055";
             "prowlarr.zenoix.com" = "http://localhost:9696";
             "radarr.zenoix.com" = "http://localhost:7878";
+            "sonarr.zenoix.com" = "http://localhost:8989";
           };
           default = "http_status:404";
         };

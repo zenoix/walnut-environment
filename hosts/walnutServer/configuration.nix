@@ -35,6 +35,7 @@
     radarr.enable = true;
     sddm.enable = lib.mkForce false;
     signal.enable = lib.mkForce false;
+    sonarr.enable = true;
     sops.enable = true;
     sound.enable = lib.mkForce false;
     swap.enable = lib.mkForce false;
@@ -138,12 +139,14 @@
             tcp dport 7070 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 9696 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 7878 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp dport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
 
           chain allowOutgoing {
             type route hook output priority -100; policy accept;
             tcp sport 9696 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 7878 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp sport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
@@ -161,6 +164,9 @@
 
     # radarr
     7878
+
+    # sonarr
+    8989
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
