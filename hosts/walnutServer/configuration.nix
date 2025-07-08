@@ -110,6 +110,35 @@
     };
   };
 
+  systemd.services.sshd.serviceConfig = {
+    ExecStart = lib.mkForce (
+      lib.concatStringsSep "" [
+        "${pkgs.mullvad}/bin/mullvad-exclude"
+        (lib.getExe' config.services.openssh.package "sshd")
+        "-D"
+        "-f"
+        "/etc/ssh/sshd_config"
+      ]
+    );
+    RestartSec = 20;
+  };
+
+  networking.nftables = {
+    enable = true;
+    tables = {
+      excludeTraffic = {
+        family = "inet";
+        content = ''
+          chain allowIncoming {
+            type filter hook input priority -100; policy accept;
+            udp dport 22 ct mark set 0x00000f41;
+            tcp dport 22 ct mark set 0x00000f41;
+          }
+        '';
+      };
+    };
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
