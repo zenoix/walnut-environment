@@ -2,6 +2,7 @@
   imports = [
     ./cloudflared.nix
     ./fail2ban.nix
+    ./flaresolverr.nix
     ./jellyfin.nix
     ./jellyseerr.nix
     ./networking.nix

@@ -19,6 +19,7 @@
     cloudflared.enable = true;
     fail2ban.enable = true;
     firefox.enable = lib.mkForce false;
+    flaresolverr.enable = true;
     fonts.enable = lib.mkForce false;
     hyprland = {
       enable = lib.mkForce false;
@@ -140,6 +141,7 @@
             tcp dport 9696 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 7878 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp dport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
 
           chain allowOutgoing {
@@ -147,6 +149,7 @@
             tcp sport 9696 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 7878 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp sport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
@@ -167,6 +170,9 @@
 
     # sonarr
     8989
+
+    # flaresolverr
+    8191
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
