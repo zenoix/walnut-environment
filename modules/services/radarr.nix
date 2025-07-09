@@ -2,6 +2,7 @@
   pkgs-unstable,
   lib,
   config,
+  server,
   ...
 }:
 {
@@ -14,6 +15,8 @@
       enable = true;
       openFirewall = true;
       package = pkgs-unstable.radarr;
+      user = server.user;
+      group = "users";
     };
   };
 }
