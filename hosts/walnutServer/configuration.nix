@@ -127,6 +127,11 @@
     RestartSec = 20;
   };
 
+  networking = {
+    interfaces.enp171s0.useDHCP = false;
+    useDHCP = false;
+  };
+
   networking.nftables = {
     enable = true;
     tables = {
@@ -142,6 +147,7 @@
             tcp dport 7878 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp dport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
 
           chain allowOutgoing {
@@ -150,6 +156,7 @@
             tcp sport 7878 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp sport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
@@ -161,6 +168,9 @@
     # qbittorrent webui
     8080
     7070
+
+    # jellyseerr
+    5055
 
     # prowlarr
     9696
