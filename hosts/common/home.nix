@@ -2,6 +2,14 @@
 {
   nix = {
     package = pkgs.nix;
+
+    # Delete configurations older than 30 days
+    gc = {
+      automatic = true;
+      frequency = "weekly";
+      options = "--delete-older-than 30d";
+    };
+
     settings = {
       download-buffer-size = 524288000;
       experimental-features = [
