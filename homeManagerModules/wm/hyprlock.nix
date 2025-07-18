@@ -71,7 +71,7 @@
             # TIME
             {
               monitor = "";
-              text = "cmd[update:1000] echo \"$(date +\"%-I:%M\")\"";
+              text = "cmd[update:1000] echo \"$(date +\"%-H:%M\")\"";
               color = textColor;
               font_size = 95;
               font_family = "JetBrains Mono Extrabold";
