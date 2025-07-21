@@ -149,6 +149,7 @@
             tcp dport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp dport 6767 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
 
           chain allowOutgoing {
@@ -158,6 +159,7 @@
             tcp sport 8989 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp sport 6767 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
@@ -184,6 +186,9 @@
 
     # flaresolverr
     8191
+
+    # bazarr
+    6767
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
