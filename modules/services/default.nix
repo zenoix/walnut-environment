@@ -1,5 +1,6 @@
 {
   imports = [
+    ./bazarr.nix
     ./cloudflared.nix
     ./fail2ban.nix
     ./flaresolverr.nix

@@ -16,6 +16,7 @@
   walnut = {
     anki.enable = lib.mkForce false;
     bluetooth.enable = lib.mkForce false;
+    bazarr.enable = true;
     cloudflared.enable = true;
     fail2ban.enable = true;
     firefox.enable = lib.mkForce false;
