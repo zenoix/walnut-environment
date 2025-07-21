@@ -23,6 +23,7 @@
             "prowlarr.zenoix.com" = "http://localhost:9696";
             "radarr.zenoix.com" = "http://localhost:7878";
             "sonarr.zenoix.com" = "http://localhost:8989";
+            "bazarr.zenoix.com" = "http://localhost:6767";
           };
           default = "http_status:404";
         };
