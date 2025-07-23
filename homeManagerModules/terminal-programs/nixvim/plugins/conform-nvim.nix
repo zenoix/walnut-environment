@@ -6,7 +6,7 @@
       beautysh
       goimports-reviser
       nixfmt-rfc-style
-      nodePackages.prettier
+      prettierd
       ruff
       stylua
     ];
@@ -16,17 +16,17 @@
 
       settings = {
         formatters_by_ft = {
-          astro = [ "prettier" ];
+          astro = [ "prettierd" ];
           bash = [ "beautysh" ];
-          css = [ "prettier" ];
+          css = [ "prettierd" ];
           cpp = [ "clang_format" ];
           go = [
             "gofmt"
             "goimports-reviser"
           ];
-          html = [ "prettier" ];
-          javascript = [ "prettier" ];
-          json = [ "prettier" ];
+          html = [ "prettierd" ];
+          javascript = [ "prettierd" ];
+          json = [ "prettierd" ];
           lua = [ "stylua" ];
           nix = [ "nixfmt" ];
           python = [
@@ -37,9 +37,9 @@
             # To organize the imports.
             "ruff_organize_imports"
           ];
-          tsx = [ "prettier" ];
-          typescript = [ "prettier" ];
-          yaml = [ "prettier" ];
+          tsx = [ "prettierd" ];
+          typescript = [ "prettierd" ];
+          yaml = [ "prettierd" ];
           zsh = [ "beautysh" ];
         };
 
