@@ -21,7 +21,7 @@
       extraConfig = {
         show-icons = true;
         icon-theme = "Pop";
-        modi = "drun,window,run";
+        modi = "drun";
       };
       theme =
         let
@@ -65,7 +65,7 @@
             border-radius = mkLiteral "100%";
             border-color = mkLiteral "#${colors.base02}";
             background-color = mkLiteral "#${colors.base02}";
-            children = mkLiteral "[textbox-prompt-colon, entry, dummy, mode-switcher]";
+            children = mkLiteral "[textbox-prompt-colon, entry]";
           };
 
           textbox-prompt-colon = {
@@ -81,7 +81,7 @@
 
           entry = {
             enabled = mkLiteral "true";
-            expand = mkLiteral "false";
+            expand = mkLiteral "true";
             width = mkLiteral "200px";
             padding = mkLiteral "12px 16px";
             border-radius = mkLiteral "100%";
@@ -162,14 +162,6 @@
             cursor = mkLiteral "inherit";
             vertical-align = mkLiteral "0.5";
             horizontal-align = mkLiteral "0.0";
-          };
-
-          "mode-switcher" = {
-            enabled = mkLiteral "true";
-            expand = mkLiteral "true";
-            padding = mkLiteral "4px";
-            text-color = mkLiteral "#${colors.base05}";
-            background-color = mkLiteral "inherit";
           };
 
           button = {
