@@ -13,43 +13,23 @@
     ./../common/configuration.nix
   ];
 
-  walnut = {
-    anki.enable = lib.mkForce false;
-    bluetooth.enable = lib.mkForce false;
+  walnut = lib.mkForce {
     bazarr.enable = true;
     cloudflared.enable = true;
     fail2ban.enable = true;
-    firefox.enable = lib.mkForce false;
     flaresolverr.enable = true;
-    fonts.enable = lib.mkForce false;
-    hyprland = {
-      enable = lib.mkForce false;
-      screenshot.enable = lib.mkForce false;
-    };
+    home-manager.enable = true;
     jellyfin.enable = true;
     jellyseerr.enable = true;
-    keymapp.enable = lib.mkForce false;
-    libreoffice.enable = lib.mkForce false;
     mullvad.enable = true;
+    networking.enable = true;
     prowlarr.enable = true;
     qbittorrent.enable = true;
-    qt-libs.enable = lib.mkForce false;
     radarr.enable = true;
-    sddm.enable = lib.mkForce false;
-    signal.enable = lib.mkForce false;
+    shell-config.enable = true;
     sonarr.enable = true;
     sops.enable = true;
-    sound.enable = lib.mkForce false;
-    swap.enable = lib.mkForce false;
     terminfo.enable = true;
-    thunar.enable = lib.mkForce false;
-    tor-browser.enable = lib.mkForce false;
-    obsidian.enable = lib.mkForce false;
-    users.enable = lib.mkForce false;
-    vesktop.enable = lib.mkForce false;
-    vlc.enable = lib.mkForce false;
-    xkb.enable = lib.mkForce false;
-    zsa.enable = lib.mkForce false;
   };
 
   sops = {
