@@ -7,6 +7,7 @@
 {
   imports = [
     ./autocmds.nix
+    ./badChars.nix
     ./highlights.nix
     ./opts.nix
     ./remap.nix
@@ -29,6 +30,7 @@
       package = pkgs-unstable.neovim-unwrapped;
 
       extraPackages = with pkgs-unstable; [ ];
+
     };
   };
 }
