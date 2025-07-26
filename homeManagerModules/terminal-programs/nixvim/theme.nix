@@ -16,9 +16,12 @@
           alpha = true;
           cmp = true;
           dashboard = true;
+          dadbod_ui = true;
+          dap = true;
           dap_ui = true;
           flash = true;
           fzf = true;
+          gitgutter = true;
           gitsigns = true;
           harpoon = true;
           headlines = true;
@@ -42,6 +45,10 @@
               hints = [ "undercurl" ];
               warnings = [ "undercurl" ];
               information = [ "undercurl" ];
+              ok = [ "undercurl " ];
+            };
+            inlay_hints = {
+              background = true;
             };
           };
           navic = {
@@ -51,8 +58,14 @@
           neotest = true;
           neotree = true;
           noice = true;
+          notifier = true;
           notify = true;
+          render_markdown = true;
           semantic_tokens = true;
+          snacks = {
+            enabled = true;
+            indent_scope_color = "mauve";
+          };
           telescope = {
             enabled = true;
             style = "nvchad";
