@@ -71,6 +71,9 @@
         setw -g pane-border-style "bg=default,fg=#{@thm_surface_0}"
         setw -g pane-border-lines heavy
 
+        # popup border
+        set -g popup-border-style "bg=default,fg=#{@thm_mauve}"
+        set -g popup-border-lines rounded
       '';
 
       plugins = with pkgs-unstable; [
