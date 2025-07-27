@@ -12,6 +12,7 @@
     ./opts.nix
     ./remap.nix
     ./theme.nix
+    ./userCommands.nix
 
     ./plugins
   ];
