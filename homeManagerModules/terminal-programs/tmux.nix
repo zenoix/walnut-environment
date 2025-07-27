@@ -28,6 +28,11 @@
         bind '"' split-window -v -c "#{pane_current_path}"
         bind % split-window -h -c "#{pane_current_path}"
 
+        bind g display-popup \
+          -d "#{pane_current_path}" \
+          -w 75% \
+          -h 75%
+
         set -g allow-passthrough on
 
         set -g history-limit 10000
