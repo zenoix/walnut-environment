@@ -13,6 +13,14 @@
     programs.jujutsu = {
       enable = true;
       package = pkgs-unstable.jujutsu;
+      settings = {
+        aliases = {
+          init = [
+            "git"
+            "init"
+          ];
+        };
+      };
     };
   };
 }
