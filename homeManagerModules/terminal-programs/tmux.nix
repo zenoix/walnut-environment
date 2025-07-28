@@ -33,6 +33,15 @@
           -w 75% \
           -h 75%
 
+        bind C-n display-popup \
+          -h 5 \
+          -T "Create New Session" \
+          -E 'bash -i -c "read -p \"Name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
+
+        bind C-j display-popup  \
+          -T "Switch to Session" \
+          -E "tmux list-sessions | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --no-multi --border=none --height 100% --reverse | sed -E 's/:.*$//' | xargs tmux switch-client -t"
+
         set -g allow-passthrough on
 
         set -g history-limit 10000
