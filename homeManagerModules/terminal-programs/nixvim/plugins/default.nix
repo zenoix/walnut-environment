@@ -18,7 +18,7 @@
     ./lualine.nix
     ./mini.nix
     ./neogen.nix
-    # ./noice.nix # NOTE: Noice redraws which bugs out multi-line inputs. This should be fixed in 0.11.3
+    ./noice.nix
     ./nvim-ts-context-commentstring.nix
     ./oil.nix
     ./render-markdown.nix
