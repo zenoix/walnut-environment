@@ -1,4 +1,4 @@
-# This is a UNSAFE workaround for the insecure and unmaintained broadcom wifi drivers my laptop needs
+# This is an UNSAFE workaround for the insecure and unmaintained broadcom wifi drivers my laptop needs
 
 { lib, ... }:
 {
