@@ -36,6 +36,7 @@
                 darkreader
                 firefox-color
                 return-youtube-dislikes
+                sponsorblock
                 stylus
                 tabliss
                 ublock-origin
