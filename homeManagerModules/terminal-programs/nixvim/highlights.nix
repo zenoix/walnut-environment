@@ -3,6 +3,7 @@
   programs.nixvim =
     let
       subtext0 = "a6adc8";
+      mauve = "cba6f7";
     in
     {
       highlight = {
@@ -20,6 +21,9 @@
             fg = "#${colors.base0E}";
             bold = true;
           };
+
+          TelescopeSelectionCaret.fg = "#${mauve}";
+          TelescopePromptPrefix.fg = "#${mauve}";
 
           # HACK: Temporary fix for fzf-lua's broken telescope highlights
           TelescopeSelection = {
