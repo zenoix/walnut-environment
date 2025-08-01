@@ -128,7 +128,18 @@
               set -g @catppuccin_window_text "#[fg=default,bg=default] #I#{?#{!=:#{window_name},},: #W,}"
               set -g @catppuccin_window_current_number ""
               set -g @catppuccin_window_current_text "#[fg=#{@thm_mantle},bg=#{@thm_mauve}] #I#{?#{!=:#{window_name},},: #W,}"
-            '';
+            ''
+            + (
+              if (sessionizerDirectories != null) then
+                ''
+                  bind -r f display-popup  \
+                    -w 80% \
+                    -T "Tmux Sessionizer" \
+                    -E "~/bin/tmux-sessionizer.sh"
+                ''
+              else
+                ''''
+            );
           }
         ];
       };
