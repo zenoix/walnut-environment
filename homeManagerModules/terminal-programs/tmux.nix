@@ -39,6 +39,7 @@
           -E 'bash -i -c "read -p \"Name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
 
         bind C-j display-popup  \
+          -w 80% \
           -T "Switch to Tmux Session" \
           -E "tmux list-sessions | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --no-multi --border=none --height 100% --reverse | sed -E 's/:.*$//' | xargs tmux switch-client -t"
 
