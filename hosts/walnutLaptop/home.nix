@@ -37,6 +37,10 @@
     sioyek.enable = true;
     spicetify.enable = true;
     syncthing.enable = true;
+    tmux.sessionizerDirectories = [
+      "~/"
+      "~/repos"
+    ];
     uv.enable = true;
     waybar.enable = true;
     zathura.enable = true;
