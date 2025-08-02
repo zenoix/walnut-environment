@@ -155,7 +155,7 @@
             if [[ $# -eq 1 ]]; then
                 selected=$1
             else
-                selected=$(find ${lib.strings.concatStringsSep " " config.walnutHome.tmux.sessionizerDirectories} -mindepth 1 -maxdepth 1 -type d -not -path "*/.*" | sed "s|^$HOME|~|" | fzf --no-multi --border=none --height 100% --layout=reverse)
+                selected=$(find ${lib.strings.concatStringsSep " " config.walnutHome.tmux.sessionizerDirectories} -mindepth 1 -maxdepth 1 -type d -not -path "*/.*" | sed "s|^$HOME|~|" | fzf --no-multi --border=none --height 100% --layout=reverse | sed "s|^~|$HOME|")
             fi
 
             if [[ -z $selected ]]; then
