@@ -16,7 +16,6 @@
       enable = true;
       brews = [ ];
       casks = [
-        "displaylink"
         "kitty"
         "firefox"
       ];
