@@ -125,7 +125,7 @@
       };
 
       work = {
-        user = "jeffwang2";
+        user = "jeff.wang";
       };
 
       overlays = import ./overlays {
