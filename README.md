@@ -167,6 +167,10 @@ home-manager --extra-experimental-features "nix-command flakes" switch --flake ~
 
 This command is aliased in my home manager configuration to `hms` which makes future rebuilding easier. 
 
+### Nix Darwin
+
+TODO
+
 ### Setting Up New Hosts
 
 TODO
