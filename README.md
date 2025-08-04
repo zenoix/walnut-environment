@@ -175,6 +175,10 @@ TODO
 
 TODO
 
+## Netskope Issue
+
+I've had issues with Netskope interfering with Nix where it causes SSL errors. If you also get that problem, try the solution in this [GitHub issue comment](https://github.com/NixOS/nix/issues/8081#issuecomment-1962419263).
+
 ## Configuration
 
 TODO
