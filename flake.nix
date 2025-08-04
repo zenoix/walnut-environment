@@ -236,7 +236,7 @@
           };
       };
 
-      darwinConfigurations."NZ-MMFP22C32DG" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."DPGL93YXYK" = nix-darwin.lib.darwinSystem {
         modules = [
           ./darwinModules
           ./hosts/workMac/configuration.nix
