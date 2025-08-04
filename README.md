@@ -113,7 +113,7 @@ in
   ...
 ```
 
-The remaining steps depend on if you are using NixOS, WSL, or both. At the end of the setup section, there are instructions for creating and adding more hosts.
+The remaining steps depend on if you are using NixOS, home-manager, or both. At the end of the setup section, there are instructions for creating and adding more hosts.
 
 ### NixOS Setup
 
@@ -144,43 +144,21 @@ home-manager switch --flake ~/walnut-environment
 
 These two switch commands are aliased in my home manager configuration to `rb` and `hms` respectively which makes future rebuilding easier. 
 
-### WSL Setup
+### Home Manager Setup
 
-First, start with installing Nix (the package manager) onto your WSL distribution by following the instructions on the [NixOS website](https://nixos.org/download/#nix-install-windows).
+First, start with installing Nix (the package manager) by following the instructions on the [NixOS website](https://nixos.org/download/).
 
 > [!TIP]
 > In my experience, Nix and home manager only work when **multi-user** installation is used.
 
-Then follow the [home manager installation instructions](https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone) for standalone installation.
+Then after installing Nix, you can create a temporary shell with home manager installed:
+
+```sh
+nix-shell -p home-manager
+```
 
 > [!IMPORTANT]
 > Do not close or restart your terminal as home manager will not be permanently installed yet at this point.
-
-Next, in `flake.nix`, you'll want to change the `wsl.user` value to whatever your WSL username is. Make sure to also edit the `personal` attribute set to your own information (if you haven't already). For example:
-
-```nix
-let
-  system = "x86_64-linux";
-
-  personal = {
-    user = "i_am_a_wsl_user"; # This isn't used by WSL-only config
-    host = "mywsl"; # This isn't used by WSL-only config
-    timeZone = "America/New_York";
-    defaultLocale = "en_US.UTF-8";
-    city = "New York";
-
-    # Used for gitconfig
-    gitUser = "gituser1234";
-    gitEmail = "gituser1234@gmail.com";
-  };
-
-  wsl = {
-    user = "i_am_a_wsl_user";
-  };
-in
-{
-  ...
-```
 
 Lastly, run the following command to get everything set up (including permanently having home manager installed):
 ```sh
