@@ -31,7 +31,7 @@
         autohide = true;
         persistent-apps = [
           "/Applications/Firefox.app"
-          "/Applications/kitty.app"
+          "/Applications/Ghostty.app"
           "/Applications/Microsoft Teams.app"
           "/Applications/Microsoft Outlook.app"
           "/System/Applications/System Settings.app"
