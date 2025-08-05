@@ -72,6 +72,9 @@
         NSWindowShouldDragOnGesture = true;
       };
     };
+
+    # turn off startup noise
+    startup.chime = false;
   };
 
   security = {
