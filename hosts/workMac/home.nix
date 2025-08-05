@@ -26,6 +26,10 @@
 
   walnutHome = {
     firefox.enable = true;
+    tmux.sessionizerDirectories = [
+      "~/"
+      "~/repos"
+    ];
   };
 
   stylix.opacity.terminal = lib.mkForce 0.97;
