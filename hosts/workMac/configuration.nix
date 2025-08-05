@@ -18,6 +18,7 @@
       casks = [
         "ghostty"
         "firefox"
+        "slack"
       ];
     };
   };
