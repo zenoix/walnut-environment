@@ -36,6 +36,12 @@
           "/Applications/Microsoft Outlook.app"
           "/System/Applications/System Settings.app"
         ];
+
+        # disable hot corners
+        wvous-tl-corner = 1;
+        wvous-bl-corner = 1;
+        wvous-tr-corner = 1;
+        wvous-br-corner = 1;
       };
 
       finder = {
