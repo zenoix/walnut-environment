@@ -34,6 +34,7 @@
           "/Applications/Firefox.app"
           "/Applications/Ghostty.app"
           "/Applications/Microsoft Teams.app"
+          "/Applications/Slack.app/"
           "/Applications/Microsoft Outlook.app"
           "/System/Applications/System Settings.app"
         ];
