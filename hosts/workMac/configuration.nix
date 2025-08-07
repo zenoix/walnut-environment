@@ -18,6 +18,7 @@
       casks = [
         "ghostty"
         "firefox"
+        "obsidian"
         "slack"
       ];
     };
@@ -36,6 +37,7 @@
           "/Applications/Microsoft Teams.app"
           "/Applications/Slack.app/"
           "/Applications/Microsoft Outlook.app"
+          "/Applications/Obsidian.app"
           "/System/Applications/System Settings.app"
         ];
 
