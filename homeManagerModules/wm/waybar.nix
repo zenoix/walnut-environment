@@ -109,7 +109,7 @@
 
             clock = {
               # timezone = "America/New_York";
-              format = "{:%a %d %b %I:%M %p}";
+              format = "{:%a %d %b %H:%M}";
               tooltip-format = "<tt>{calendar}</tt>";
               calendar = {
                 mode = "month";
