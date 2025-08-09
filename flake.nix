@@ -170,7 +170,7 @@
             ./hosts/walnutLaptop/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
         };
 
@@ -180,7 +180,7 @@
             ./hosts/walnutDesktop/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
         };
 
@@ -190,7 +190,7 @@
             ./hosts/walnutServer/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
         };
 
@@ -201,7 +201,7 @@
             ./hosts/work-wsl/home.nix
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
         };
 
@@ -232,7 +232,7 @@
               ./hosts/workMac/home.nix
               ./homeManagerModules
               inputs.stylix.homeModules.stylix
-              inputs.nixvim.homeManagerModules.nixvim
+              inputs.nixvim.homeModules.nixvim
             ];
           };
       };
