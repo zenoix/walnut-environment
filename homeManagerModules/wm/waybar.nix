@@ -308,10 +308,10 @@
               border: none;
               border-radius: 0;
               /* `otf-font-awesome` is required to be installed for icons */
-              font-size: 14px;
+              font-size: 12px;
               font-family: JetBrains Mono;
               font-weight: bold;
-              min-height: 20px;
+              min-height: 18px;
             }
 
             window#waybar {
