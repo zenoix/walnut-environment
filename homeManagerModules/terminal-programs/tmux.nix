@@ -55,6 +55,8 @@
             -E "tmux list-sessions | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --no-multi --border=none --height 100% --reverse | sed -E 's/:.*$//' | xargs tmux switch-client -t"
 
           set -g allow-passthrough on
+          set -ga update-environment TERM
+          set -ga update-environment TERM_PROGRAM
 
           set -g history-limit 10000
 
