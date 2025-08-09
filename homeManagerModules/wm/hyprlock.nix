@@ -22,7 +22,7 @@
 
           background = [
             {
-              path = "$HOME/walnut-environment/assets/fuji.jpg";
+              path = "$HOME/walnut-environment/assets/finan-akbar-OhOun94xtF8-unsplash.jpg";
               blur_passes = 2;
               brightness = 0.75;
               vibrancy = 0.2;

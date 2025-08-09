@@ -24,7 +24,7 @@
       };
 
       # Stylix needs an image for some reason
-      image = ../../assets/fuji-palette.png;
+      image = ../../assets/finan-akbar-OhOun94xtF8-unsplash.jpg;
 
       fonts = {
         monospace = {
