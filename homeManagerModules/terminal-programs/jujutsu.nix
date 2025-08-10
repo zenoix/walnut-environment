@@ -2,6 +2,7 @@
   pkgs-unstable,
   lib,
   config,
+  personal,
   ...
 }:
 {
@@ -14,6 +15,11 @@
       enable = true;
       package = pkgs-unstable.jujutsu;
       settings = {
+        user = {
+          email = personal.gitEmail;
+          user = personal.gitUser;
+        };
+
         aliases = {
           init = [
             "git"
