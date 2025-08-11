@@ -26,6 +26,7 @@
 
   walnutHome = {
     firefox.enable = true;
+    jujutsu.enable = true;
     tmux.sessionizerDirectories = [
       "~/"
       "~/repos"
