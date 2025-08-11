@@ -54,6 +54,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    starship-jj = {
+      url = "gitlab:lanastara_foss/starship-jj";
+    };
+
   };
 
   outputs =
