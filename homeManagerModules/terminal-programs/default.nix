@@ -1,5 +1,6 @@
 {
   imports = [
+    ./aliases.nix
     ./bat.nix
     ./cava.nix
     ./fastfetch.nix

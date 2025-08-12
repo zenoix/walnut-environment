@@ -39,6 +39,7 @@
   fonts.fontconfig.enable = true;
 
   walnutHome = {
+    aliases.enable = true;
     bat.enable = true;
     devbox.enable = true;
     direnv.enable = true;
