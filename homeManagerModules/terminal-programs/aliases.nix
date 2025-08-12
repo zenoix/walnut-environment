@@ -122,8 +122,9 @@
         gwtls = "git worktree list";
         gwtmv = "git worktree move";
         gwtrm = "git worktree remove";
-        gcc = "gcc -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror";
-        "g++" = "g++ -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror";
+        gcc = "gcc -std=c23 -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror";
+        "g++" =
+          "g++ -std=c++23 -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror";
         l = "ls -lah --group-directories-first";
         la = "ls -lAh --group-directories-first";
         ll = "ls -lh --group-directories-first";
