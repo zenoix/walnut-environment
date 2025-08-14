@@ -25,6 +25,7 @@
   };
 
   walnutHome = {
+    awscli.enable = true;
     firefox.enable = true;
     jujutsu.enable = true;
     tmux.sessionizerDirectories = [

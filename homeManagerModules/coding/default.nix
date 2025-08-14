@@ -1,5 +1,6 @@
 {
   imports = [
+    ./awscli.nix
     ./devbox.nix
     ./devenv.nix
     ./direnv.nix
