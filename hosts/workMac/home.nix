@@ -18,9 +18,13 @@
       ".hushlogin".text = "";
     };
 
+    sessionPath = [
+      "$HOME/.npm-global/bin"
+    ];
+
     packages = with pkgs; [
       coreutils
-
+      nodejs
     ];
   };
 
