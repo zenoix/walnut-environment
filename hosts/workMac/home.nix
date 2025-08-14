@@ -19,8 +19,8 @@
     };
 
     packages = with pkgs; [
+      aws-azure-login
       coreutils
-
     ];
   };
 
