@@ -62,7 +62,7 @@
               text = "cmd[update:1000] echo \"$(date +\"%A, %B %d\")\"";
               color = textColor;
               font_size = 22;
-              font_family = "JetBrains Mono";
+              font_family = "JetBrains Mono Nerd Font";
               position = "0, 50";
               halign = "center";
               valign = "center";
@@ -74,7 +74,7 @@
               text = "cmd[update:1000] echo \"$(date +\"%-H:%M\")\"";
               color = textColor;
               font_size = 95;
-              font_family = "JetBrains Mono Extrabold";
+              font_family = "JetBrains Mono Nerd Font Extrabold";
               position = "0, 150";
               halign = "center";
               valign = "center";
@@ -86,7 +86,7 @@
               text = "cmd[update:1000] echo \"$($HOME/walnut-environment/nonNix/scripts/now_playing.sh)\"";
               color = textColor;
               font_size = 14;
-              font_family = "JetBrains Mono";
+              font_family = "JetBrains Mono Nerd Font";
               position = "0, 10";
               halign = "center";
               valign = "bottom";
