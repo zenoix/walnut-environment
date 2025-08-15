@@ -309,7 +309,7 @@
               border-radius: 0;
               /* `otf-font-awesome` is required to be installed for icons */
               font-size: 12px;
-              font-family: JetBrains Mono;
+              font-family: JetBrains Mono Nerd Font;
               font-weight: bold;
               min-height: 18px;
             }
