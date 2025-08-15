@@ -20,7 +20,7 @@
       enable = true;
       monitorSetup = [
         "DP-2,preferred,0x0,1,bitdepth,10"
-        "DP-3,preferred,2560x0,1,bitdepth,10"
+        "DP-3,preferred,2560x-560,1,bitdepth,10,transform,1"
       ];
     };
     hyprlock.enable = true;
