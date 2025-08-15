@@ -10,6 +10,7 @@
   };
 
   walnutHome = {
+    catppuccin.enable = true;
     cava.enable = true;
     dunst.enable = true;
     firefox.enable = true;

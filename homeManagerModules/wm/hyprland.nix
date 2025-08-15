@@ -150,6 +150,10 @@
 
           ];
 
+          exec = [
+            "gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\""
+          ];
+
           exec-once = [
             # "hyprpaper"
             "waybar"

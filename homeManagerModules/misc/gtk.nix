@@ -13,7 +13,6 @@
     home.packages = with pkgs; [ pop-icon-theme ];
     gtk = {
       enable = true;
-      iconTheme.name = "Pop";
     };
   };
 }

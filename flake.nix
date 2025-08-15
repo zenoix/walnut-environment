@@ -18,6 +18,8 @@
 
     stylix.url = "github:danth/stylix/release-25.05";
 
+    catppuccin.url = "github:catppuccin/nix/release-25.05";
+
     nixvim = {
       url = "github:nix-community/nixvim/";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -145,6 +147,7 @@
         modules = [
           ./hosts/walnutLaptop/configuration.nix
           stylix.nixosModules.stylix
+          inputs.catppuccin.nixosModules.catppuccin
         ];
       };
 
@@ -154,6 +157,7 @@
         modules = [
           ./hosts/walnutDesktop/configuration.nix
           stylix.nixosModules.stylix
+          inputs.catppuccin.nixosModules.catppuccin
         ];
       };
 
@@ -163,6 +167,7 @@
         modules = [
           ./hosts/walnutServer/configuration.nix
           stylix.nixosModules.stylix
+          inputs.catppuccin.nixosModules.catppuccin
         ];
       };
 
@@ -175,6 +180,7 @@
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeModules.nixvim
+            inputs.catppuccin.homeModules.catppuccin
           ];
         };
 
@@ -185,6 +191,7 @@
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeModules.nixvim
+            inputs.catppuccin.homeModules.catppuccin
           ];
         };
 
@@ -195,6 +202,7 @@
             ./homeManagerModules
             inputs.stylix.homeModules.stylix
             inputs.nixvim.homeModules.nixvim
+            inputs.catppuccin.homeModules.catppuccin
           ];
         };
 
@@ -237,6 +245,7 @@
               ./homeManagerModules
               inputs.stylix.homeModules.stylix
               inputs.nixvim.homeModules.nixvim
+              inputs.catppuccin.homeModules.catppuccin
             ];
           };
       };

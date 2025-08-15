@@ -38,6 +38,7 @@
   };
 
   walnut = {
+    catppuccin.enable = true;
     grub.enable = false; # Override my grub config due to dual boot
   };
 

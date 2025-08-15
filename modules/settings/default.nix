@@ -1,5 +1,6 @@
 {
   imports = [
+    ./catppuccin.nix
     ./fonts.nix
     ./home-manager.nix
     ./locale.nix

@@ -1,5 +1,6 @@
 {
   imports = [
+    ./catppuccin.nix
     ./gammastep.nix
     ./gtk.nix
     ./i18n.nix

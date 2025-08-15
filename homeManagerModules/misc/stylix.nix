@@ -13,6 +13,7 @@
   config = lib.mkIf config.walnutHome.stylix.enable {
     stylix = {
       enable = true;
+      autoEnable = false;
       polarity = "dark";
 
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
@@ -40,14 +41,6 @@
         popups = 0.975;
       };
 
-      targets = {
-        waybar.enable = false;
-        hyprlock.enable = false;
-        neovim.enable = false;
-        nixvim.enable = false;
-        kitty.variant256Colors = true;
-        tmux.enable = false;
-      };
     };
   };
 }
