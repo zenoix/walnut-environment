@@ -12,7 +12,7 @@
   ];
 
   # For my Nvidia GPU
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
   services.xserver.videoDrivers = [ "nvidia" ];
