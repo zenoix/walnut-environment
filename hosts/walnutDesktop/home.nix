@@ -18,7 +18,10 @@
     hypridle.enable = false;
     hyprland = {
       enable = true;
-      monitor-setup = "double";
+      monitorSetup = [
+        "DP-2,preferred,0x0,1,bitdepth,10"
+        "DP-3,preferred,2560x0,1,bitdepth,10"
+      ];
     };
     hyprlock.enable = true;
     i18n.enable = true;

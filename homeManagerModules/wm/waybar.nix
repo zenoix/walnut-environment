@@ -530,7 +530,7 @@
     })
 
     (lib.mkIf
-      (config.walnutHome.hyprland.enable && config.walnutHome.hyprland.monitor-setup == "double")
+      (config.walnutHome.hyprland.enable && builtins.isList config.walnutHome.hyprland.monitorSetup)
       {
         programs.waybar = {
           settings = {
