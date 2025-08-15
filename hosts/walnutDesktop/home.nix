@@ -25,6 +25,7 @@
       ];
     };
     hyprlock.enable = true;
+    hyprpaper.enable = true;
     i18n.enable = true;
     kitty.enable = false;
     obs.enable = true;
