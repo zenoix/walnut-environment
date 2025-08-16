@@ -11,6 +11,7 @@
   config = lib.mkIf config.walnut.catppuccin.enable {
     catppuccin = {
       enable = true;
+      grub.enable = false;
       sddm.enable = !config.walnut.sddm.enable;
     };
 
