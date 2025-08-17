@@ -12,6 +12,7 @@
   };
 
   walnutHome = {
+    catppuccin.enable = lib.mkForce false;
     devbox.enable = lib.mkForce false;
     devenv.enable = lib.mkForce false;
     direnv.enable = lib.mkForce false;

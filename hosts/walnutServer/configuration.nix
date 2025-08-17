@@ -15,6 +15,7 @@
 
   walnut = lib.mkForce {
     bazarr.enable = true;
+    catppuccin.enable = false;
     cloudflared.enable = true;
     fail2ban.enable = true;
     flaresolverr.enable = true;

@@ -41,6 +41,7 @@
   walnutHome = {
     aliases.enable = true;
     bat.enable = true;
+    catppuccin.enable = true;
     devbox.enable = true;
     direnv.enable = true;
     fastfetch.enable = true;

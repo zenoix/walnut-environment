@@ -23,12 +23,16 @@
     firefox.enable = true;
     gammastep.enable = true;
     gtk-config.enable = true;
-    hypridle.enable = true;
+    hypridle = {
+      enable = true;
+      dimScreen.enable = true;
+    };
     hyprland = {
       enable = true;
       mouse-sensitivity = "-0.15";
     };
     hyprlock.enable = true;
+    hyprpaper.enable = true;
     i18n.enable = true;
     jujutsu.enable = true;
     kitty.enable = false;

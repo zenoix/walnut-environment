@@ -20,6 +20,7 @@
   walnut = {
     anki.enable = true;
     bluetooth.enable = true;
+    catppuccin.enable = true;
     coding-stuff.enable = true;
     docker.enable = false;
     firefox.enable = true;
