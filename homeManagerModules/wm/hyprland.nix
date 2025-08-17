@@ -178,15 +178,15 @@
             "$mainMod, P, pseudo, # dwindle"
             "$mainMod, S, togglesplit, # dwindle"
             "$mainMod, B, exec, firefox"
-            "$mainMod, L, exec, hyprlock"
+            "$mainMod SHIFT, L, exec, hyprlock"
 
             "$mainMod SHIFT, P, exec, grim -g \"$(slurp)\" - | swappy -f -"
 
             # Move focus with mainMod + arrow keys
-            "$mainMod, left,  movefocus, l"
-            "$mainMod, right, movefocus, r"
-            "$mainMod, up,    movefocus, u"
-            "$mainMod, down,  movefocus, d"
+            "$mainMod, H,  movefocus, l"
+            "$mainMod, L, movefocus, r"
+            "$mainMod, K,    movefocus, u"
+            "$mainMod, J,  movefocus, d"
 
             # Moving windows
             "$mainMod SHIFT, left,  swapwindow, l"
