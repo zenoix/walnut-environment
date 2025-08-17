@@ -1,7 +1,17 @@
 { lib, config, ... }:
 {
   options = {
-    walnutHome.hypridle.enable = lib.mkEnableOption "enable hypridle";
+    walnutHome.hypridle = {
+      enable = lib.mkEnableOption "enable hypridle";
+      dimScreen = {
+        enable = lib.mkEnableOption "dim monitor after inactivity";
+        delay = lib.mkOption {
+          default = 180; # 3 minutes
+          description = "delay to dim monitors in seconds";
+          type = with lib.types; ints.positive;
+        };
+      };
+    };
   };
 
   config = lib.mkIf config.walnutHome.hypridle.enable {
@@ -17,10 +27,10 @@
         listener =
           (
             # NOTE: This is very hacky, will find a more robust way another time
-            if config.walnutHome.hyprland.monitor-setup != "double" then
+            if config.walnutHome.hypridle.dimScreen.enable then
               [
                 {
-                  timeout = 180; # 3min.
+                  timeout = config.walnutHome.hypridle.dimScreen.delay;
                   on-timeout = "brightnessctl -s set 10"; # set monitor backlight to minimum, avoid 0 on OLED monitor.
                   on-resume = "brightnessctl -r"; # monitor backlight restore.
                 }
