@@ -435,7 +435,7 @@
 
           #workspaces button.active {
             /* background: #2B2F38; */
-            color: #f5c2e7;
+            color: @mauve;
             /* margin-left: 1px; 
             padding-left: 4px;
             padding-right: 8px;
@@ -445,9 +445,10 @@
           }
 
           #workspaces button:hover {
-            /* background: @wb-hvr-bg; */
-            color: #d5a5aa;
-            animation: ws_hover 20s ease-in-out 1;
+            color: @mauve;
+            box-shadow: none;
+            text-shadow: none;
+            background: none;
             transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
           }
 
