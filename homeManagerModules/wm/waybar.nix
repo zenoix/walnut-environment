@@ -324,6 +324,7 @@
           #power {
             padding-left: 10px;
             padding-right: 10px;
+            color: @text;
           }
 
           #group1 {
@@ -368,6 +369,7 @@
             border-radius: 10px;
             margin-right: 8px;
             transition: none;
+            color: @text;
           }
 
           #battery,
