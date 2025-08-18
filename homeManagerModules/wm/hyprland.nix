@@ -3,7 +3,7 @@
   options = {
     walnutHome.hyprland.enable = lib.mkEnableOption "enable hyprland";
     walnutHome.hyprland.monitorSetup = lib.mkOption {
-      default = ",preferred,auto,1,bitdepth,10";
+      default = ",preferred,auto,1";
       type = with lib.types; either str (listOf str);
     };
     walnutHome.hyprland.mouse-sensitivity = lib.mkOption {
@@ -162,6 +162,7 @@
             "wl-paste --type image --watch cliphist store"
             "fcitx5"
             "hyprpaper"
+            "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
           ];
 
           bind = [
