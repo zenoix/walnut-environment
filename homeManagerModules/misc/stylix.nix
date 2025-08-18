@@ -38,6 +38,10 @@
         popups = 0.975;
       };
 
+      targets = {
+        # Catppuccin-nix doesn't have gtk themeing so use stylix
+        gtk.enable = true;
+      };
     };
   };
 }
