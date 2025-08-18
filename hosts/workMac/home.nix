@@ -54,4 +54,8 @@
       font-size = 12;
     };
   };
+
+  xdg.mimeApps = {
+    enable = lib.mkForce false;
+  };
 }

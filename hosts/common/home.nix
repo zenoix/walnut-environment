@@ -61,4 +61,15 @@
     zoxide.enable = true;
     zsh.enable = true;
   };
+
+  xdg.mimeApps = {
+    enable = true;
+    associations.removed = {
+      "inode/directory" = "org.pwmt.zathura-cb.desktop";
+    };
+    defaultApplications = {
+      "inode/directory" = "thunar.desktop";
+      "x-scheme-handler/discord" = "vesktop.desktop";
+    };
+  };
 }
