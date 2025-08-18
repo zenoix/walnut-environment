@@ -20,6 +20,7 @@
         "firefox"
         "obsidian"
         "slack"
+        "keymapp"
       ];
     };
   };
