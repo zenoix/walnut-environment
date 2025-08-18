@@ -18,9 +18,6 @@
 
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-      # Stylix needs an image for some reason
-      image = ../../assets/finan-akbar-OhOun94xtF8-unsplash.jpg;
-
       fonts = {
         monospace = {
           package = pkgs-unstable.monaspace;
