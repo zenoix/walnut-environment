@@ -10,13 +10,9 @@
   };
 
   config = lib.mkIf config.walnut.anki.enable {
-    programs.anki = {
-      enable = true;
-      addons = [ ];
-      language = "ja_JP";
-      minimalistMode = true;
-      sync.autosync = true;
-      theme = "dark";
-    };
+    environment.systemPackages = with pkgs; [
+      anki-bin
+      mpv
+    ];
   };
 }
