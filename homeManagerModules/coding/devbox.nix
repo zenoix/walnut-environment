@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -12,7 +12,7 @@
   config = lib.mkIf config.walnutHome.devbox.enable {
 
     home = {
-      packages = with pkgs-unstable; [ devbox ];
+      packages = with pkgs; [ devbox ];
     };
 
   };

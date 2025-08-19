@@ -1,8 +1,8 @@
-{ pkgs-unstable, lib, ... }:
+{ pkgs, lib, ... }:
 {
   programs.nixvim.plugins.fzf-lua = {
     enable = true;
-    package = pkgs-unstable.vimPlugins.fzf-lua;
+    package = pkgs.vimPlugins.fzf-lua;
     profile = "telescope";
     settings = {
       winopts = {

@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   server,
@@ -14,7 +14,7 @@
     services.sonarr = {
       enable = true;
       openFirewall = true;
-      package = pkgs-unstable.sonarr;
+      package = pkgs.sonarr;
       user = server.user;
       group = "users";
     };

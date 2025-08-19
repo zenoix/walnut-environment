@@ -1,6 +1,6 @@
 {
   pkgs,
-  pkgs-unstable,
+  pkgs,
   lib,
   work,
   ...
@@ -30,7 +30,7 @@
         (python312.withPackages (ps: with ps; [ requests ]))
 
       ]
-      ++ (with pkgs-unstable; [
+      ++ (with pkgs; [
         jetbrains-mono
         monaspace
         noto-fonts

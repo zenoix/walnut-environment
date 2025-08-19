@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -28,9 +28,9 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
-      package = pkgs-unstable.neovim-unwrapped;
+      package = pkgs.neovim-unwrapped;
 
-      extraPackages = with pkgs-unstable; [ ];
+      extraPackages = with pkgs; [ ];
 
     };
   };

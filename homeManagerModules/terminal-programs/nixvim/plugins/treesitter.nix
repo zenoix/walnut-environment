@@ -1,8 +1,8 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   programs.nixvim.plugins.treesitter = {
     enable = true;
-    package = pkgs-unstable.vimPlugins.nvim-treesitter;
+    package = pkgs.vimPlugins.nvim-treesitter;
     settings = {
       highlight.enable = true;
       ensure_installed = [

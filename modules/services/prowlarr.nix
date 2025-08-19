@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -13,7 +13,7 @@
     services.prowlarr = {
       enable = true;
       openFirewall = true;
-      package = pkgs-unstable.prowlarr;
+      package = pkgs.prowlarr;
     };
   };
 }

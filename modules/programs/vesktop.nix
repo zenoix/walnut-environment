@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -10,6 +10,6 @@
   };
 
   config = lib.mkIf config.walnut.vesktop.enable {
-    environment.systemPackages = with pkgs-unstable; [ vesktop ];
+    environment.systemPackages = with pkgs; [ vesktop ];
   };
 }

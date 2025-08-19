@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -14,7 +14,7 @@
       enable = true;
       port = 5055;
       openFirewall = true;
-      package = pkgs-unstable.jellyseerr;
+      package = pkgs.jellyseerr;
     };
   };
 }

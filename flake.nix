@@ -3,31 +3,31 @@
 
   inputs = {
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     devbox = {
       url = "github:jetify-com/devbox";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix/release-25.05";
+    stylix.url = "github:danth/stylix";
 
-    catppuccin.url = "github:catppuccin/nix/release-25.05";
+    catppuccin.url = "github:catppuccin/nix";
 
     nixvim = {
       url = "github:nix-community/nixvim/";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     firefox-addons = {
@@ -37,7 +37,7 @@
 
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
@@ -53,7 +53,7 @@
 
     sops-nix = {
       url = "github:mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     starship-jj = {
@@ -66,7 +66,7 @@
     {
       self,
       nixpkgs,
-      nixpkgs-unstable,
+      nixpkgs-stable,
       home-manager,
       nix-darwin,
       nix-homebrew,
@@ -86,7 +86,7 @@
       };
 
       specialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {
+        pkgs-stable = import nixpkgs-stable {
           inherit system;
           config.allowUnfree = true;
         };
@@ -100,7 +100,7 @@
       };
 
       extraSpecialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {
+        pkgs-stable = import nixpkgs-stable {
           inherit system;
           config.allowUnfree = true;
         };
@@ -233,7 +233,7 @@
             };
 
             extraSpecialArgs = {
-              pkgs-unstable = import nixpkgs-unstable {
+              pkgs-stable = import nixpkgs-stable {
                 inherit system;
                 config.allowUnfree = true;
               };

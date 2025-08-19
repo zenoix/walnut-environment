@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -10,10 +10,10 @@
   };
 
   config = lib.mkIf config.walnut.qbittorrent.enable {
-    environment.systemPackages = [ pkgs-unstable.qbittorrent-enhanced-nox ];
+    environment.systemPackages = [ pkgs.qbittorrent-enhanced-nox ];
 
     systemd = {
-      packages = [ pkgs-unstable.qbittorrent-enhanced-nox ];
+      packages = [ pkgs.qbittorrent-enhanced-nox ];
       services."qbittorrent-nox" = {
         overrideStrategy = "asDropin";
         wantedBy = [ "multi-user.target" ];

@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   personal,
@@ -13,7 +13,7 @@
   config = lib.mkIf config.walnutHome.jujutsu.enable {
     programs.jujutsu = {
       enable = true;
-      package = pkgs-unstable.jujutsu;
+      package = pkgs.jujutsu;
       settings = {
         user = {
           email = personal.gitEmail;

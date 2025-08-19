@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -10,7 +10,7 @@
   };
 
   config = lib.mkIf config.walnut.fonts.enable {
-    fonts.packages = with pkgs-unstable; [
+    fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
       nerd-fonts.monaspace
       noto-fonts

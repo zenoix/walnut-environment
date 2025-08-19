@@ -1,7 +1,7 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
-    extraPlugins = [ pkgs-unstable.vimPlugins.iron-nvim ];
+    extraPlugins = [ pkgs.vimPlugins.iron-nvim ];
     extraConfigLua = ''
       local iron = require("iron.core")
 

@@ -1,8 +1,8 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   programs.nixvim.plugins.noice = {
     enable = true;
-    package = pkgs-unstable.vimPlugins.noice-nvim;
+    package = pkgs.vimPlugins.noice-nvim;
 
     settings = {
       cmdline = {

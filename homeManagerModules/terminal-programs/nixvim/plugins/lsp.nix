@@ -1,11 +1,11 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   programs.nixvim.plugins = {
     lsp-format.enable = true;
 
     lsp = {
       enable = true;
-      package = pkgs-unstable.vimPlugins.nvim-lspconfig;
+      package = pkgs.vimPlugins.nvim-lspconfig;
       inlayHints = true;
       keymaps = {
         silent = true;
@@ -48,7 +48,7 @@
       servers = {
         basedpyright = {
           enable = true;
-          package = pkgs-unstable.basedpyright;
+          package = pkgs.basedpyright;
           settings = {
             basedpyright = {
               analysis = {
@@ -68,7 +68,7 @@
         };
         bashls = {
           enable = true;
-          package = pkgs-unstable.bash-language-server;
+          package = pkgs.bash-language-server;
         };
         clangd.enable = true;
         dockerls.enable = true;
@@ -85,16 +85,16 @@
         marksman.enable = true;
         nil_ls = {
           enable = true;
-          package = pkgs-unstable.nil;
+          package = pkgs.nil;
         };
         ruff = {
           enable = true;
-          package = pkgs-unstable.ruff;
+          package = pkgs.ruff;
         };
         taplo.enable = true;
         ts_ls = {
           enable = true;
-          package = pkgs-unstable.typescript-language-server;
+          package = pkgs.typescript-language-server;
         };
         typos_lsp = {
           enable = true;

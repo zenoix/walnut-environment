@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   server,
@@ -14,7 +14,7 @@
     services.bazarr = {
       enable = true;
       openFirewall = true;
-      package = pkgs-unstable.bazarr;
+      package = pkgs.bazarr;
       user = server.user;
       group = "users";
     };

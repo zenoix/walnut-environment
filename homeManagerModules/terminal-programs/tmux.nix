@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -99,7 +99,7 @@
           set -g popup-border-lines rounded
         '';
 
-        plugins = with pkgs-unstable; [
+        plugins = with pkgs; [
           tmuxPlugins.vim-tmux-navigator
           {
             plugin = tmuxPlugins.catppuccin;

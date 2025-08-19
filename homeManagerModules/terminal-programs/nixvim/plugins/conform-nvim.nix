@@ -1,8 +1,8 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
 
-    extraPackages = with pkgs-unstable; [
+    extraPackages = with pkgs; [
       beautysh
       goimports-reviser
       nixfmt-rfc-style

@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-unstable,
   lib,
   config,
   ...
@@ -22,7 +21,7 @@
       gcc
       gnumake
       go
-      pkgs-unstable.nodejs
+      pkgs.nodejs
       (python313.withPackages (ps: with ps; [ requests ]))
     ];
   };

@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-unstable,
   lib,
   config,
   ...
@@ -26,7 +25,7 @@
 
       fonts = {
         monospace = {
-          package = pkgs-unstable.monaspace;
+          package = pkgs.monaspace;
           name = "Monaspace Neon";
         };
       };

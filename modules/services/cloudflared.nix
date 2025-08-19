@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -10,7 +10,7 @@
   };
 
   config = lib.mkIf config.walnut.cloudflared.enable {
-    environment.systemPackages = with pkgs-unstable; [ cloudflared ];
+    environment.systemPackages = with pkgs; [ cloudflared ];
     services.cloudflared = {
       enable = true;
 

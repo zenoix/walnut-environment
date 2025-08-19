@@ -1,10 +1,10 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
     extraPackages = with pkgs; [
       hadolint
 
-      pkgs-unstable.mypy
+      pkgs.mypy
     ];
 
     plugins.lint = {

@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -12,7 +12,7 @@
   config = lib.mkIf config.walnutHome.ghostty.enable {
     programs.ghostty = {
       enable = true;
-      package = pkgs-unstable.ghostty;
+      package = pkgs.ghostty;
       enableZshIntegration = true;
       installBatSyntax = true;
       installVimSyntax = true;

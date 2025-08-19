@@ -1,5 +1,5 @@
 {
-  pkgs-unstable,
+  pkgs,
   lib,
   config,
   ...
@@ -12,7 +12,7 @@
   config = lib.mkIf config.walnutHome.fastfetch.enable {
     programs.fastfetch = {
       enable = true;
-      package = pkgs-unstable.fastfetch;
+      package = pkgs.fastfetch;
       settings = {
         "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
         logo = {
