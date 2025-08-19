@@ -70,6 +70,8 @@
     defaultApplications = {
       "inode/directory" = "thunar.desktop";
       "x-scheme-handler/discord" = "vesktop.desktop";
+      "x-scheme-handler/sgnl" = "signal.desktop";
+      "x-scheme-handler/signalcaptcha" = "signal.desktop";
     };
   };
 }
