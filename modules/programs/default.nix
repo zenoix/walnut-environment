@@ -1,6 +1,5 @@
 {
   imports = [
-    ./anki.nix
     ./coding.nix
     ./docker.nix
     ./firefox.nix
