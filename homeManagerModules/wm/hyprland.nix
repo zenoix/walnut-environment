@@ -131,6 +131,11 @@
             workspace_swipe_forever = true;
           };
 
+          ecosystem = {
+            no_update_news = true;
+            no_donation_nag = true;
+          };
+
           misc = {
             animate_manual_resizes = true;
             animate_mouse_windowdragging = true;
