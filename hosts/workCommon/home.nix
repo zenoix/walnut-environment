@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs,
   lib,
   work,
   ...
@@ -57,5 +56,23 @@
     settings = {
       git_protocol = lib.mkForce "https";
     };
+  };
+
+  catppuccin = {
+    cursors.enable = false;
+    dunst.enable = false;
+    fcitx5.enable = false;
+    gtk.icon.enable = false;
+    hyprland.enable = false;
+    hyprlock.enable = false;
+    mako.enable = false;
+    mpv.enable = false;
+    sway.enable = false;
+    swaylock.enable = false;
+    swaync.enable = false;
+    waybar.enable = false;
+    wlogout.enable = false;
+    xfce4-terminal.enable = false;
+    zathura.enable = false;
   };
 }
