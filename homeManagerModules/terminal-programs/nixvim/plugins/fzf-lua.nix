@@ -78,5 +78,9 @@
         action = "live_grep";
       };
     };
+
+    luaConfig.post = ''
+      require("fzf-lua").register_ui_select()
+    '';
   };
 }
