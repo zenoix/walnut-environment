@@ -9,7 +9,9 @@
       enable = true;
       settings =
         let
-          wallpaperPath = (builtins.toString "${../../assets/finan-akbar-OhOun94xtF8-unsplash.jpg}");
+          wallpaperPath = (
+            builtins.toString "${../../assets/finan-akbar-OhOun94xtF8-unsplash-catppuccin.jpg}"
+          );
         in
         {
           preload = [ wallpaperPath ];
