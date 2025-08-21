@@ -10,10 +10,20 @@
       keymaps = {
         silent = true;
         lspBuf = {
+          # Display information about the symbol under cursor
           K = "hover";
+
+          # Jump to the definition of the word under cursor
           "<leader>gd" = "definition";
+
+          # Jump to the implementation of the word under cursor
+          # Useful when the language has ways of declaring types without an actual implementation
           "<leader>gi" = "implementation";
+
+          # Find references for the word under cursor
           "<leader>gr" = "references";
+
+          # Rename variable under cursor
           "<leader>rn" = "rename";
         };
       };
