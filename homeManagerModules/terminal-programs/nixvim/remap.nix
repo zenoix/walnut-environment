@@ -33,6 +33,9 @@
 
               # Use fzf-lua for code actions
               "<leader>ca" = "<CMD>FzfLua lsp_code_actions previewer=codeaction_native<CR>";
+
+              # Fuzzy find all the symbols (variables, functions, types, etc.) in the current document
+              "<leader>go" = "<CMD>FzfLua lsp_document_symbols<CR>";
             };
         visual =
           lib.mapAttrsToList

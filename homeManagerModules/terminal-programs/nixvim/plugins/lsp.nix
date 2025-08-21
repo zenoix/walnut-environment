@@ -16,6 +16,10 @@
           # Jump to the definition of the word under cursor
           "<leader>gd" = "definition";
 
+          # This is not go to definition, this is go to declaration
+          # For example, in C this would take you to the header
+          "<leader>gD" = "declaration";
+
           # Jump to the implementation of the word under cursor
           # Useful when the language has ways of declaring types without an actual implementation
           "<leader>gi" = "implementation";
@@ -25,6 +29,14 @@
 
           # Rename variable under cursor
           "<leader>rn" = "rename";
+
+          # Jump to the type of the word under the cursor
+          # Useful when you're not sure what type a variable is and you want to see the definition
+          # of its *type*, not where it was *defined*
+          "<leader>gt" = "type_definition";
+
+          # List all subtypes or supertypes of the symbol under cursor in a quickfix window
+          "<leader>gT" = "typehierarchy";
         };
       };
 
