@@ -62,7 +62,7 @@
 
           resize_on_border = true;
 
-          "col.active_border" = lib.mkForce "$blue";
+          "col.active_border" = lib.mkForce "$mauve";
         };
 
         decoration = {
