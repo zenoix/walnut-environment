@@ -55,7 +55,7 @@
       # Decrease update time
       updatetime = 100;
       timeout = true;
-      timeoutlen = 300;
+      timeoutlen = 500;
 
       # Set completeopt to have a better completion experience
       completeopt = [
