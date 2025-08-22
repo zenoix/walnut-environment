@@ -17,6 +17,7 @@
       installBatSyntax = true;
       installVimSyntax = true;
       settings = {
+        background-blur = true;
         background-opacity = 0.975;
         font-family = "Monaspace Neon";
         font-size = 10;
