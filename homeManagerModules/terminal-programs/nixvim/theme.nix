@@ -10,6 +10,9 @@
         no_italic = false;
         no_underline = false;
         transparent_background = true;
+        float = {
+          transparent = true;
+        };
         show_end_of_buffer = true;
         integrations = {
           aerial = true;
