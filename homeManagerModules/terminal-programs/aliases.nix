@@ -20,7 +20,7 @@
       in
       {
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}#$(hostname)";
-        rbs = "nixos-rebuild switch --flake ${flakeDir}#walnut-server --build-host walnut@walnut-server --target-host walnut@walnut-server --use-remote-sudo";
+        rbs = "nixos-rebuild switch --flake ${flakeDir}#walnut-server --build-host walnut@walnut-server --target-host walnut@walnut-server --sudo --ask-sudo-password";
         upd = "nix flake update --flake ${flakeDir}";
         upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
