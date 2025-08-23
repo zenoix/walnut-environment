@@ -7,6 +7,10 @@
         default = ",preferred,auto,1";
         type = with lib.types; either str (listOf str);
       };
+      monitorWorkspaceBindings = lib.mkOption {
+        default = null;
+        type = with lib.types; nullOr (attrsOf (uniq str));
+      };
       mouse-sensitivity = lib.mkOption {
         default = "-0.5";
         type = with lib.types; nullOr (strMatching "-?[0-1].[0-9]+");
@@ -258,6 +262,11 @@
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
         ];
+      }
+      // lib.optionalAttrs (config.walnutHome.hyprland.monitorWorkspaceBindings != null) {
+        workspace = lib.attrsets.mapAttrsToList (
+          workspace: monitor: "${workspace}, monitor:${monitor}"
+        ) config.walnutHome.hyprland.monitorWorkspaceBindings;
       };
     };
   };
