@@ -23,6 +23,15 @@
         "DP-2,preferred,0x0,1"
         "DP-3,preferred,2560x-560,1,transform,1"
       ];
+      monitorWorkspaceBindings = {
+        "1" = "DP-2";
+        "2" = "DP-2";
+        "3" = "DP-2";
+
+        "4" = "DP-3";
+        "5" = "DP-3";
+        "6" = "DP-3";
+      };
     };
     hyprlock.enable = true;
     hyprpaper.enable = true;
