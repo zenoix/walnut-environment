@@ -1,14 +1,16 @@
 { lib, config, ... }:
 {
   options = {
-    walnutHome.hyprland.enable = lib.mkEnableOption "enable hyprland";
-    walnutHome.hyprland.monitorSetup = lib.mkOption {
-      default = ",preferred,auto,1";
-      type = with lib.types; either str (listOf str);
-    };
-    walnutHome.hyprland.mouse-sensitivity = lib.mkOption {
-      default = "-0.5";
-      type = with lib.types; nullOr (strMatching "-?[0-1].[0-9]+");
+    walnutHome.hyprland = {
+      enable = lib.mkEnableOption "enable hyprland";
+      monitorSetup = lib.mkOption {
+        default = ",preferred,auto,1";
+        type = with lib.types; either str (listOf str);
+      };
+      mouse-sensitivity = lib.mkOption {
+        default = "-0.5";
+        type = with lib.types; nullOr (strMatching "-?[0-1].[0-9]+");
+      };
     };
   };
 
