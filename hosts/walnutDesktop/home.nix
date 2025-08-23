@@ -47,4 +47,15 @@
     };
     zathura.enable = true;
   };
+
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      walnut-server = {
+        hostname = "10.0.0.56";
+        user = "walnut";
+        identityFile = "/home/${personal.user}/.ssh/id_ed25519";
+      };
+    };
+  };
 }

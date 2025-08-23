@@ -66,6 +66,7 @@
     packages = with pkgs; [ ];
     openssh.authorizedKeys.keys = [
       (builtins.readFile ../../keys/walnutLaptop/id_ed25519.pub)
+      (builtins.readFile ../../keys/walnutDesktop/id_ed25519.pub)
     ];
     shell = pkgs.zsh;
   };
