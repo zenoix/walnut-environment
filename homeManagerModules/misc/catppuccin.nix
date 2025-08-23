@@ -16,6 +16,7 @@
         force = true;
       };
       hyprlock.enable = !config.walnutHome.hyprlock.enable;
+      zsh-syntax-highlighting.enable = false;
     };
   };
 }
