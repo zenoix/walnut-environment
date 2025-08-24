@@ -11,6 +11,7 @@
 
   walnutHome = {
     anki.enable = true;
+    appflowy.enable = true;
     cava.enable = true;
     dunst.enable = true;
     firefox.enable = true;

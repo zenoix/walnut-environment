@@ -1,6 +1,7 @@
 {
   imports = [
     ./anki.nix
+    ./appflowy.nix
     ./firefox.nix
     ./ghostty.nix
     ./kitty.nix
