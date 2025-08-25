@@ -68,8 +68,7 @@ walnut-environment
 │   ├── ...
 │   └── README.md           # Readme explaining home manager modules layout
 ├── hosts                   # Different hosts and their configurations
-│   ├── walnut-nixos
-│   └── wsl
+│   └── walnut-nixos
 ├── modules                 # System modules
 │   ├── ...
 │   └── README.md           # Readme explaining modules layout

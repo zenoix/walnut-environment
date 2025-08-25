@@ -206,17 +206,6 @@
           ];
         };
 
-        # Work WSL home manager
-        "${work.user}@NZ-WPF4GDYVJ" = home-manager.lib.homeManagerConfiguration {
-          inherit extraSpecialArgs pkgs;
-          modules = [
-            ./hosts/work-wsl/home.nix
-            ./homeManagerModules
-            inputs.stylix.homeModules.stylix
-            inputs.nixvim.homeModules.nixvim
-          ];
-        };
-
         # Work Mac home manager
         # For some reason the host name keeps changing so no host name here
         "${work.user}" =
