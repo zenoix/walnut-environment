@@ -42,6 +42,10 @@
     rofi.enable = true;
     spicetify.enable = true;
     syncthing.enable = true;
+    tmux.sessionizerDirectories = [
+      "~/"
+      "~/repos"
+    ];
     waybar = {
       enable = true;
       group2.enable = false;
