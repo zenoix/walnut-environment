@@ -14,7 +14,7 @@
   walnutDarwin = {
     homebrew = {
       enable = true;
-      brews = [ ];
+      brews = [ "openssl@3" ];
       casks = [
         "ghostty"
         "firefox"
