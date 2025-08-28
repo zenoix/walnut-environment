@@ -16,11 +16,11 @@
       enable = true;
       brews = [ "openssl@3" ];
       casks = [
-        "ghostty"
         "firefox"
+        "ghostty"
+        "keymapp"
         "obsidian"
         "slack"
-        "keymapp"
       ];
     };
   };
