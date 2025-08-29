@@ -29,6 +29,9 @@ in
         lyricsPlus
         newReleases
       ];
+
+      theme = spicePkgs.themes.catppuccin;
+      colorScheme = "mocha";
     };
   };
 }
