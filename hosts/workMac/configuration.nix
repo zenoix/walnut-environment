@@ -75,6 +75,8 @@
         "com.apple.sound.beep.feedback" = 0; # disable beep sound when pressing volume up/down key
         NSWindowShouldDragOnGesture = true;
       };
+
+      WindowManager.EnableStandardClickToShowDesktop = false;
     };
 
     # turn off startup noise
