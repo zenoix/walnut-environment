@@ -32,7 +32,7 @@
       dock = {
         autohide = true;
         persistent-apps = [
-          "/Applications/Firefox.app"
+          "/Users/${work.user}/Applications/Home Manager Apps/Firefox.app"
           "/Applications/Ghostty.app"
           "/Applications/Microsoft Teams.app"
           "/Applications/Slack.app/"
