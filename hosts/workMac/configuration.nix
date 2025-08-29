@@ -16,7 +16,6 @@
       enable = true;
       brews = [ "openssl@3" ];
       casks = [
-        "firefox"
         "ghostty"
         "keymapp"
         "obsidian"
