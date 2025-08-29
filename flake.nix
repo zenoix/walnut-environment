@@ -56,6 +56,8 @@
       inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
+    mac-app-util.url = "github:hraban/mac-app-util";
+
     starship-jj = {
       url = "gitlab:lanastara_foss/starship-jj";
     };
@@ -73,6 +75,7 @@
       homebrew-core,
       homebrew-cask,
       stylix,
+      mac-app-util,
       ...
     }@inputs:
 
@@ -235,6 +238,7 @@
               inputs.stylix.homeModules.stylix
               inputs.nixvim.homeModules.nixvim
               inputs.catppuccin.homeModules.catppuccin
+              mac-app-util.homeManagerModules.default
             ];
           };
       };
@@ -243,6 +247,8 @@
         modules = [
           ./darwinModules
           ./hosts/workMac/configuration.nix
+
+          mac-app-util.darwinModules.default
 
           (
             { config, ... }:
