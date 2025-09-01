@@ -21,6 +21,7 @@ in
 
       enabledExtensions = with spicePkgs.extensions; [
         adblock
+        fullAppDisplay
         shuffle
         wikify
       ];
