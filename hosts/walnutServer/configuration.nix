@@ -22,6 +22,7 @@
     home-manager.enable = true;
     jellyfin.enable = true;
     jellyseerr.enable = true;
+    lidarr.enable = true;
     mullvad.enable = true;
     networking.enable = true;
     prowlarr.enable = true;
@@ -132,6 +133,7 @@
             tcp dport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 6767 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp dport 8686 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
 
           chain allowOutgoing {
@@ -142,6 +144,7 @@
             tcp sport 8191 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 6767 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp sport 8686 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
