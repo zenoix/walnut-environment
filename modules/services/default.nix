@@ -6,6 +6,7 @@
     ./flaresolverr.nix
     ./jellyfin.nix
     ./jellyseerr.nix
+    ./lidarr.nix
     ./networking.nix
     ./prowlarr.nix
     ./radarr.nix
