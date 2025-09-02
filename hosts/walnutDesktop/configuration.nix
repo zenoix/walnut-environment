@@ -39,6 +39,7 @@
 
   walnut = {
     grub.enable = false; # Override my grub config due to dual boot
+    steam.enable = true;
   };
 
   networking.hostName = "walnut-desktop";
