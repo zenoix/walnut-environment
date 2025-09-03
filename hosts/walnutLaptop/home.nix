@@ -66,6 +66,7 @@
 
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
     matchBlocks = {
       walnut-server = {
         hostname = "10.0.0.56";
