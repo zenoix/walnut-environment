@@ -1,4 +1,8 @@
 { pkgs, personal, ... }:
+let
+  mainMonitor = "DP-2";
+  secondaryMonitor = "DP-3";
+in
 {
   imports = [ ./../common/home.nix ];
 
@@ -21,17 +25,17 @@
     hyprland = {
       enable = true;
       monitorSetup = [
-        "DP-2,preferred,0x0,1"
-        "DP-3,preferred,2560x-560,1,transform,1"
+        "${mainMonitor},preferred,0x0,1"
+        "${secondaryMonitor},preferred,2560x-560,1,transform,1"
       ];
       monitorWorkspaceBindings = {
-        "1" = "DP-2";
-        "2" = "DP-2";
-        "3" = "DP-2";
+        "1" = mainMonitor;
+        "2" = mainMonitor;
+        "3" = mainMonitor;
 
-        "4" = "DP-3";
-        "5" = "DP-3";
-        "6" = "DP-3";
+        "4" = secondaryMonitor;
+        "5" = secondaryMonitor;
+        "6" = secondaryMonitor;
       };
     };
     hyprlock.enable = true;
@@ -54,7 +58,7 @@
   };
 
   programs.waybar.settings = {
-    mainBar.output = [ "DP-2" ];
+    mainBar.output = [ mainMonitor ];
   };
 
   programs.ssh = {
