@@ -53,6 +53,10 @@
     zathura.enable = true;
   };
 
+  programs.waybar.settings = {
+    mainBar.output = [ "DP-2" ];
+  };
+
   programs.ssh = {
     enable = true;
     matchBlocks = {
