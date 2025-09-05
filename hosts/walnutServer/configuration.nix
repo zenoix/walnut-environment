@@ -31,6 +31,7 @@
     shell-config.enable = true;
     sonarr.enable = true;
     sops.enable = true;
+    syncthing.enable = true;
     terminfo.enable = true;
   };
 
@@ -134,6 +135,7 @@
             tcp dport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 6767 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp dport 8686 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp dport 8384 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
 
           chain allowOutgoing {
@@ -145,6 +147,7 @@
             tcp sport 5055 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 6767 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
             tcp sport 8686 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            tcp sport 8384 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
           }
         '';
       };
@@ -174,8 +177,15 @@
 
     # bazarr
     6767
+
+    # syncthing
+    8384
+    22000
   ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedUDPPorts = [
+    22000
+    21027
+  ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
