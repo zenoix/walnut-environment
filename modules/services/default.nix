@@ -11,6 +11,7 @@
     ./prowlarr.nix
     ./radarr.nix
     ./sonarr.nix
+    ./syncthing.nix
     ./tlp.nix
   ];
 }
