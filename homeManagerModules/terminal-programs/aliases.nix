@@ -11,7 +11,6 @@
         gnuCompilerFlags = lib.concatStringsSep " " [
           "-pedantic-errors"
           "-Wall"
-          "-Weffc++"
           "-Wextra"
           "-Wconversion"
           "-Wsign-conversion"
@@ -139,6 +138,7 @@
         "g++" = lib.concatStringsSep " " [
           "g++"
           "-std=c++23"
+          "-Weffc++"
           gnuCompilerFlags
         ];
         l = "ls -lah --group-directories-first";
