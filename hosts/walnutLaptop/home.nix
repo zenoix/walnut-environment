@@ -34,7 +34,6 @@
     hyprlock.enable = true;
     hyprpaper.enable = true;
     i18n.enable = true;
-    jujutsu.enable = true;
     kitty.enable = false;
     obs.enable = true;
     rofi.enable = true;
