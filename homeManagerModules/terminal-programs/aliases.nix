@@ -32,6 +32,9 @@
         please = "sudo !!";
         pls = "sudo !!";
 
+        ":q" = "exit";
+        ":wq" = "exit";
+        ":q!" = "exit";
         ".." = "cd ..";
         cat = "bat";
         cls = "clear";
