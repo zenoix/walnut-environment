@@ -27,6 +27,7 @@
           html = [ "prettierd" ];
           javascript = [ "prettierd" ];
           json = [ "prettierd" ];
+          less = [ "deno_fmt" ];
           lua = [ "stylua" ];
           nix = [ "nixfmt" ];
           python = [
