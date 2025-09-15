@@ -35,6 +35,7 @@
                 bitwarden
                 darkreader
                 firefox-color
+                multi-account-containers
                 return-youtube-dislikes
                 sponsorblock
                 stylus
