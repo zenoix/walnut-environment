@@ -16,6 +16,7 @@
       enable = true;
       brews = [ "openssl@3" ];
       casks = [
+        "citrix-workspace"
         "ghostty"
         "keymapp"
         "obsidian"
