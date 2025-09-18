@@ -1,0 +1,2 @@
+# noisy diffs
+flake.lock -diff
