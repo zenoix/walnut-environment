@@ -31,7 +31,6 @@
   walnutHome = {
     awscli.enable = true;
     firefox.enable = true;
-    spicetify.enable = true;
     tmux.sessionizerDirectories = [
       "~/"
       "~/repos"

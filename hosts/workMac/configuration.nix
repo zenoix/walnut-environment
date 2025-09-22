@@ -23,6 +23,7 @@
         "slack"
       ];
     };
+    spicetify.enable = true;
   };
 
   system = {
