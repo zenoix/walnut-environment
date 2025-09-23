@@ -42,6 +42,7 @@
           "/Applications/Obsidian.app"
           "/System/Applications/System Settings.app"
         ];
+        show-recents = false;
 
         # disable hot corners
         wvous-tl-corner = 1;
