@@ -8,6 +8,7 @@
       nixfmt-rfc-style
       prettierd
       ruff
+      sleek
       stylua
     ];
 
