@@ -1,18 +1,18 @@
 {
   imports = [
-    ./aerial.nix
-    ./alpha.nix
+    # ./aerial.nix
+    # ./alpha.nix
     ./bigfile.nix
     ./biscuits.nix
     ./blink-cmp.nix
     ./conform-nvim.nix
-    ./dadbod.nix
+    # ./dadbod.nix
     ./fzf-lua.nix
     ./gitgutter.nix
     ./hardtime.nix
     ./harpoon.nix
     ./indent-blankline.nix
-    ./iron.nix
+    # ./iron.nix
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
