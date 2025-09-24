@@ -34,6 +34,7 @@
     tmux.sessionizerDirectories = [
       "~/"
       "~/repos"
+      "~/Projects"
     ];
   };
 
