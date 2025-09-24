@@ -38,6 +38,7 @@
             # To organize the imports.
             "ruff_organize_imports"
           ];
+          sql = [ "sleek" ];
           tsx = [ "prettierd" ];
           typescript = [ "prettierd" ];
           yaml = [ "prettierd" ];
