@@ -32,6 +32,7 @@
           extensionsConfig = {
             extensions = {
               packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+                inputs.firefox-addons.packages.${pkgs.system}."2fas-two-factor-authentication"
                 bitwarden
                 darkreader
                 firefox-color
