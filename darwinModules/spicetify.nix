@@ -6,10 +6,10 @@
   ...
 }:
 let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in
 {
-  imports = [ inputs.spicetify-nix.darwinModules.default ];
+  imports = [ inputs.spicetify-nix.darwinModules.spicetify ];
 
   options = {
     walnutDarwin.spicetify.enable = lib.mkEnableOption "enable spicetify";
