@@ -18,7 +18,7 @@
     ./lualine.nix
     ./mini.nix
     ./neogen.nix
-    ./noice.nix
+    # ./noice.nix
     ./nvim-ts-context-commentstring.nix
     ./oil.nix
     ./render-markdown.nix
