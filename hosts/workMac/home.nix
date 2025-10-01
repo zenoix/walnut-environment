@@ -26,6 +26,10 @@
       coreutils
       nodejs
     ];
+
+    shellAliases = {
+      vi = "nvim";
+    };
   };
 
   walnutHome = {
