@@ -182,7 +182,6 @@
           "$mainMod, F, fullscreen, 1"
           "$mainMod, Super_L, exec, rofi -show drun -no-levenshtein-sort -disable-history"
           "$mainMod, Super_R, exec, rofi -show drun -no-levenshtein-sort -disable-history"
-          "$mainMod, P, pseudo, # dwindle"
           "$mainMod, S, togglesplit, # dwindle"
           "$mainMod, B, exec, firefox"
           "$mainMod SHIFT, L, exec, hyprlock"

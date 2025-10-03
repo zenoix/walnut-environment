@@ -19,7 +19,8 @@
     ];
 
     wayland.windowManager.hyprland.settings.bind = [
-      "$mainMod SHIFT, P, exec, grim -g \"$(slurp)\" - | swappy -f -"
+      "$mainMod SHIFT, P, exec, grim - | swappy -f -"
+      "$mainMod, P, exec, grim -g \"$(slurp)\" - | swappy -f -"
     ];
   };
 }
