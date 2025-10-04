@@ -16,6 +16,19 @@
         passfail2
         review-heatmap
 
+        (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
+          pname = "fsrs4anki-helper";
+          version = "2025.10.02";
+          src = pkgs.fetchFromGitHub {
+            owner = "open-spaced-repetition";
+            repo = "fsrs4anki-helper";
+            rev = "558b7e8c49f974cffabbe83262a849afb0923ede";
+            hash = "sha256-5oFpX3TOuXkmUe10JcJOOJ0dhX6rLc+3ACfzkriZRHk=";
+            fetchSubmodules = true;
+          };
+          sourceRoot = "${finalAttrs.src.name}";
+        }))
+
         (recolor.withConfig {
           config = {
             colors = {
