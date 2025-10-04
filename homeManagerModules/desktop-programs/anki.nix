@@ -14,6 +14,7 @@
       enable = true;
       addons = with pkgs.ankiAddons; [
         passfail2
+        review-heatmap
 
         (recolor.withConfig {
           config = {
