@@ -16,6 +16,25 @@
         passfail2
         review-heatmap
 
+        (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
+          pname = "ajt-card-management";
+          version = "2025.09.14";
+          src =
+            (pkgs.fetchFromGitHub {
+              owner = "Ajatt-Tools";
+              repo = "learn-now-button";
+              rev = "5a6192c215059e9b32f31f9d28a65f0ae3b4806d";
+              hash = "sha256-Oy2lUZgvE8pY6t72CPayjCtH2UcvM0D3AhvFSm4nt2I=";
+              fetchSubmodules = true;
+            }).overrideAttrs
+              {
+                GIT_CONFIG_COUNT = 1;
+                GIT_CONFIG_KEY_0 = "url.https://github.com/.insteadOf";
+                GIT_CONFIG_VALUE_0 = "git@github.com:";
+              };
+          sourceRoot = "${finalAttrs.src.name}";
+        }))
+
         (
           (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
             pname = "fsrs4anki-helper";
