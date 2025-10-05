@@ -16,18 +16,39 @@
         passfail2
         review-heatmap
 
-        (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
-          pname = "fsrs4anki-helper";
-          version = "2025.10.02";
-          src = pkgs.fetchFromGitHub {
-            owner = "open-spaced-repetition";
-            repo = "fsrs4anki-helper";
-            rev = "558b7e8c49f974cffabbe83262a849afb0923ede";
-            hash = "sha256-5oFpX3TOuXkmUe10JcJOOJ0dhX6rLc+3ACfzkriZRHk=";
-            fetchSubmodules = true;
-          };
-          sourceRoot = "${finalAttrs.src.name}";
-        }))
+        (
+          (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
+            pname = "fsrs4anki-helper";
+            version = "2025.10.02";
+            src = pkgs.fetchFromGitHub {
+              owner = "open-spaced-repetition";
+              repo = "fsrs4anki-helper";
+              rev = "558b7e8c49f974cffabbe83262a849afb0923ede";
+              hash = "sha256-5oFpX3TOuXkmUe10JcJOOJ0dhX6rLc+3ACfzkriZRHk=";
+              fetchSubmodules = true;
+            };
+            sourceRoot = "${finalAttrs.src.name}";
+          })).withConfig
+          {
+            config = {
+              easy_dates = [ ];
+              days_to_reschedule = 7;
+              auto_reschedule_after_sync = true;
+              auto_disperse_after_sync = true;
+              auto_disperse_when_review = true;
+              auto_disperse_after_reschedule = true;
+              mature_ivl = 21;
+              reschedule_threshold = 0;
+              debug_notify = false;
+              fsrs_stats = true;
+              display_memory_state = false;
+              has_rated = false;
+              show_steps_stats = false;
+              show_true_retention = true;
+              reschedule-set-due-date = false;
+            };
+          }
+        )
 
         (recolor.withConfig {
           config = {
