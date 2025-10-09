@@ -22,8 +22,7 @@
 
     nixvim = {
       url = "github:nix-community/nixvim/";
-      # HACK: Temp fix for atopile cannot be found in pkgs
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     spicetify-nix = {
