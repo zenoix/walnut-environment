@@ -44,6 +44,7 @@
                 ublock-origin
                 vimium
                 youtube-nonstop
+                yomitan
               ];
 
               force = true;
