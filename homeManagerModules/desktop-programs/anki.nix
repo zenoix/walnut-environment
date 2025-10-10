@@ -13,7 +13,6 @@
     programs.anki = {
       enable = true;
       addons = with pkgs.ankiAddons; [
-        anki-connect
         passfail2
         review-heatmap
 
@@ -69,6 +68,20 @@
             };
           }
         )
+
+        (anki-connect.withConfig {
+          config = {
+            apiKey = null;
+            apiLogPath = null;
+            webBindAddress = "127.0.0.1";
+            webBindPort = 8765;
+            ignoreOriginList = [ ];
+            webCorsOriginList = [
+              "http://localhost"
+              "https://app.asbplayer.dev"
+            ];
+          };
+        })
 
         (recolor.withConfig {
           config = {
