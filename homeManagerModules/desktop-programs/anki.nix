@@ -13,6 +13,7 @@
     programs.anki = {
       enable = true;
       addons = with pkgs.ankiAddons; [
+        anki-connect
         passfail2
         review-heatmap
 
