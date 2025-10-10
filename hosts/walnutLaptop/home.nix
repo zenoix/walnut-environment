@@ -62,6 +62,8 @@
       "private_keys/walnut-laptop" = {
         path = "/home/${personal.user}/.ssh/id_ed25519";
       };
+      personal-email = { };
+      anki-sync-key = { };
     };
   };
 

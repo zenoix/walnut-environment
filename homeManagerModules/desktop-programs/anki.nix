@@ -405,8 +405,13 @@
       ];
       language = "en_US";
       minimalistMode = true;
-      sync.autoSync = true;
+      sync = {
+        autoSync = true;
+        username = config.sops.secrets.personal-email.path;
+        keyFile = config.sops.secrets.anki-sync-key.path;
+      };
       theme = "dark";
+
     };
   };
 }
