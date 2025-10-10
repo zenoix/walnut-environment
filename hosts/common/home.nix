@@ -64,8 +64,13 @@
 
   xdg.mimeApps = {
     enable = true;
-    associations.removed = {
-      "inode/directory" = "org.pwmt.zathura-cb.desktop";
+    associations = {
+      added = {
+        "application/zip" = "thunar.desktop";
+      };
+      removed = {
+        "inode/directory" = "org.pwmt.zathura-cb.desktop";
+      };
     };
     defaultApplications = {
       "inode/directory" = "thunar.desktop";
