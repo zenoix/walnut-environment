@@ -37,6 +37,7 @@ in
         "5" = secondaryMonitor;
         "6" = secondaryMonitor;
       };
+      screenshot.enable = true;
     };
     hyprlock.enable = true;
     hyprpaper.enable = true;

@@ -25,10 +25,7 @@
     firefox.enable = true;
     fonts.enable = true;
     home-manager.enable = true;
-    hyprland = {
-      enable = true;
-      screenshot.enable = true;
-    };
+    hyprland.enable = true;
     keymapp.enable = true;
     kitty.enable = false;
     libreoffice.enable = true;
