@@ -31,6 +31,7 @@
     hyprland = {
       enable = true;
       mouse-sensitivity = "-0.15";
+      gestures.enable = true;
       screenshot.enable = true;
     };
     hyprlock.enable = true;

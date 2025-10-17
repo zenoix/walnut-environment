@@ -3,6 +3,7 @@
   options = {
     walnutHome.hyprland = {
       enable = lib.mkEnableOption "enable hyprland";
+      gestures.enable = lib.mkEnableOption "enable gestures";
       monitorSetup = lib.mkOption {
         default = ",preferred,auto,1";
         type = with lib.types; either str (listOf str);
@@ -123,7 +124,7 @@
           new_status = true;
         };
 
-        gesture = [
+        gesture = lib.mkIf config.walnutHome.hyprland.gestures.enable [
           "3, horizontal, workspace"
         ];
 
