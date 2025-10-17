@@ -174,6 +174,46 @@ TODO
 
 TODO
 
+### Secrets
+
+This configuration uses sops-nix for secrets management. The two files of relevance are `.sops.yaml` and `secrets.yaml`. To allow a new host to decrypt secrets, you can add your standalone dev access key to `~/.config/sops/age/keys.txt` in the following format:
+
+```
+# public key: age17r0pvv7rl7u4psfcm6p23l99ldh2sqmyq0jg63hnqj8htxhv05fqa4jvsj
+AGE-SECRET-KEY-...
+```
+
+For NixOS configuration, you need to set `walnut.sops.enable = true` and then add the following snipppet with the secrets you want to use:
+
+```nix
+  sops = {
+    secrets = {
+      example-secret = { };
+    };
+  };
+```
+
+For home manager, you need to import `inputs.sops-nix.homeManagerModules.sops` and then add the following snippet with the secrets you want to use:
+```nix
+  sops = {
+    # This is the walnut/dev key and needs to have been copied to this location on the host
+    age.keyFile = "/home/${personal.user}/.config/sops/age/keys.txt";
+
+    defaultSopsFile = ../../secrets.yaml;
+    validateSopsFiles = false;
+
+    secrets = {
+      example-secret = { };
+    };
+  };
+```
+
+You then need to run `nix-shell -p sops --run "sops updatekeys secrets.yaml"`.
+
+To edit the secrets, you can run `nix-shell -p sops --run "sops secrets.yaml"`.
+
+More information on sops-nix can be found by following EmergentMind's amazing [sops-nix tutorials](https://www.youtube.com/watch?v=6EMNHDOY-wo).
+
 ## Netskope Issue
 
 I've had issues with Netskope interfering with Nix where it causes SSL errors. If you also get that problem, try the solution in this [GitHub issue comment](https://github.com/NixOS/nix/issues/8081#issuecomment-1962419263).
