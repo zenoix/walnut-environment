@@ -1,10 +1,19 @@
-{ pkgs, personal, ... }:
+{
+  inputs,
+  pkgs,
+  personal,
+  ...
+}:
 let
   mainMonitor = "DP-2";
   secondaryMonitor = "DP-3";
 in
 {
-  imports = [ ./../common/home.nix ];
+  imports = [
+    ./../common/home.nix
+
+    inputs.sops-nix.homeManagerModules.sops
+  ];
 
   home = {
     username = "${personal.user}";
@@ -56,6 +65,19 @@ in
       group2.enable = false;
     };
     zathura.enable = true;
+  };
+
+  sops = {
+    # This is the walnut/dev key and needs to have been copied to this location on the host
+    age.keyFile = "/home/${personal.user}/.config/sops/age/keys.txt";
+
+    defaultSopsFile = ../../secrets.yaml;
+    validateSopsFiles = false;
+
+    secrets = {
+      personal-email = { };
+      anki-sync-key = { };
+    };
   };
 
   programs.waybar.settings = {
