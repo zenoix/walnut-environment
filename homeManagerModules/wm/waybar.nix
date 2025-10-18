@@ -119,7 +119,7 @@
                 format = {
                   months = "<span color='#f9e2af'><b>{}</b></span>";
                   weekdays = "<span color='#cba6f7'><b>{}</b></span>";
-                  today = "<span color='#f38ba8'><b>{}</b></span>";
+                  today = "<span color='#f38ba8'><b><u>{}</u></b></span>";
                 };
               };
               actions = {
