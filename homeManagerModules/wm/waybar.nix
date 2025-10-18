@@ -219,6 +219,7 @@
             };
 
             battery = {
+              interval = 30; # Increase polling to once every 30sec
               states = {
                 warning = 30;
                 critical = 15;
