@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   options = {
     walnutHome.waybar.enable = lib.mkEnableOption "enable waybar";
@@ -10,6 +15,8 @@
 
   config = lib.mkMerge [
     (lib.mkIf config.walnutHome.waybar.enable {
+      home.packages = [ pkgs.plemoljp ];
+
       programs.waybar = {
         enable = true;
         settings = {
@@ -109,17 +116,18 @@
 
             clock = {
               # timezone = "America/New_York";
-              format = "{:%a %d %b %H:%M}";
-              tooltip-format = "<tt>{calendar}</tt>";
+              format = "{:L%m月%d日(%a) %H:%M}";
+              locale = "ja_JP.utf8";
+              tooltip-format = "<span size='10pt' font='PlemolJP'>{calendar}</span>";
               calendar = {
                 mode = "month";
                 mode-mon-col = 3;
                 on-scroll = 1;
                 on-click-right = "mode";
                 format = {
-                  months = "<span color='#f9e2af'><b>{}</b></span>";
-                  weekdays = "<span color='#cba6f7'><b>{}</b></span>";
-                  today = "<span color='#f38ba8'><b><u>{}</u></b></span>";
+                  months = "<span color='#f9e2af' size='10pt' font='PlemolJP'><b>{}</b></span>";
+                  weekdays = "<span color='#cba6f7' size='10pt' font='PlemolJP'><b>{}</b></span>";
+                  today = "<span color='#f38ba8' size='10pt' font='PlemolJP'><b><u>{}</u></b></span>";
                 };
               };
               actions = {
