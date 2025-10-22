@@ -12,14 +12,16 @@
   config = lib.mkIf config.walnutHome.git.enable {
     programs.git = {
       enable = true;
-      userName = "${personal.gitUser}";
-      userEmail = "${personal.gitEmail}";
 
-      aliases = {
-        tree = "log --all --graph --decorate";
-      };
+      settings = {
+        user = {
+          name = "${personal.gitUser}";
+          email = "${personal.gitEmail}";
+        };
 
-      extraConfig = {
+        aliases = {
+          tree = "log --all --graph --decorate";
+        };
         branch = {
           sort = "-committerdate";
         };
@@ -100,12 +102,14 @@
 
       };
 
-      delta = {
-        enable = true;
-        options = {
-          navigate = true;
-          side-by-side = true;
-        };
+    };
+
+    programs.delta = {
+      enable = true;
+      enableGitIntegration = true;
+      options = {
+        navigate = true;
+        side-by-side = true;
       };
     };
   };
