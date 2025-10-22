@@ -17,10 +17,13 @@
       brews = [ "openssl@3" ];
       casks = [
         "citrix-workspace"
+        "displaylink"
         "ghostty"
         "keymapp"
         "obsidian"
         "slack"
+        "kitty"
+        "firefox"
       ];
     };
     spicetify.enable = true;
