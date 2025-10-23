@@ -12,7 +12,7 @@
   config = lib.mkIf config.walnutHome.chromium.enable {
     programs.chromium = {
       enable = true;
-      package = pkgs.ungoogled-chromium.override { enableWideVine = true; };
+      package = pkgs.chromium.override { enableWideVine = true; };
 
       extensions = [
         { id = "hkledmpjpaehamkiehglnbelcpdflcab"; } # asbplayer
