@@ -1,7 +1,7 @@
 {
     "version": 0,
-    "date": "2025-10-19 05:02:40",
-    "url": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/",
+    "date": "2025-10-23 02:07:26",
+    "url": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/",
     "manifest": {
         "author": "Yomidevs",
         "browser_specific_settings": {
@@ -27,7 +27,7 @@
         "short_name": null,
         "version": "25.9.29.0",
         "background": {
-            "page": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/background.html",
+            "page": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/background.html",
             "preferred_environment": null,
             "scripts": null,
             "service_worker": null,
@@ -37,11 +37,12 @@
             {
                 "all_frames": true,
                 "css": null,
+                "css_origin": "author",
                 "exclude_globs": null,
                 "exclude_matches": null,
                 "include_globs": null,
                 "js": [
-                    "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/js/app/content-script-wrapper.js"
+                    "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/js/app/content-script-wrapper.js"
                 ],
                 "match_about_blank": true,
                 "match_origin_as_fallback": null,
@@ -63,13 +64,13 @@
             "<all_urls>"
         ],
         "icons": {
-            "16": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon16.png",
-            "19": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon19.png",
-            "32": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon32.png",
-            "38": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon38.png",
-            "48": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon48.png",
-            "64": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon64.png",
-            "128": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon128.png"
+            "16": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon16.png",
+            "19": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon19.png",
+            "32": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon32.png",
+            "38": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon38.png",
+            "48": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon48.png",
+            "64": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon64.png",
+            "128": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon128.png"
         },
         "incognito": "spanning",
         "minimum_chrome_version": "102.0.0.0",
@@ -83,7 +84,7 @@
         "options_ui": {
             "browser_style": false,
             "open_in_tab": true,
-            "page": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/settings.html"
+            "page": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/settings.html"
         },
         "permissions": [
             "storage",
@@ -106,22 +107,6 @@
                 ]
             }
         ],
-        "action": {
-            "browser_style": false,
-            "default_area": null,
-            "default_icon": {
-                "16": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon16.png",
-                "19": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon19.png",
-                "32": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon32.png",
-                "38": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon38.png",
-                "48": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon48.png",
-                "64": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon64.png",
-                "128": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/images/icon128.png"
-            },
-            "default_popup": "moz-extension://d1495440-5480-4ff7-9ef1-492ce8910943/action-popup.html",
-            "default_title": "Yomitan",
-            "theme_icons": null
-        },
         "chrome_settings_overrides": null,
         "commands": {
             "toggleTextScanning": {
@@ -164,13 +149,29 @@
             }
         },
         "devtools_page": null,
+        "action": {
+            "browser_style": false,
+            "default_area": null,
+            "default_icon": {
+                "16": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon16.png",
+                "19": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon19.png",
+                "32": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon32.png",
+                "38": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon38.png",
+                "48": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon48.png",
+                "64": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon64.png",
+                "128": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/images/icon128.png"
+            },
+            "default_popup": "moz-extension://ce727e78-410d-4e41-a09b-cf37ce447db9/action-popup.html",
+            "default_title": "Yomitan",
+            "theme_icons": null
+        },
+        "page_action": null,
         "omnibox": {
             "keyword": "yomi"
         },
-        "page_action": null,
         "sidebar_action": null,
-        "chrome_url_overrides": null,
         "declarative_net_request": null,
+        "chrome_url_overrides": null,
         "default_locale": null,
         "l10n_resources": null,
         "protocol_handlers": null,
@@ -197,7 +198,7 @@
             "os": "linux"
         }
     },
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0",
     "permissions": {
         "origins": [
             "<all_urls>",
@@ -554,7 +555,7 @@
                         "enable": true,
                         "server": "http://127.0.0.1:8765",
                         "tags": [
-                            "yomitan"
+                            "mining"
                         ],
                         "screenshot": {
                             "format": "jpeg",
@@ -564,13 +565,9 @@
                             {
                                 "name": "Expression",
                                 "icon": "big-circle",
-                                "deck": "Default",
-                                "model": "LLJ - JLPT Tango Japanese",
+                                "deck": "Sentence Mining",
+                                "model": "Sentence Mining",
                                 "fields": {
-                                    "Tango_Sort_Index": {
-                                        "value": "{expression}",
-                                        "overwriteMode": "coalesce"
-                                    },
                                     "Tango_Vocab_Japanese": {
                                         "value": "{expression}",
                                         "overwriteMode": "coalesce"
@@ -619,16 +616,8 @@
                                         "value": "",
                                         "overwriteMode": "coalesce"
                                     },
-                                    "Tango_Chapter": {
+                                    "Image": {
                                         "value": "",
-                                        "overwriteMode": "coalesce"
-                                    },
-                                    "Tango_Section": {
-                                        "value": "",
-                                        "overwriteMode": "coalesce"
-                                    },
-                                    "Tango_Has_Sentence": {
-                                        "value": "X",
                                         "overwriteMode": "coalesce"
                                     }
                                 },
