@@ -2,6 +2,7 @@
   imports = [
     ./anki.nix
     ./appflowy.nix
+    ./chromium.nix
     ./firefox.nix
     ./ghostty.nix
     ./kitty.nix
