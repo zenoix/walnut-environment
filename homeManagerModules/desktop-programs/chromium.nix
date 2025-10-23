@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -11,6 +12,7 @@
   config = lib.mkIf config.walnutHome.chromium.enable {
     programs.chromium = {
       enable = true;
+      package = pkgs.ungoogled-chromium;
 
       extensions = [
         { id = "hkledmpjpaehamkiehglnbelcpdflcab"; } # asbplayer
