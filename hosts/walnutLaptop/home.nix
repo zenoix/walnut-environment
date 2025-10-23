@@ -20,6 +20,7 @@
   walnutHome = {
     anki.enable = true;
     cava.enable = true;
+    chromium.enable = true;
     dunst.enable = true;
     firefox.enable = true;
     gammastep.enable = true;
