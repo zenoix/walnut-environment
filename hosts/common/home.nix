@@ -33,6 +33,7 @@
     sessionVariables = {
       DEVBOX_NO_PROMPT = "true";
       MANPAGER = "nvim +Man!";
+      DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
     };
   };
 
@@ -77,6 +78,12 @@
       "x-scheme-handler/discord" = "vesktop.desktop";
       "x-scheme-handler/sgnl" = "signal.desktop";
       "x-scheme-handler/signalcaptcha" = "signal.desktop";
+
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
     };
   };
 }
