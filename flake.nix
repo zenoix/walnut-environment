@@ -57,11 +57,6 @@
     };
 
     mac-app-util.url = "github:hraban/mac-app-util";
-
-    starship-jj = {
-      url = "gitlab:lanastara_foss/starship-jj";
-    };
-
   };
 
   outputs =
