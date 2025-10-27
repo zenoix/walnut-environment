@@ -28,6 +28,11 @@
           Fingerprinting = true;
         };
         DisablePocket = true;
+        GenerativeAI = {
+          Chatbot = false;
+          LinkPreviews = false;
+          TabGroups = false;
+        };
         OverridePostUpdatePage = "";
       };
 
