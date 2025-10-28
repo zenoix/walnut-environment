@@ -15,9 +15,6 @@
     programs.firefox = {
       enable = true;
 
-      # HACK: Temp use stable firefox until https://github.com/NixOS/nixpkgs/pull/449689 gets merged
-      package = pkgs-stable.firefox;
-
       policies = {
         DisableTelemetry = true;
         DisableFirefoxStudies = true;
