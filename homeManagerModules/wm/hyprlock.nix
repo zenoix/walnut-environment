@@ -59,7 +59,7 @@
             # DATE
             {
               monitor = "";
-              text = "cmd[update:1000] echo \"$(date +\"%A, %B %d\")\"";
+              text = "cmd[update:2000] echo \"$(date +\"%A, %B %d\")\"";
               color = textColor;
               font_size = 22;
               font_family = "JetBrains Mono Nerd Font";
@@ -90,6 +90,18 @@
               position = "0, 10";
               halign = "center";
               valign = "bottom";
+            }
+
+            # Caps lock indicator
+            {
+              monitor = "";
+              text = "cmd[update:1000] echo \"$($HOME/walnut-environment/nonNix/scripts/capslock.sh)\"";
+              color = textColor;
+              font_size = 12;
+              font_family = "JetBrains Mono Nerd Font";
+              position = "0, -170";
+              halign = "center";
+              valign = "center";
             }
 
             # # Battery
