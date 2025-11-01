@@ -10,6 +10,6 @@
   };
 
   config = lib.mkIf config.walnut.tor-browser.enable {
-    environment.systemPackages = with pkgs; [ tor-browser-bundle-bin ];
+    environment.systemPackages = with pkgs; [ tor-browser ];
   };
 }
