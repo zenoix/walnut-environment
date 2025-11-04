@@ -37,8 +37,8 @@
         let
           extensionsConfig = {
             extensions = {
-              packages = with inputs.firefox-addons.packages.${pkgs.system}; [
-                inputs.firefox-addons.packages.${pkgs.system}."2fas-two-factor-authentication"
+              packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+                inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}."2fas-two-factor-authentication"
                 asbplayer
                 bitwarden
                 darkreader
