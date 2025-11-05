@@ -43,6 +43,7 @@
           "/Applications/Slack.app/"
           "/Applications/Microsoft Outlook.app"
           "/Applications/Obsidian.app"
+          "/Applications/Nix Apps/Spotify.app"
           "/System/Applications/System Settings.app"
         ];
         show-recents = false;
