@@ -149,6 +149,9 @@
         windowrulev2 = [
           "bordercolor $red $peach, fullscreen:1" # set bordercolor to red if window is fullscreen
           "stayfocused, class:(rofi)"
+          "float, title:Picture-in-Picture"
+          "pin, title:Picture-in-Picture"
+          "size 50% 50%, title:Picture-in-Picture"
         ];
 
         layerrule = [
