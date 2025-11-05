@@ -4,7 +4,10 @@
   ...
 }:
 {
-  imports = [ ./../common/home.nix ];
+  imports = [
+    ./../common/home.nix
+    ./../common/nixOSHome.nix
+  ];
 
   home = {
     username = "${server.user}";

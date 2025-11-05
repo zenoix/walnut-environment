@@ -7,6 +7,7 @@
 {
   imports = [
     ./../common/home.nix
+    ./../common/nixOSHome.nix
     inputs.sops-nix.homeManagerModules.sops
   ];
 
