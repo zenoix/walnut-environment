@@ -18,12 +18,12 @@
       casks = [
         "citrix-workspace"
         "displaylink"
+        "firefox"
         "ghostty"
         "keymapp"
+        "kitty"
         "obsidian"
         "slack"
-        "kitty"
-        "firefox"
         "visual-studio-code"
       ];
     };
