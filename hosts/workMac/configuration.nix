@@ -24,6 +24,7 @@
         "slack"
         "kitty"
         "firefox"
+        "visual-studio-code"
       ];
     };
     spicetify.enable = true;
