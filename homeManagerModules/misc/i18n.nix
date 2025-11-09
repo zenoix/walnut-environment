@@ -19,6 +19,8 @@
           qt6Packages.fcitx5-configtool
           qt6Packages.fcitx5-chinese-addons
         ];
+
+        waylandFrontend = true;
       };
     };
   };
