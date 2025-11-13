@@ -50,6 +50,10 @@
     '';
   };
 
+  programs.git.ignores = [
+    ".DS_Store"
+  ];
+
   programs.ghostty = {
     package = lib.mkForce null;
     installBatSyntax = lib.mkForce false;
