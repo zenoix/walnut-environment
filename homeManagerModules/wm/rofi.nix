@@ -42,7 +42,6 @@
             enabled = mkLiteral "true";
             margin = mkLiteral "0px";
             padding = mkLiteral "0px";
-            border-radius = mkLiteral "20px";
             border = mkLiteral "3px";
             border-color = mkLiteral "#${colors.base0E}";
             cursor = "default";
