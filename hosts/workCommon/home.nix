@@ -73,6 +73,5 @@
     waybar.enable = false;
     wlogout.enable = false;
     xfce4-terminal.enable = false;
-    zathura.enable = false;
   };
 }

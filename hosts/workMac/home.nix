@@ -40,6 +40,7 @@
       "~/repos"
       "~/Projects/*"
     ];
+    zathura.enable = true;
   };
 
   stylix.opacity.terminal = lib.mkForce 0.97;
