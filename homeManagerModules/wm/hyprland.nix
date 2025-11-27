@@ -237,8 +237,8 @@
           "$mainMod, mouse_up, workspace, e-1"
 
           # Keyboard backlight
-          ", F5, exec, brightnessctl -d '*::kbd_backlight' set +33%"
-          ", F6, exec, brightnessctl -d '*::kbd_backlight' set 33%-"
+          ", F5, exec, brightnessctl -d '*::kbd_backlight' set +10%"
+          ", F6, exec, brightnessctl -d '*::kbd_backlight' set 10%-"
 
           # Volume and Media Control
           ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
