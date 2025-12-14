@@ -23,8 +23,8 @@
             (pkgs.fetchFromGitHub {
               owner = "Ajatt-Tools";
               repo = "learn-now-button";
-              rev = "5a6192c215059e9b32f31f9d28a65f0ae3b4806d";
-              hash = "sha256-Oy2lUZgvE8pY6t72CPayjCtH2UcvM0D3AhvFSm4nt2I=";
+              rev = "aecb2010c0b2b8c68dd4892fe743169b9f871247";
+              hash = "sha256-ebGMrEfDV9ZWtrV2AjiaNd7WMeNBHlaOBE2xL1x0nWs=";
               fetchSubmodules = true;
             }).overrideAttrs
               {
@@ -42,8 +42,8 @@
             src = pkgs.fetchFromGitHub {
               owner = "open-spaced-repetition";
               repo = "fsrs4anki-helper";
-              rev = "558b7e8c49f974cffabbe83262a849afb0923ede";
-              hash = "sha256-5oFpX3TOuXkmUe10JcJOOJ0dhX6rLc+3ACfzkriZRHk=";
+              rev = "6078218218d5456dc0f80c089572184e035cf257";
+              hash = "sha256-T1IBiODvxjs3FSGyesLSPvDvZlox+5T0XzvQM5MUlmg=";
               fetchSubmodules = true;
             };
             sourceRoot = "${finalAttrs.src.name}";
