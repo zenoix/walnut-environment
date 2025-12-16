@@ -68,26 +68,6 @@
       '';
 
       servers = {
-        basedpyright = {
-          enable = true;
-          package = pkgs.basedpyright;
-          settings = {
-            basedpyright = {
-              analysis = {
-                diagnosticSeverityOverrides = {
-                  reportCallInDefaultInitializer = false;
-                  reportMissingParameterType = false;
-                  reportSelfClsParameterName = false;
-                  reportUndefinedVariable = false;
-                  reportUnknownParameterType = false;
-                  reportUnusedExpression = false;
-                  reportUnusedImport = false;
-                  reportUnusedVariable = false;
-                };
-              };
-            };
-          };
-        };
         bashls = {
           enable = true;
           package = pkgs.bash-language-server;
@@ -117,6 +97,9 @@
         ts_ls = {
           enable = true;
           package = pkgs.typescript-language-server;
+        };
+        ty = {
+          enable = true;
         };
         typos_lsp = {
           enable = true;
