@@ -27,11 +27,13 @@
               hash = "sha256-ebGMrEfDV9ZWtrV2AjiaNd7WMeNBHlaOBE2xL1x0nWs=";
               fetchSubmodules = true;
             }).overrideAttrs
-              {
-                GIT_CONFIG_COUNT = 1;
-                GIT_CONFIG_KEY_0 = "url.https://github.com/.insteadOf";
-                GIT_CONFIG_VALUE_0 = "git@github.com:";
-              };
+              (oldAttrs: {
+                env = oldAttrs.env or { } // {
+                  GIT_CONFIG_COUNT = 1;
+                  GIT_CONFIG_KEY_0 = "url.https://github.com/.insteadOf";
+                  GIT_CONFIG_VALUE_0 = "git@github.com:";
+                };
+              });
           sourceRoot = "${finalAttrs.src.name}";
         }))
 
