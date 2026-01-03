@@ -156,12 +156,6 @@
           "size 50% 50%, title:Picture-in-Picture"
         ];
 
-        layerrule = [
-          "noanim, selection"
-          "noanim, hyprpicker"
-
-        ];
-
         exec = [
           "gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\""
         ];
