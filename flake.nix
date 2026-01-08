@@ -112,7 +112,7 @@
 
       personal = {
         user = "zenoix";
-        timeZone = "Asia/Tokyo";
+        timeZone = "Pacific/Auckland";
         defaultLocale = "en_NZ.UTF-8";
         city = "Auckland";
 
