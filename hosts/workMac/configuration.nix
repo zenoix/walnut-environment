@@ -21,7 +21,6 @@
         "firefox"
         "ghostty"
         "keymapp"
-        "kitty"
         "obsidian"
         "slack"
         "visual-studio-code"
