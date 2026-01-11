@@ -5,7 +5,7 @@
     extraPackages = with pkgs; [
       beautysh
       goimports-reviser
-      nixfmt-rfc-style
+      nixfmt
       prettierd
       ruff
       sleek
