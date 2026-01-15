@@ -3,7 +3,7 @@
     # ./aerial.nix
     # ./alpha.nix
     ./bigfile.nix
-    ./biscuits.nix
+    # ./biscuits.nix # NOTE: Broken due to tressitter rewrite
     ./blink-cmp.nix
     ./colorizer.nix
     ./conform-nvim.nix
