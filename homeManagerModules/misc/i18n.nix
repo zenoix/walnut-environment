@@ -20,6 +20,26 @@
           qt6Packages.fcitx5-chinese-addons
         ];
 
+        settings = {
+          globalOptions = {
+            "Hotkey/TriggerKeys" = {
+              "0" = "Super+space";
+            };
+          };
+
+          inputMethod = {
+            GroupOrder."0" = "Default";
+            "Groups/0" = {
+              Name = "Default";
+              "Default Layout" = "nz";
+              DefaultIM = "mozc";
+            };
+            "Groups/0/Items/0".Name = "keyboard-nz";
+            "Groups/0/Items/1".Name = "mozc";
+            "Groups/0/Items/2".Name = "pinyin";
+          };
+        };
+
         waylandFrontend = true;
       };
     };
