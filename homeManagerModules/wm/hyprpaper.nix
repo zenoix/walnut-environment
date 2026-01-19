@@ -14,6 +14,8 @@
           );
         in
         {
+          splash = false;
+
           wallpaper = [
             {
               monitor = "";
