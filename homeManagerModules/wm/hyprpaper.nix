@@ -14,8 +14,12 @@
           );
         in
         {
-          preload = [ wallpaperPath ];
-          wallpaper = [ ",${wallpaperPath}" ];
+          wallpaper = [
+            {
+              monitor = "";
+              path = wallpaperPath;
+            }
+          ];
         };
     };
   };
