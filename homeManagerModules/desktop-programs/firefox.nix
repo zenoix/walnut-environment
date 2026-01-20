@@ -76,6 +76,7 @@
               "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
               "browser.urlbar.suggest.quicksuggest.sponsored" = false;
               "browser.urlbar.suggest.yelp" = false;
+              "browser.ml.linkPreview.enabled" = false;
             };
           };
 
