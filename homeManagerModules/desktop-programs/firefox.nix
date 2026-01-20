@@ -77,6 +77,11 @@
               "browser.urlbar.suggest.quicksuggest.sponsored" = false;
               "browser.urlbar.suggest.yelp" = false;
               "browser.ml.linkPreview.enabled" = false;
+
+              "browser.tabs.loadInBackground" = true; # When opening in new tab, never switch to it
+              "browser.tabs.loadDivertedInBackground" = false; # When opening javascript and external links, switch to it
+              "browser.tabs.loadBookmarksInBackground" = false; # Always switch to the newly opened bookmark
+              "browser.tabs.loadBookmarksInTabs" = true; # Open tabs if not empty page otherwise always create new tab
             };
           };
 
