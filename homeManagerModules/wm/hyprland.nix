@@ -148,12 +148,24 @@
           disable_hyprland_logo = true;
         };
 
-        windowrulev2 = [
-          "bordercolor $red $peach, fullscreen:1" # set bordercolor to red if window is fullscreen
-          "stayfocused, class:(rofi)"
-          "float, title:Picture-in-Picture"
-          "pin, title:Picture-in-Picture"
-          "size 50% 50%, title:Picture-in-Picture"
+        windowrule = [
+          {
+            name = "highlight-fullscreen";
+            "match:fullscreen" = true;
+            border_color = "$red";
+          }
+          {
+            name = "focus-rofi";
+            "match:class" = "rofi";
+            stay_focused = true;
+          }
+          {
+            name = "picture-in-picture";
+            "match:title" = "Picture-in-Picture";
+            float = true;
+            pin = true;
+            # size = "(monitor_w * 0.5) (monitor_h * 0.5)";
+          }
         ];
 
         exec = [
