@@ -5,6 +5,7 @@
     ./chromium.nix
     ./firefox.nix
     ./ghostty.nix
+    ./gimp.nix
     ./kitty.nix
     ./obs.nix
     ./sioyek.nix
