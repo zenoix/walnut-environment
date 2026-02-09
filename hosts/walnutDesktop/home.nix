@@ -31,6 +31,7 @@ in
     dunst.enable = true;
     firefox.enable = true;
     gammastep.enable = true;
+    gimp.enable = true;
     gtk-config.enable = true;
     hypridle.enable = false;
     hyprland = {
