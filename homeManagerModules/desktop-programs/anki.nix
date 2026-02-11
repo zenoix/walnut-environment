@@ -6,7 +6,10 @@
 }:
 {
   options = {
-    walnutHome.anki.enable = lib.mkEnableOption "enable anki";
+    walnutHome.anki = {
+      enable = lib.mkEnableOption "enable anki";
+      disableSopsAnkiSync = lib.mkEnableOption "disable Anki Sync using Sops";
+    };
   };
 
   config = lib.mkIf config.walnutHome.anki.enable {
@@ -409,8 +412,13 @@
       minimalistMode = true;
       sync = {
         autoSync = true;
-        username = config.sops.secrets.personal-email.path;
-        keyFile = config.sops.secrets.anki-sync-key.path;
+        username =
+          if config.walnutHome.anki.disableSopsAnkiSync then
+            null
+          else
+            config.sops.secrets.personal-email.path;
+        keyFile =
+          if config.walnutHome.anki.disableSopsAnkiSync then null else config.sops.secrets.anki-sync-key.path;
       };
       theme = "dark";
 
