@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   lib,
   work,
@@ -8,6 +9,7 @@
   imports = [
     ./../common/home.nix
     ./../workCommon/home.nix
+    inputs.sops-nix.homeManagerModules.sops
   ];
 
   home = {
@@ -33,6 +35,10 @@
   };
 
   walnutHome = {
+    anki = {
+      enable = true;
+      disableSopsAnkiSync = true;
+    };
     awscli.enable = true;
     firefox.enable = true;
     tmux.sessionizerDirectories = [
