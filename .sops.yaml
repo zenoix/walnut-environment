@@ -1,7 +1,6 @@
 keys:
   - &users:
     - &zenoix age17r0pvv7rl7u4psfcm6p23l99ldh2sqmyq0jg63hnqj8htxhv05fqa4jvsj
-    - &work-user age1ffgyrcdd380yxdvx4g35q7nf63d23hn9wzvzv9eectwn4q6vx4gqyfeflm
   - &hosts:
     - &walnut-server age1ync33693pyguwq0p66p3ckqtn26mw20mc5w6h4lyte223favryxsq5p56v
 creation_rules:
@@ -9,5 +8,4 @@ creation_rules:
     key_groups:
       - age:
           - *zenoix
-          - *work-user
           - *walnut-server
