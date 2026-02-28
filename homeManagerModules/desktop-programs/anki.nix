@@ -21,13 +21,13 @@
 
         (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
           pname = "ajt-card-management";
-          version = "2025.09.14";
+          version = "v26.2.21.0";
           src =
             (pkgs.fetchFromGitHub {
               owner = "Ajatt-Tools";
               repo = "learn-now-button";
-              rev = "aecb2010c0b2b8c68dd4892fe743169b9f871247";
-              hash = "sha256-ebGMrEfDV9ZWtrV2AjiaNd7WMeNBHlaOBE2xL1x0nWs=";
+              rev = "e952008bd43b4964f6c030ef536adb5edd78a493";
+              hash = "sha256-9PLEEE9M+4LQX5xI7R/xORvykq9qf0k+Eo2UG71e1iM=";
               fetchSubmodules = true;
             }).overrideAttrs
               (oldAttrs: {
@@ -43,12 +43,12 @@
         (
           (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
             pname = "fsrs4anki-helper";
-            version = "2025.10.02";
+            version = "2026.01.28";
             src = pkgs.fetchFromGitHub {
               owner = "open-spaced-repetition";
               repo = "fsrs4anki-helper";
-              rev = "6078218218d5456dc0f80c089572184e035cf257";
-              hash = "sha256-T1IBiODvxjs3FSGyesLSPvDvZlox+5T0XzvQM5MUlmg=";
+              rev = "8934a5d53caa68bf688e6b0964c36fb5a87970c0";
+              hash = "sha256-Yoj4pqO0DgQZ8v7KrnEs/OrdUr/AdbV6SXB3dpbg55M=";
               fetchSubmodules = true;
             };
             sourceRoot = "${finalAttrs.src.name}";
