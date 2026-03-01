@@ -410,7 +410,7 @@
       ];
       language = "en_US";
       minimalistMode = true;
-      sync = {
+      profiles."User 1".sync = {
         autoSync = true;
         username =
           if config.walnutHome.anki.disableSopsAnkiSync then
