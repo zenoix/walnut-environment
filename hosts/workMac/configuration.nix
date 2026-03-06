@@ -24,6 +24,7 @@
         "obsidian"
         "slack"
         "visual-studio-code"
+        "zoom"
       ];
     };
     spicetify.enable = true;
