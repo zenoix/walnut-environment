@@ -30,7 +30,6 @@
 
       ]
       ++ (with pkgs; [
-        jetbrains-mono
         monaspace
         noto-fonts
         noto-fonts-cjk-sans
@@ -39,7 +38,6 @@
         font-awesome
         powerline-fonts
         powerline-symbols
-        nerd-fonts.jetbrains-mono
         nerd-fonts.monaspace
       ]);
   };
