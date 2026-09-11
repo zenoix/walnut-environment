@@ -23,7 +23,7 @@
    </div>
 </h1>
 
-# THIS REPO HAS BEEN MIGRATED TO ![CODEBERG](https://codeberg.org/zenoix/walnut-environment)
+# THIS REPO HAS BEEN MIGRATED TO [CODEBERG](https://codeberg.org/zenoix/walnut-environment)
 
 ## Screenshots
 
